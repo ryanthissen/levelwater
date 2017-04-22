@@ -50,10 +50,25 @@ body {
   padding-top: 0.5rem;
 }
 
+/*homepage images*/
+
 #main-image {
   height: 320px;
   background: url('./img/lakehole_cropped.png') no-repeat;
   width: 100%;
   background-size: cover;
   background-position: center;
+}
+
+/*homepage about*/
+
+#about {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+#about h3 {
+  color: teal;
+  font-size: 1.6em;
 }
