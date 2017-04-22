@@ -4,6 +4,7 @@ import './App.css';
 import NavbarHome from './components/nav/navbar-home';
 import MainImage from './components/home/main-image';
 import About from './components/home/about';
+import SupportImage from './components/home/support-image';
 
 class App extends Component {
   render() {
@@ -12,6 +13,7 @@ class App extends Component {
         <NavbarHome />
         <MainImage />
         <About />
+        <SupportImage />
       </div>
     );
   }

@@ -60,6 +60,14 @@ body {
   background-position: center;
 }
 
+#support-image {
+  height: 320px;
+  background: url('./img/check.png') no-repeat;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
 /*homepage about*/
 
 #about {
