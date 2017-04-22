@@ -1,9 +1,51 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
 }
 
+
+/*NAV*/
 #navbar {
-  background-color: blue;  
+  background-color: blue;
+  height: 68px;
+}
+
+#navbar h1 {
+  color: white;
+  font-size: 3em;
+}
+
+#right-nav-home {
+  text-align: right;
+  padding: 0;
+}
+
+#right-nav-home .button:first-of-type {
+  border-right: 1px solid black;
+  border-left: 2px solid black;
+}
+
+#right-nav-home .button {
+  height: 68px;
+  background-color: blue;
+  color: white;
+
+}
+
+#navbar .grid {
+  height: 68px;
+  margin: 0;
+}
+
+#demo-button {
+  text-align: left;
+}
+
+#header {
+  padding-top: 0.5rem;
 }
