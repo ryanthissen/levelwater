@@ -49,3 +49,9 @@ body {
 #header {
   padding-top: 0.5rem;
 }
+
+#main-image {
+  height: 400px;
+  background: url('./img/lakehole_cropped.png') no-repeat;
+  background-size: cover;
+}
