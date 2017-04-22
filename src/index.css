@@ -61,7 +61,7 @@ body {
 }
 
 #support-image {
-  height: 320px;
+  height: 240px;
   background: url('./img/check.png') no-repeat;
   width: 100%;
   background-size: cover;
