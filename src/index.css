@@ -134,4 +134,69 @@ body {
   left: 15%;
   right: 15%;
   background-color: white;
+  padding-top: 40px;
+}
+
+#login-form {
+
+}
+
+#login-border {
+  border-bottom: 3px solid black;
+  width: 80%;
+  padding-bottom: 20px;
+  margin: 0 auto;
+}
+
+.login-field label {
+  display: block;
+  font-size: 2em;
+}
+
+.login-field label:first-of-type {
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+
+.login-field input {
+  height: 40px;
+  width: 420px;
+  border-radius: 5px;
+  font-size: 2em;
+}
+
+.login-field:nth-of-type(2) div:first-of-type {
+  margin-bottom: 16px;
+}
+
+.login-field:first-of-type {
+  text-align: center;
+}
+
+.login-field:nth-of-type(2) {
+  text-align: left;
+}
+
+.login-field:nth-of-type(3) {
+  text-align: right;
+  padding-top: 0 !important;
+}
+
+
+.login-field button {
+  margin-right: 70px;
+  border-radius: 5px;
+  width: 160px;
+  height: 50px;
+  background-color: blue;
+  color: white;
+  font-size: 2em;
+}
+
+.o-auth-button {
+  margin-top: 10px;
+}
+
+.o-auth-button img {
+  width: 500px;
 }
