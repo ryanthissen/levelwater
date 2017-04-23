@@ -201,6 +201,29 @@ body {
   width: 500px;
 }
 
+/*back button*/
+
+#sign-up-back-button button {
+  color: white;
+  background-color: blue;
+  width: 220px;
+  height: 70px;
+  font-size: 2.4em;
+  padding: 0;
+  text-align: right;
+  padding-right: 14px;
+  border-radius: 10px;
+}
+
+#sign-up-back-button {
+  text-align: left;
+}
+
+#sign-up-back-button button {
+  margin-left: 50px;
+  padding-right: 55px;
+}
+
 /*basic info form*/
 
 #step1 label, #step1 input {
@@ -253,4 +276,57 @@ body {
 #basic-info-submit-button {
   text-align: right;
   padding-right: 50px;
+}
+
+/*revenue & costs form*/
+
+#step2 label, #step2 input {
+  display: block;
+}
+
+#revenue-costs-form {
+  margin: 40px 0;
+}
+
+#step2 label {
+  font-size: 1.6em;
+  margin: 44px 0;
+}
+
+#step2 input {
+  font-size: 1.6em;
+  margin: 32px 0;
+  width: 160px;
+}
+
+#step2 .seven {
+  text-align: right;
+  padding-right: 40px;
+  margin-top: -4px;
+
+}
+
+#revenue-costs-form h3 {
+  color: teal;
+  font-size: 1.8em;
+}
+
+#revenue-costs-submit-button button {
+  color: white;
+  background-color: blue;
+  width: 380px;
+  height: 70px;
+  font-size: 2.4em;
+  padding: 0;
+  text-align: right;
+  padding-right: 14px;
+  border-radius: 10px;
+}
+
+#revenue-costs-submit-button {
+  text-align: right;
+}
+
+#revenue-costs-submit-button button {
+  margin-right: 50px;
 }
