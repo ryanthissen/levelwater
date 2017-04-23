@@ -6,6 +6,7 @@ import MainImage from './components/home/main-image';
 import About from './components/home/about';
 import SupportImage from './components/home/support-image';
 import Details from './components/home/details';
+import Footer from './components/footer/footer';
 
 class App extends Component {
   render() {
@@ -16,6 +17,7 @@ class App extends Component {
         <About />
         <SupportImage />
         <Details />
+        <Footer />
       </div>
     );
   }
