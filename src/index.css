@@ -73,10 +73,37 @@ body {
 #about {
   width: 90%;
   margin: 0 auto;
-  margin-top: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 #about h3 {
   color: teal;
   font-size: 1.6em;
+}
+
+/*homepage details*/
+
+#details h3 {
+  color: teal;
+  font-size: 1.2em;
+}
+
+#details {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+#details ul {
+  list-style: none;
+  line-height: 2;
+}
+
+#details p {
+  color: teal;
+  font-weight: 800;
+}
+
+#details .eight {
+  border-right: 1px solid black;
 }
