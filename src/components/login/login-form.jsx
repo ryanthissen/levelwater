@@ -1,7 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const LoginForm = () => (
   <form id="login-form">
+    <div id="close-login"><Link to="/">X</Link></div>
     <div className="ui grid">
       <div className="login-field column five wide">
         <label>E-mail</label>

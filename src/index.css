@@ -260,3 +260,15 @@ body {
 #sign-up-step {
   font-weight: 800;
 }
+
+#close-login {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  font-size: 2em;
+  font-weight: 800;
+}
+
+#close-login a {
+  color: black;
+}
