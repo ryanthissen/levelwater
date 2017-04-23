@@ -1,6 +1,5 @@
 import React from 'react';
 import SignUpStep from '../sign-up-step';
-import BasicInfoSubmitButton from './basic-info-submit-button';
 
 const BasicInfoForm = () => (
   <div id="basic-info-form">
@@ -33,8 +32,15 @@ const BasicInfoForm = () => (
             <input></input>
           </div>
         </div>
+        <div id="basic-info-submit-button">
+          <div className="ui grid">
+            <div className="column four wide"></div>
+            <div className="column twelve wide">
+              <button type='submit' className="ui button">Continue To Revenue & Costs &gt;</button>
+            </div>
+          </div>
+        </div>
       </form>
-      <BasicInfoSubmitButton />
     </div>
 
 );

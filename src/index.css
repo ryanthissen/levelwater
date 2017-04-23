@@ -5,13 +5,15 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  color: #666666;
+  /*font-family: 'Signika' !important;*/
+
 }
 
 
 /*NAV*/
 #navbar {
-  background-color: blue;
+  background-color: #297A75;
   height: 68px;
 }
 
@@ -32,7 +34,7 @@ body {
 
 #right-nav-home .button {
   height: 68px;
-  background-color: blue;
+  background-color: #297A75;
   color: white;
 
 }
@@ -78,14 +80,14 @@ body {
 }
 
 #about h3 {
-  color: teal;
+  color: #3971AC;
   font-size: 1.6em;
 }
 
 /*homepage details*/
 
 #details h3 {
-  color: teal;
+  color: #3971AC;
   font-size: 1.2em;
 }
 
@@ -100,7 +102,7 @@ body {
 }
 
 #details p {
-  color: teal;
+  color: #3971AC;
   font-weight: 800;
 }
 
@@ -112,7 +114,7 @@ body {
 
 #footer {
   height: 40px;
-  background-color: blue;
+  background-color: #297A75;
   text-align: right;
   padding-right: 40px;
   color: white;
@@ -188,7 +190,7 @@ body {
   border-radius: 5px;
   width: 160px;
   height: 50px;
-  background-color: blue;
+  background-color: #3971AC;
   color: white;
   font-size: 2em;
 }
@@ -234,13 +236,13 @@ body {
 }
 
 #basic-info-form h3 {
-  color: teal;
+  color: #3971AC;
   font-size: 1.8em;
 }
 
 #basic-info-submit-button button {
   color: white;
-  background-color: blue;
+  background-color: #3971AC;
   width: 500px;
   height: 70px;
   font-size: 2.4em;
@@ -253,4 +255,8 @@ body {
 #basic-info-submit-button {
   text-align: right;
   padding-right: 50px;
+}
+
+#sign-up-step {
+  font-weight: 800;
 }
