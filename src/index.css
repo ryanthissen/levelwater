@@ -121,3 +121,17 @@ body {
 #footer .column {
   padding-bottom: 0;
 }
+
+/*login*/
+#login {
+  width: 70%;
+  height: 360px;
+  border: 1px solid black;
+  border-radius: 10px;
+  z-index: 1;
+  position: absolute;
+  top: 100px;
+  left: 15%;
+  right: 15%;
+  background-color: white;
+}

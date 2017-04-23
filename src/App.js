@@ -7,6 +7,8 @@ import About from './components/home/about';
 import SupportImage from './components/home/support-image';
 import Details from './components/home/details';
 import Footer from './components/footer/footer';
+import Login from './components/login/login';
+
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 class App extends Component {
@@ -19,20 +21,17 @@ class App extends Component {
         <Route exact path="/" component={About} />
         <Route exact path="/" component={SupportImage} />
         <Route exact path="/" component={Details} />
+
+        <Route exact path="/login" component={NavbarHome} />
+        <Route exact path="/login" component={MainImage} />
+        <Route exact path="/login" component={About} />
+        <Route exact path="/login" component={SupportImage} />
+        <Route exact path="/login" component={Details} />
+        <Route exact path="/login" component={Login} />
+
         <Route path="/" component={Footer} />
       </div>
     </Router>
-
-
-
-      // <div className="App">
-      //   <NavbarHome />
-      //   <MainImage />
-      //   <About />
-      //   <SupportImage />
-      //   <Details />
-      //   <Footer />
-      // </div>
     );
   }
 }
