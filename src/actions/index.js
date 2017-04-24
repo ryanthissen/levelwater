@@ -1,3 +1,11 @@
+import {
+  BrowserRouter as Router,
+  Route,
+  Link,
+  Redirect,
+  withRouter
+} from 'react-router-dom'
+
 
 //Authentication
 export const logUserIn = (email, password) => {
@@ -19,5 +27,19 @@ export const signUserUp = (email, firstName, lastName, password) => {
       lastName: lastName,
       password: password
     }
+  };
+};
+
+//Forms
+
+const basicUserInfoHelper = () => {
+  console.log('yo!');
+  return 'stuff';
+};
+
+export const submitBasicUserInfo = (waterSystemName, PWSNum, numberOfConnections, CustomerPop) => {
+  return {
+    type: 'SUBMIT_BASIC_USER_INFO',
+    payload: basicUserInfoHelper(waterSystemName, PWSNum, numberOfConnections, CustomerPop)
   };
 };
