@@ -22,7 +22,7 @@ class LoginForm extends Component{
     return (
       <form id="login-form" onSubmit={(event) => {
         event.preventDefault();
-        let x = this.props.formData.login.values;
+        let x = this.props;
         this.props.logUserIn(x.email, x.password);
       }}>
         <div id="close-login"><Link to="/">X</Link></div>
