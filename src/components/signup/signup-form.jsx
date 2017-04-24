@@ -1,12 +1,29 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Field, reduxForm } from 'redux-form';
+import { signUserUp } from '../../actions';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
 
+const mapStateToProps = (state, ownProps) => {
+  return {
+    formData: state.signupForm
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return bindActionCreators ({ signUserUp }, dispatch);
+};
 
 class SignupForm extends Component{
-  render() {
+  render(props) {
+    const { handleSubmit, pristine, reset, submitting } = this.props;
     return (
-      <form id="signup-form">
+      <form id="signup-form" onSubmit={(event) => {
+        event.preventDefault();
+        let x = this.props;
+        this.props.signUserUp(x.email, x.firstName, x.lastName, x.password);
+      }}>
         <div id="close-login"><Link to="/">X</Link></div>
         <div className="ui grid">
           <div className="login-field signup-field column five wide">
@@ -54,4 +71,4 @@ SignupForm = reduxForm ({
 
 
 
-export default SignupForm;
+export default connect (mapStateToProps, mapDispatchToProps)(SignupForm);
