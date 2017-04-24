@@ -10,6 +10,7 @@ import Login from './components/login/login';
 import SignUpStep from './components/forms/sign-up-step';
 import FormNavbar from './components/forms/navbar/form-navbar';
 import BasicInfoForm from './components/forms/basic-info/basic-info-form';
+import RevenueCostsForm from './components/forms/revenue-costs/revenue-costs-form'
 
 
 import { BrowserRouter as Router, Route } from 'react-router-dom';
@@ -36,6 +37,10 @@ class App extends Component {
         <Route exact path="/signup/step1" component={FormNavbar}  />
         {/* <Route exact path="/signup/step1" component={() => (<SignUpStep step="1" />)}  /> */}
         <Route exact path="/signup/step1" component={BasicInfoForm}  />
+
+        <Route exact path="/signup/step2" component={FormNavbar} />
+        <Route exact path="/signup/step2" component={RevenueCostsForm} />
+
         <Route path="/" component={Footer} />
       </div>
     </Router>

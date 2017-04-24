@@ -12,26 +12,27 @@ const BasicInfoForm = () => (
       </div>
     </div>
 
-      <form id="step1">
-        <div className="ui grid">
-          <div className="column seven wide">
-            <label>Your First Name:</label>
-            <label>Your Last Name:</label>
-            <label>Water System Name:</label>
-            <label>PWS Number:</label>
-            <label>Number Of Connections:</label>
-            <label>Customer Population:</label>
+    <form id="step1">
+      <div className="ui grid">
+        <div className="column seven wide">
+          <label>Your First Name:</label>
+          <label>Your Last Name:</label>
+          <label>Water System Name:</label>
+          <label>PWS Number:</label>
+          <label>Number Of Connections:</label>
+          <label>Customer Population:</label>
 
-          </div>
-          <div className="column nine wide">
-            <input></input>
-            <input></input>
-            <input></input>
-            <input></input>
-            <input></input>
-            <input></input>
-          </div>
         </div>
+
+        <div className="column nine wide">
+          <input></input>
+          <input></input>
+          <input></input>
+          <input></input>
+          <input></input>
+          <input></input>
+        </div>
+
         <div id="basic-info-submit-button">
           <div className="ui grid">
             <div className="column four wide"></div>
@@ -40,7 +41,11 @@ const BasicInfoForm = () => (
             </div>
           </div>
         </div>
-      </form>
+
+
+
+      </div>
+    </form>
     </div>
 
 );
