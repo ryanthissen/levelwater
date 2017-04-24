@@ -35,7 +35,7 @@ const SignupForm = () => (
       </div>
 
       <div className="login-field column sixteen wide">
-        <button type="submit">Sign In</button>
+        <button type="submit">Sign Up</button>
       </div>
     </div>
     <div id="login-border"></div>
