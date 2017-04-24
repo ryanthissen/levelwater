@@ -5,13 +5,15 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  color: #666666;
+  /*font-family: 'Signika' !important;*/
+
 }
 
 
 /*NAV*/
 #navbar {
-  background-color: blue;
+  background-color: #297A75;
   height: 68px;
 }
 
@@ -32,7 +34,7 @@ body {
 
 #right-nav-home .button {
   height: 68px;
-  background-color: blue;
+  background-color: #297A75;
   color: white;
 
 }
@@ -50,8 +52,223 @@ body {
   padding-top: 0.5rem;
 }
 
+/*homepage images*/
+
 #main-image {
   height: 320px;
   background: url('./img/lakehole_cropped.png') no-repeat;
+  width: 100%;
   background-size: cover;
+  background-position: center;
+}
+
+#support-image {
+  height: 240px;
+  background: url('./img/check.png') no-repeat;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+/*homepage about*/
+
+#about {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+#about h3 {
+  color: #3971AC;
+  font-size: 1.6em;
+}
+
+/*homepage details*/
+
+#details h3 {
+  color: #3971AC;
+  font-size: 1.2em;
+}
+
+#details {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+#details ul {
+  list-style: none;
+  line-height: 2;
+}
+
+#details p {
+  color: #3971AC;
+  font-weight: 800;
+}
+
+#details .eight {
+  border-right: 1px solid black;
+}
+
+/*footer*/
+
+#footer {
+  height: 40px;
+  background-color: #297A75;
+  text-align: right;
+  padding-right: 40px;
+  color: white;
+}
+
+#footer .column {
+  padding-bottom: 0;
+}
+
+/*login*/
+#login {
+  width: 70%;
+  height: 360px;
+  border: 1px solid black;
+  border-radius: 10px;
+  z-index: 1;
+  position: absolute;
+  top: 100px;
+  left: 15%;
+  right: 15%;
+  background-color: white;
+  padding-top: 40px;
+}
+
+#login-form {
+
+}
+
+#login-border {
+  border-bottom: 3px solid black;
+  width: 80%;
+  padding-bottom: 20px;
+  margin: 0 auto;
+}
+
+.login-field label {
+  display: block;
+  font-size: 2em;
+}
+
+.login-field label:first-of-type {
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+
+.login-field input {
+  height: 40px;
+  width: 420px;
+  border-radius: 5px;
+  font-size: 2em;
+}
+
+.login-field:nth-of-type(2) div:first-of-type {
+  margin-bottom: 16px;
+}
+
+.login-field:first-of-type {
+  text-align: center;
+}
+
+.login-field:nth-of-type(2) {
+  text-align: left;
+}
+
+.login-field:nth-of-type(3) {
+  text-align: right;
+  padding-top: 0 !important;
+}
+
+
+.login-field button {
+  margin-right: 70px;
+  border-radius: 5px;
+  width: 160px;
+  height: 50px;
+  background-color: #3971AC;
+  color: white;
+  font-size: 2em;
+}
+
+.o-auth-button {
+  margin-top: 10px;
+}
+
+.o-auth-button img {
+  width: 500px;
+}
+
+/*basic info form*/
+
+#step1 label, #step1 input {
+  display: block;
+}
+
+#basic-info-form {
+  margin: 40px 0;
+}
+
+#step1 label {
+  font-size: 1.6em;
+  margin: 44px 0;
+}
+
+#step1 input {
+  font-size: 1.6em;
+  margin: 32px 0;
+  width: 160px;
+}
+
+#step1 .seven {
+  text-align: right;
+  padding-right: 40px;
+  margin-top: -4px;
+
+}
+
+#step1 input:nth-of-type(-n + 3) {
+  width: 360px;
+}
+
+#basic-info-form h3 {
+  color: #3971AC;
+  font-size: 1.8em;
+}
+
+#basic-info-submit-button button {
+  color: white;
+  background-color: #3971AC;
+  width: 500px;
+  height: 70px;
+  font-size: 2.4em;
+  padding: 0;
+  text-align: right;
+  padding-right: 14px;
+  border-radius: 10px;
+}
+
+#basic-info-submit-button {
+  text-align: right;
+  padding-right: 50px;
+}
+
+#sign-up-step {
+  font-weight: 800;
+}
+
+#close-login {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  font-size: 2em;
+  font-weight: 800;
+}
+
+#close-login a {
+  color: black;
 }
