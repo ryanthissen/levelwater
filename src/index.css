@@ -125,9 +125,8 @@ body {
 }
 
 /*login*/
-#login {
+#login, #signup {
   width: 70%;
-  height: 360px;
   border: 1px solid black;
   border-radius: 10px;
   z-index: 1;
@@ -137,6 +136,14 @@ body {
   right: 15%;
   background-color: white;
   padding-top: 40px;
+}
+
+#login {
+  height: 360px;
+}
+
+#signup {
+  height: 540px;
 }
 
 #login-form {
@@ -160,6 +167,10 @@ body {
   margin-top: 10px;
 }
 
+.signup-field label:nth-of-type(-n + 4) {
+  margin-bottom: 39px;
+}
+
 .login-field input {
   height: 40px;
   width: 420px;
@@ -168,6 +179,10 @@ body {
 }
 
 .login-field:nth-of-type(2) div:first-of-type {
+  margin-bottom: 16px;
+}
+
+.signup-field:nth-of-type(2) div:nth-of-type(-n + 4) {
   margin-bottom: 16px;
 }
 
@@ -186,7 +201,7 @@ body {
 
 
 .login-field button {
-  margin-right: 70px;
+  margin-right: 194px;
   border-radius: 5px;
   width: 160px;
   height: 50px;

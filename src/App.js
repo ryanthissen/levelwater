@@ -7,10 +7,12 @@ import SupportImage from './components/home/support-image';
 import Details from './components/home/details';
 import Footer from './components/footer/footer';
 import Login from './components/login/login';
+import Signup from './components/signup/signup';
 import SignUpStep from './components/forms/sign-up-step';
 import FormNavbar from './components/forms/navbar/form-navbar';
 import BasicInfoForm from './components/forms/basic-info/basic-info-form';
-import RevenueCostsForm from './components/forms/revenue-costs/revenue-costs-form'
+import RevenueCostsForm from './components/forms/revenue-costs/revenue-costs-form';
+
 
 
 import { BrowserRouter as Router, Route } from 'react-router-dom';
@@ -32,6 +34,14 @@ class App extends Component {
         <Route exact path="/login" component={SupportImage} />
         <Route exact path="/login" component={Details} />
         <Route exact path="/login" component={Login} />
+
+        <Route exact path="/signup" component={NavbarHome} />
+        <Route exact path="/signup" component={MainImage} />
+        <Route exact path="/signup" component={About} />
+        <Route exact path="/signup" component={SupportImage} />
+        <Route exact path="/signup" component={Details} />
+        <Route exact path="/signup" component={Signup} />
+
 
 
         <Route exact path="/signup/step1" component={FormNavbar}  />
