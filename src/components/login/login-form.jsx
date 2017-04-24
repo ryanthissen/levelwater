@@ -20,7 +20,7 @@ class LoginForm extends Component{
               <Field name="email" component="input" type="email" />
             </div>
             <div>
-              <Field name="email" component="input" type="email" />
+              <Field name="password" component="input" type="password" />
             </div>
           </div>
 
