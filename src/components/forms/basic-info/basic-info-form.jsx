@@ -35,7 +35,7 @@ class BasicInfoForm extends Component{
               <Field name="numberOfConnections" component="input" type="number" />
               <Field name="customerPop" component="input" type="number" />
             </div>
-
+          </div>
             <div id="basic-info-submit-button">
               <div className="ui grid">
                 <div className="column four wide"></div>
@@ -45,7 +45,7 @@ class BasicInfoForm extends Component{
               </div>
             </div>
 
-          </div>
+
         </form>
         </div>
     );
