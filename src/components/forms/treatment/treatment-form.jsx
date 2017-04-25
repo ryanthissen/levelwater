@@ -6,7 +6,7 @@ import { Field, reduxForm } from 'redux-form';
 class TreatmentForm extends Component {
   render() {
     return (
-      <div id="treatment-form">
+      <div id="treatment-form" className="form-step">
         <SignUpStep step="4" />
         <div className="ui grid">
           <div className="column sixteen wide">
@@ -54,6 +54,13 @@ class TreatmentForm extends Component {
               <button className="ui button">Add Another Plant &gt;</button>
             </div>
 
+          </div>
+
+          <div className="ui grid">
+            <div className="column eight wide"></div>
+            <div id="revenue-costs-submit-button" className="column eight wide">
+              <button className="ui button">Continue To Storage &gt;</button>
+            </div>
           </div>
         </form>
 
