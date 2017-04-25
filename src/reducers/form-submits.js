@@ -4,6 +4,8 @@ const formSubmits = (state = null, action) => {
     return action.payload;
   case 'SUBMIT_REVENUE_COST_INFO':
     return action.payload;
+  case 'SUBMIT_PUMP_INFO':
+    return action.payload;
   default:
     return state;
   }

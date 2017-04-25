@@ -49,7 +49,7 @@ class TreatmentForm extends Component {
             </div>
           </div>
           <div className="ui grid">
-            <SignUpBackButton />
+            <SignUpBackButton to="/signup/step3"/>
             <div id="revenue-costs-submit-button" className="column eight wide">
               <button className="ui button">Add Another Plant &gt;</button>
             </div>
