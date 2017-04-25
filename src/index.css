@@ -407,3 +407,8 @@ h3 {
 #treatment-submit-button button {
   margin-right: 50px;
 }
+
+/*storage form*/
+#step5 input:first-of-type {
+  width: 360px;
+}

@@ -63,8 +63,6 @@ class TreatmentForm extends Component {
             </div>
           </div>
         </form>
-
-
       </div>
     );
   }
