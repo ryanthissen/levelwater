@@ -37,6 +37,11 @@ const basicUserInfoHelper = () => {
   return 'stuff';
 };
 
+const revenueCostInfoHelper = () => {
+  console.log('yo');
+  return 'stuff';
+}
+
 export const submitBasicUserInfo = (waterSystemName, PWSNum, numberOfConnections, CustomerPop) => {
   return {
     type: 'SUBMIT_BASIC_USER_INFO',
@@ -47,7 +52,7 @@ export const submitBasicUserInfo = (waterSystemName, PWSNum, numberOfConnections
 export const submitRevenueCostInfo = (ratePerConnection, waterSalesrev, feesChargesRev, subsidiesRev, reserveFundTotal, reserveFundContribution, personnelCosts, operationsCosts, debtFinancing) => {
   return {
     type: 'SUBMIT_REVENUE_COST_INFO',
-    payload: (ratePerConnection, waterSalesrev, feesChargesRev, subsidiesRev, reserveFundTotal, reserveFundContribution, personnelCosts, operationsCosts, debtFinancing)
+    payload: revenueCostInfoHelper(ratePerConnection, waterSalesrev, feesChargesRev, subsidiesRev, reserveFundTotal, reserveFundContribution, personnelCosts, operationsCosts, debtFinancing)
   };
 };
 
