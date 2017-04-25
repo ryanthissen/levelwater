@@ -43,3 +43,17 @@ export const submitBasicUserInfo = (waterSystemName, PWSNum, numberOfConnections
     payload: basicUserInfoHelper(waterSystemName, PWSNum, numberOfConnections, CustomerPop)
   };
 };
+
+export const submitRevenueCostInfo = (ratePerConnection, waterSalesrev, feesChargesRev, subsidiesRev, reserveFundTotal, reserveFundContribution, personnelCosts, operationsCosts, debtFinancing) => {
+  return {
+    type: 'SUBMIT_REVENUE_COST_INFO',
+    payload: (ratePerConnection, waterSalesrev, feesChargesRev, subsidiesRev, reserveFundTotal, reserveFundContribution, personnelCosts, operationsCosts, debtFinancing)
+  };
+};
+
+export const submitSourceInfo = (ratePerConnection, waterSalesrev, feesChargesRev, subsidiesRev, reserveFundTotal, reserveFundContribution, personnelCosts, operationsCosts, debtFinancing) => {
+  return {
+    type: 'SUBMIT_SOURCE_INFO',
+    payload: (ratePerConnection, waterSalesrev, feesChargesRev, subsidiesRev, reserveFundTotal, reserveFundContribution, personnelCosts, operationsCosts, debtFinancing)
+  };
+};

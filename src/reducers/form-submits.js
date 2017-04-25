@@ -1,9 +1,11 @@
 const formSubmits = (state = null, action) => {
   switch (action.type) {
-    case 'SUBMIT_BASIC_USER_INFO':
-      return action.payload;
-    default:
-      return state;
+  case 'SUBMIT_BASIC_USER_INFO':
+    return action.payload;
+  case 'SUBMIT_REVENUE_COST_INFO':
+    return action.payload;
+  default:
+    return state;
   }
 };
 
