@@ -12,6 +12,7 @@ import SignUpStep from './components/forms/sign-up-step';
 import FormNavbar from './components/forms/navbar/form-navbar';
 import BasicInfoForm from './components/forms/basic-info/basic-info-form';
 import RevenueCostsForm from './components/forms/revenue-costs/revenue-costs-form';
+import TreatmentForm from './components/forms/treatment/treatment-form';
 
 
 
@@ -50,6 +51,9 @@ class App extends Component {
 
         <Route exact path="/signup/step2" component={FormNavbar} />
         <Route exact path="/signup/step2" component={RevenueCostsForm} />
+
+        <Route exact path="/signup/step4" component={FormNavbar} />
+        <Route exact path="/signup/step4" component={TreatmentForm} />
 
         <Route path="/" component={Footer} />
       </div>
