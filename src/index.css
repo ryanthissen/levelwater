@@ -5,15 +5,28 @@
 body {
   margin: 0;
   padding: 0;
-  color: #666666;
-  /*font-family: 'Signika' !important;*/
+  color: white;
+  background-color: #414141;
+  font-family: 'Roboto' !important;
 
+}
+
+h1 {
+  font-family: 'Roboto' !important;
+}
+
+h2 {
+  font-family: 'Roboto' !important;
+}
+
+h3 {
+  font-family: 'Roboto' !important;
 }
 
 
 /*NAV*/
 #navbar {
-  background-color: #297A75;
+  background-color: #78bec8;
   height: 68px;
 }
 
@@ -34,7 +47,7 @@ body {
 
 #right-nav-home .button {
   height: 68px;
-  background-color: #297A75;
+  background-color: #78bec8;
   color: white;
 
 }
@@ -46,6 +59,11 @@ body {
 
 #demo-button {
   text-align: left;
+}
+
+#demo-button button {
+  background-color: crimson;
+  color: white;
 }
 
 #header {
@@ -72,16 +90,27 @@ body {
 
 /*homepage about*/
 
-#about {
+.about {
   width: 90%;
   margin: 0 auto;
   margin-top: 30px;
   margin-bottom: 30px;
+  font-size: 1.4em;
 }
 
-#about h3 {
-  color: #3971AC;
+.about h3 {
+  /*color: #3971AC;*/
   font-size: 1.6em;
+}
+
+.about-heading {
+  background-color: #414141;
+  height: 80px;
+  padding-top: 12px;
+}
+
+.about-heading h3 {
+  font-size: 3em;
 }
 
 /*homepage details*/
@@ -92,8 +121,10 @@ body {
 }
 
 #details {
-  margin-top: 30px;
-  margin-bottom: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: white;
+  color: black;
 }
 
 #details ul {
@@ -102,7 +133,7 @@ body {
 }
 
 #details p {
-  color: #3971AC;
+  /*color: #3971AC;*/
   font-weight: 800;
 }
 
@@ -114,7 +145,7 @@ body {
 
 #footer {
   height: 40px;
-  background-color: #297A75;
+  background-color: #78bec8;
   text-align: right;
   padding-right: 40px;
   color: white;
@@ -126,15 +157,15 @@ body {
 
 /*login*/
 #login, #signup {
-  width: 70%;
+  width: 50%;
   border: 1px solid black;
   border-radius: 10px;
   z-index: 1;
   position: absolute;
   top: 100px;
-  left: 15%;
-  right: 15%;
-  background-color: white;
+  left: 26%;
+  right: 26%;
+  background-color: #414141;
   padding-top: 40px;
 }
 
@@ -173,16 +204,16 @@ body {
 
 .login-field input {
   height: 40px;
-  width: 420px;
+  width: 80%;
   border-radius: 5px;
   font-size: 2em;
 }
 
-.login-field:nth-of-type(2) div:first-of-type {
+.login-field div:first-of-type {
   margin-bottom: 16px;
 }
 
-.signup-field:nth-of-type(2) div:nth-of-type(-n + 4) {
+.signup-field div:nth-of-type(-n + 4) {
   margin-bottom: 16px;
 }
 
@@ -194,18 +225,17 @@ body {
   text-align: left;
 }
 
-.login-field:nth-of-type(3) {
-  text-align: right;
+.login-field:nth-of-type(2) {
+  text-align: center;
   padding-top: 0 !important;
 }
 
 
 .login-field button {
-  margin-right: 194px;
   border-radius: 5px;
   width: 160px;
   height: 50px;
-  background-color: #3971AC;
+  background-color: crimson;
   color: white;
   font-size: 2em;
 }
@@ -215,7 +245,7 @@ body {
 }
 
 .o-auth-button img {
-  width: 500px;
+  width: 60%;
 }
 
 /*back button*/
@@ -274,13 +304,13 @@ body {
 }
 
 #basic-info-form h3 {
-  color: #3971AC;
+  color: white;
   font-size: 1.8em;
 }
 
 #basic-info-submit-button button {
   color: white;
-  background-color: #3971AC;
+  background-color: crimson;
   width: 500px;
   height: 70px;
   font-size: 2.4em;
@@ -302,10 +332,13 @@ body {
 
 #close-login {
   position: absolute;
-  right: 16px;
-  top: 16px;
-  font-size: 2em;
-  font-weight: 800;
+  right: 10px;
+  top: 10px;
+  z-index: 2;
+}
+
+#close-login img {
+  width: 26px;
 }
 
 #close-login a {
