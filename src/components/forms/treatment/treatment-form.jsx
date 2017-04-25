@@ -7,14 +7,14 @@ class TreatmentForm extends Component {
   render() {
     return (
       <div id="treatment-form">
-        <SignUpStep step="3" />
+        <SignUpStep step="4" />
         <div className="ui grid">
           <div className="column sixteen wide">
             <h3>Treatment Plant #1</h3>
           </div>
         </div>
 
-        <form id="step3">
+        <form id="step4">
           <div className="ui grid">
             <div className="column seven wide">
               <label>Name Of Treatment Plant:</label>

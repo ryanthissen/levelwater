@@ -400,7 +400,7 @@ h3 {
 }
 
 /*treatment form */
-#step3 label, #step3 input, #step3 select {
+#step4 label, #step4 input, #step4 select {
   display: block;
   font-size: 1.6em;
 }
@@ -409,35 +409,35 @@ h3 {
   margin: 40px 0;
 }
 
-#step3 label {
+#step4 label {
   font-size: 1.6em;
   margin: 44px 0;
 }
 
-#step3 input, #step3 select {
+#step4 input, #step4 select {
   margin: 32px 0;
 
 }
 
-#step3 input, #step3 select {
+#step4 input, #step4 select {
     width: 160px;
     color: #414141;
 }
 
-#step3 input:nth-of-type(1) {
+#step4 input:nth-of-type(1) {
   width: 360px;
 }
 
-#step3 select:nth-of-type(1) {
+#step4 select:nth-of-type(1) {
   width: 320px;
 }
 
-#step3 select:nth-of-type(n + 2) {
+#step4 select:nth-of-type(n + 2) {
   width: 100px;
 }
 
 
-#step3 .seven {
+#step4 .seven {
   text-align: right;
   padding-right: 40px;
   margin-top: -4px;
