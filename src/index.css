@@ -167,6 +167,7 @@ h3 {
   right: 26%;
   background-color: #414141;
   padding-top: 40px;
+  color: #414141;
 }
 
 #login {
@@ -252,7 +253,7 @@ h3 {
 
 #sign-up-back-button button {
   color: white;
-  background-color: #3971AC;
+  background-color: crimson;
   width: 220px;
   height: 70px;
   font-size: 2.4em;
@@ -380,7 +381,7 @@ h3 {
 
 #revenue-costs-submit-button button {
   color: white;
-  background-color: #3971AC;
+  background-color: crimson;
   width: 380px;
   height: 70px;
   font-size: 2.4em;
@@ -395,5 +396,75 @@ h3 {
 }
 
 #revenue-costs-submit-button button {
+  margin-right: 50px;
+}
+
+/*treatment form */
+#step3 label, #step3 input, #step3 select {
+  display: block;
+  font-size: 1.6em;
+}
+
+#treatment-form {
+  margin: 40px 0;
+}
+
+#step3 label {
+  font-size: 1.6em;
+  margin: 44px 0;
+}
+
+#step3 input, #step3 select {
+  margin: 32px 0;
+
+}
+
+#step3 input, #step3 select {
+    width: 160px;
+    color: #414141;
+}
+
+#step3 input:nth-of-type(1) {
+  width: 360px;
+}
+
+#step3 select:nth-of-type(1) {
+  width: 320px;
+}
+
+#step3 select:nth-of-type(n + 2) {
+  width: 100px;
+}
+
+
+#step3 .seven {
+  text-align: right;
+  padding-right: 40px;
+  margin-top: -4px;
+
+}
+
+#treatment-form h3 {
+  color: white;
+  font-size: 1.8em;
+}
+
+#treatment-submit-button button {
+  color: white;
+  background-color: #3971AC;
+  width: 380px;
+  height: 70px;
+  font-size: 2.4em;
+  padding: 0;
+  text-align: right;
+  padding-right: 14px;
+  border-radius: 10px;
+}
+
+#treatment-submit-button {
+  text-align: right;
+}
+
+#treatment-submit-button button {
   margin-right: 50px;
 }
