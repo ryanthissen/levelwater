@@ -69,9 +69,9 @@ class RevenueCostsForm extends Component {
               </div>
             </div>
             <div className="ui grid">
-              <SignUpBackButton />
+              <SignUpBackButton to="/signup/step1"/>
               <div id="revenue-costs-submit-button" className="column eight wide">
-                <button className="ui button">Continue To Sources &gt;</button>
+                <button type='submit' className="ui button">Continue To Sources &gt;</button>
               </div>
             </div>
           </form>
