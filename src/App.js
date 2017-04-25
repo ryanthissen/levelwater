@@ -54,12 +54,12 @@ class App extends Component {
         <Route exact path="/signup/step2" component={FormNavbar} />
         <Route exact path="/signup/step2" component={RevenueCostsForm} />
 
+        <Route exact path="/signup/step3" component={FormNavbar} />
+        <Route exact path="/signup/step3" component={SourceForm} />
 
         <Route exact path="/signup/step4" component={FormNavbar} />
         <Route exact path="/signup/step4" component={TreatmentForm} />
 
-        <Route exact path="/signup/step3" component={FormNavbar} />
-        <Route exact path="/signup/step3" component={SourceForm} />
 
 
         <Route path="/" component={Footer} />
