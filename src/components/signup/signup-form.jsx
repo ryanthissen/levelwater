@@ -24,9 +24,12 @@ class SignupForm extends Component{
         let x = this.props;
         this.props.signUserUp(x.email, x.firstName, x.lastName, x.password);
       }}>
-        <div id="close-login"><Link to="/">X</Link></div>
+      <Link to="/"><div id="close-login"><img
+    src={require('../../img/white-icon.png')}
+     alt="close window"
+   /></div></Link>
         <div className="ui grid">
-          <div className="login-field signup-field column five wide">
+          {/* <div className="login-field signup-field column five wide">
             <label>E-mail</label>
             <label>First Name</label>
             <label>Last Name</label>
@@ -34,24 +37,24 @@ class SignupForm extends Component{
             <label>Confirm Password</label>
 
 
-          </div>
+          </div> */}
 
-          <div className="login-field signup-field column eleven wide">
+          <div className="login-field signup-field column sixteen wide">
 
             <div>
-              <Field name="email" component="input" type="email" />
+              <Field name="email" component="input" type="email" placeholder="Email" />
             </div>
             <div>
-              <Field name="firstName" component="input" type="text" />
+              <Field name="firstName" component="input" type="text" placeholder="First Name" />
             </div>
             <div>
-              <Field name="lastName" component="input" type="text" />
+              <Field name="lastName" component="input" type="text" placeholder="Last Name" />
             </div>
             <div>
-              <Field name="password" component="input" type="password" />
+              <Field name="password" component="input" type="password" placeholder="Password" />
             </div>
             <div>
-              <Field name="passwordConfirm" component="input" type="password" />
+              <Field name="passwordConfirm" component="input" type="password" placeholder="Confirm Password" />
             </div>
           </div>
 

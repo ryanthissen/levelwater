@@ -25,21 +25,24 @@ class LoginForm extends Component{
         let x = this.props;
         this.props.logUserIn(x.email, x.password);
       }}>
-        <div id="close-login"><Link to="/">X</Link></div>
+        <Link to="/"><div id="close-login"><img
+      src={require('../../img/white-icon.png')}
+       alt="close window"
+     /></div></Link>
         <div className="ui grid">
-          <div className="login-field column five wide">
+          {/* <div className="login-field column five wide">
             <label>E-mail</label>
             <label>Password</label>
 
-          </div>
+          </div> */}
 
-          <div className="login-field column eleven wide">
+          <div className="login-field column sixteen wide">
 
             <div>
-              <Field name="email" component="input" type="email" />
+              <Field name="email" component="input" type="email" placeholder="Email Address" />
             </div>
             <div>
-              <Field name="password" component="input" type="password" />
+              <Field name="password" component="input" type="password" placeholder="Password" />
             </div>
           </div>
 
