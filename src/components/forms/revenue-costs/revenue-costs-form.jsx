@@ -29,7 +29,7 @@ class RevenueCostsForm extends Component {
   render() {
     return (
       <Route render={({ history }) => (
-        <div id="revenue-costs-form">
+        <div id="revenue-costs-form" className="form-step">
           <SignUpStep step="2" />
           <div className="ui grid">
             <div className="column sixteen wide">

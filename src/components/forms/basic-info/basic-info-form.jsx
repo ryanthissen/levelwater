@@ -29,7 +29,7 @@ class BasicInfoForm extends Component{
   render() {
     return (
       <Route render={({ history }) => (
-      <div id="basic-info-form">
+      <div id="basic-info-form" className="form-step">
         <SignUpStep step="1" />
         <div className="ui grid">
           <div className="column sixteen wide">

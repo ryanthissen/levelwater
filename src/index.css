@@ -272,41 +272,47 @@ h3 {
   padding-right: 55px;
 }
 
-/*basic info form*/
+/*all form steps*/
 
-#step1 label, #step1 input {
-  display: block;
-}
-
-#basic-info-form {
+.form-step {
   margin: 40px 0;
 }
 
-#step1 label {
+.form-step label, .form-step input, .form-step select {
+  display: block !important;
+  font-size: 1.6em;
+}
+
+.form-step label {
   font-size: 1.6em;
   margin: 44px 0;
 }
 
-#step1 input {
+.form-step input, .form-step select {
   font-size: 1.6em;
   margin: 32px 0;
   width: 160px;
+  color: #414141;
 }
 
-#step1 .seven {
+.form-step .seven {
   text-align: right;
   padding-right: 40px;
   margin-top: -4px;
 
 }
 
-#step1 input:nth-of-type(-n + 3) {
-  width: 360px;
+.form-step h3 {
+  font-size: 1.8em;
 }
 
-#basic-info-form h3 {
-  color: white;
-  font-size: 1.8em;
+
+/*basic info form*/
+
+
+
+#step1 input:nth-of-type(-n + 3) {
+  width: 360px;
 }
 
 #basic-info-submit-button button {
@@ -348,37 +354,6 @@ h3 {
 
 /*revenue & costs form*/
 
-#step2 label, #step2 input {
-  display: block;
-}
-
-#revenue-costs-form {
-  margin: 40px 0;
-}
-
-#step2 label {
-  font-size: 1.6em;
-  margin: 44px 0;
-}
-
-#step2 input {
-  font-size: 1.6em;
-  margin: 32px 0;
-  width: 160px;
-}
-
-#step2 .seven {
-  text-align: right;
-  padding-right: 40px;
-  margin-top: -4px;
-
-}
-
-#revenue-costs-form h3 {
-  color: #3971AC;
-  font-size: 1.8em;
-}
-
 #revenue-costs-submit-button button {
   color: white;
   background-color: crimson;
@@ -400,29 +375,6 @@ h3 {
 }
 
 /*treatment form */
-#step4 label, #step4 input, #step4 select {
-  display: block;
-  font-size: 1.6em;
-}
-
-#treatment-form {
-  margin: 40px 0;
-}
-
-#step4 label {
-  font-size: 1.6em;
-  margin: 44px 0;
-}
-
-#step4 input, #step4 select {
-  margin: 32px 0;
-
-}
-
-#step4 input, #step4 select {
-    width: 160px;
-    color: #414141;
-}
 
 #step4 input:nth-of-type(1) {
   width: 360px;
@@ -434,19 +386,6 @@ h3 {
 
 #step4 select:nth-of-type(n + 2) {
   width: 100px;
-}
-
-
-#step4 .seven {
-  text-align: right;
-  padding-right: 40px;
-  margin-top: -4px;
-
-}
-
-#treatment-form h3 {
-  color: white;
-  font-size: 1.8em;
 }
 
 #treatment-submit-button button {
