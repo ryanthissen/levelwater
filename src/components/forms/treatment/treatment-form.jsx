@@ -55,6 +55,13 @@ class TreatmentForm extends Component {
             </div>
 
           </div>
+
+          <div className="ui grid">
+            <div className="column eight wide"></div>
+            <div id="revenue-costs-submit-button" className="column eight wide">
+              <button className="ui button">Continue To Storage &gt;</button>
+            </div>
+          </div>
         </form>
 
 
