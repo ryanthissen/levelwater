@@ -74,7 +74,7 @@ class SourceForm extends Component {
           <div className="ui grid">
             <SignUpBackButton />
             <div id="revenue-costs-submit-button" className="column eight wide">
-              <button className="ui button">Add Anotter Source &gt;</button>
+              <button className="ui button">Add Another Source &gt;</button>
             </div>
           </div>
 
