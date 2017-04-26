@@ -4,6 +4,7 @@ import { Field, reduxForm } from 'redux-form';
 import { signUserUp } from '../../actions';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import styles from '../login/login.css'
 
 const mapStateToProps = (state, ownProps) => {
   return {

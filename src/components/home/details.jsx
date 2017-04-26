@@ -1,4 +1,6 @@
 import React from 'react';
+import styles from './home.css';
+
 
 const Details = () => (
   <div id="details">

@@ -1,0 +1,70 @@
+/*homepage images*/
+
+#main-image {
+  height: 320px;
+  background: url('../../img/lakehole_cropped.png') no-repeat;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+#support-image {
+  height: 240px;
+  background: url('../../img/check.png') no-repeat;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+/*homepage about*/
+
+.about {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 1.4em;
+}
+
+.about h3 {
+  /*color: #3971AC;*/
+  font-size: 1.6em;
+}
+
+.about-heading {
+  background-color: #414141;
+  height: 80px;
+  padding-top: 12px;
+}
+
+.about-heading h3 {
+  font-size: 3em;
+}
+
+/*homepage details*/
+
+#details h3 {
+  color: #3971AC;
+  font-size: 1.2em;
+}
+
+#details {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: white;
+  color: black;
+}
+
+#details ul {
+  list-style: none;
+  line-height: 2;
+}
+
+#details p {
+  /*color: #3971AC;*/
+  font-weight: 800;
+}
+
+#details .eight {
+  border-right: 1px solid black;
+}

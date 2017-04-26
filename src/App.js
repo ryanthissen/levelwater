@@ -14,7 +14,7 @@ import BasicInfoForm from './components/forms/basic-info/basic-info-form';
 import RevenueCostsForm from './components/forms/revenue-costs/revenue-costs-form';
 import StorageForm from './components/forms/storage/storage-form';
 import PumpingDistForm from './components/forms/pumping-dist/pumping-dist-form';
-
+import Dashboard from './components/dashboard/dashboard';
 
 import TreatmentForm from './components/forms/treatment/treatment-form';
 import SourceForm from './components/forms/source/source-form';
@@ -72,6 +72,8 @@ class App extends Component {
         <Route exact path="/signup/step6" component={FormNavbar} />
         <Route exact path="/signup/step6" component={PumpingDistForm} />
 
+        <Route exact path="/dashboard" component={FormNavbar} />
+        <Route exact path="/dashboard" component={Dashboard} />
 
         <Route path="/" component={Footer} />
       </div>

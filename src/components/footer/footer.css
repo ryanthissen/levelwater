@@ -1,0 +1,13 @@
+/*footer*/
+
+#footer {
+  height: 40px;
+  background-color: #78bec8;
+  text-align: right;
+  padding-right: 40px;
+  color: white;
+}
+
+#footer .column {
+  padding-bottom: 0;
+}
