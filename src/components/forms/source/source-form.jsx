@@ -51,6 +51,7 @@ class SourceForm extends Component {
               <div className="column seven wide">
                 <label>Name Of Source:</label>
                 <label>Source Type:</label>
+                <label>Does This Source Receive Continuous Chlorination:</label>
                 <label>Does This Source Receive Treatment To Meet An MCL:</label>
                 <label>Year Of Construction:</label>
                 <label>Maximum Available Capacity:</label>
@@ -63,6 +64,10 @@ class SourceForm extends Component {
                 <Field name="SourceType" component="select" className="ui dropdown">
                   <option value="Groundwater">Groundwater</option>
                   <option value="SurfaceWater">Surface Water</option>
+                </Field>
+                <Field name="SourceReceivesContinuousChlorination" component="select" className="ui dropdown">
+                  <option value="NoSourceDoesNotReceiveContinuousChlorination">No</option>
+                  <option value="YesSourceDoesReceiveContinuousChlorination">Yes</option>
                 </Field>
                 <Field name="SourceReceivesTreatment" component="select" className="ui dropdown">
                   <option value="NoSourceDoesNotReceiveTreatment">No</option>
