@@ -11,6 +11,10 @@ import {
   Redirect,
   withRouter
 } from 'react-router-dom';
+import styles from '../forms.css';
+import styles2 from './treatment-form.css';
+
+
 
 const mapStateToProps = (state, ownProps) => {
   return {
