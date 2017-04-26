@@ -54,15 +54,15 @@ class StorageForm extends Component {
               </div>
 
               <div className="column nine wide">
-                <Field name="ReservoirName" component="input" type="text" />
+                <Field name="ReservoirName" component="input" type="text" required />
                 <Field name="StorageType" component="select" className="ui dropdown">
                   <option value="Concrete">Concrete</option>
                   <option value="Steel">Steel</option>
                   <option value="Redwood">Redwood</option>
                   <option value="Plastic">Plastic</option>
                 </Field>
-                <Field name="YearOfConstruction" component="input" type="number" />
-                <Field name="StorageCapacity" component="input" type="number" />
+                <Field name="YearOfConstruction" component="input" type="number" required />
+                <Field name="StorageCapacity" component="input" type="number" required />
                 <Field name="StorageCondition" component="select" className="ui dropdown">
                   <option value="Great">Great</option>
                   <option value="Fair">Fair</option>

@@ -60,15 +60,15 @@ class RevenueCostsForm extends Component {
               </div>
 
               <div className="column nine wide">
-                <Field name="ratePerConnection" component="input" type="number" />
-                <Field name="waterSalesRev" component="input" type="number" />
-                <Field name="feesChargesRev" component="input" type="number" />
-                <Field name="subsidiesRev" component="input" type="number" />
-                <Field name="reserveFundTotal" component="input" type="number" />
-                <Field name="reserveFundContribution" component="input" type="number" />
-                <Field name="personnelCosts" component="input" type="number" />
-                <Field name="operationCosts" component="input" type="number" />
-                <Field name="debtFinancing" component="input" type="number" />
+                <Field name="ratePerConnection" component="input" type="number" required />
+                <Field name="waterSalesRev" component="input" type="number" required />
+                <Field name="feesChargesRev" component="input" type="number" required />
+                <Field name="subsidiesRev" component="input" type="number" required />
+                <Field name="reserveFundTotal" component="input" type="number" required />
+                <Field name="reserveFundContribution" component="input" type="number" required />
+                <Field name="personnelCosts" component="input" type="number" required />
+                <Field name="operationCosts" component="input" type="number" required />
+                <Field name="debtFinancing" component="input" type="number" required />
               </div>
             </div>
             <div className="ui grid">

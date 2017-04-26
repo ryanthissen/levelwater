@@ -58,10 +58,10 @@ class BasicInfoForm extends Component{
             </div>
 
             <div className="column nine wide">
-              <Field name="waterSystemName" component="input" type="text" />
-              <Field name="PWSNumber" component="input" type="number" />
-              <Field name="numberOfConnections" component="input" type="number" />
-              <Field name="customerPop" component="input" type="number" />
+              <Field name="waterSystemName" component="input" type="text" required />
+              <Field name="PWSNumber" component="input" type="number" required />
+              <Field name="numberOfConnections" component="input" type="number" required />
+              <Field name="customerPop" component="input" type="number" required />
             </div>
           </div>
             <div id="basic-info-submit-button">
