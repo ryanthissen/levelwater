@@ -27,7 +27,8 @@ class SourceForm extends Component {
 
   render() {
     return (
-      <Route render={({ history }) => (
+
+      <Route render = {({ history }) => (
         <div id="source-form" className="form-step">
           <SignUpStep step="3" />
           <div className="ui grid">
@@ -36,10 +37,11 @@ class SourceForm extends Component {
             </div>
           </div>
 
-          <form id="step3" onSubmit={(event) => {
+          <form id="step3" onSubmit = {(event) => {
             event.preventDefault();
-            // let x = this.props.formData.values;
-            history.push('/signup/step4')
+            let x = this.props;
+            history.push('/signup/step4');
+
           }}>
             <div className="ui grid">
               <div className="column seven wide">
@@ -77,14 +79,18 @@ class SourceForm extends Component {
             </div>
 
             <div className="ui grid">
+
               <SignUpBackButton to="/signup/step2"/>
               <div id="revenue-costs-submit-button" className="column eight wide">
                 <button className="ui button">Add Another Source &gt;</button>
+
               </div>
             </div>
 
             <div className="ui grid">
+
               <div className="column eight wide"></div>
+
               <div id="revenue-costs-submit-button" className="column eight wide">
                 <button className="ui button">Continue To Treatment &gt;</button>
               </div>
@@ -92,6 +98,7 @@ class SourceForm extends Component {
           </form>
         </div>
       )} />
+
     );
   }
 }
@@ -102,4 +109,3 @@ SourceForm = reduxForm({
 
 export default connect(mapStateToProps, mapDispatchToProps)(SourceForm);
 
-// export default SourceForm;

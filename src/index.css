@@ -310,6 +310,10 @@ h3 {
   font-size: 1.8em;
 }
 
+.form-step .sixteen button {
+  text-align: center !important;
+}
+
 
 /*basic info form*/
 

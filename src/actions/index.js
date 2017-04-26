@@ -40,12 +40,22 @@ const basicUserInfoHelper = () => {
 const revenueCostHelper = () => {
   console.log('yo');
   return 'stuff';
-}
+};
 
 const pumpingDistHelper = () => {
   console.log('yo');
   return 'stuff';
-}
+};
+
+const sourceInfoHelper = () => {
+  console.log('yo');
+  return 'stuff';
+};
+
+const treatmentInfoHelper = () => {
+  console.log('yo');
+  return 'stuff';
+};
 
 export const submitBasicUserInfo = (waterSystemName, PWSNum, numberOfConnections, CustomerPop) => {
   return {
@@ -64,7 +74,7 @@ export const submitRevenueCostInfo = (ratePerConnection, waterSalesrev, feesChar
 export const submitSourceInfo = (ratePerConnection, waterSalesrev, feesChargesRev, subsidiesRev, reserveFundTotal, reserveFundContribution, personnelCosts, operationsCosts, debtFinancing) => {
   return {
     type: 'SUBMIT_SOURCE_INFO',
-    payload: (ratePerConnection, waterSalesrev, feesChargesRev, subsidiesRev, reserveFundTotal, reserveFundContribution, personnelCosts, operationsCosts, debtFinancing)
+    payload: sourceInfoHelper(ratePerConnection, waterSalesrev, feesChargesRev, subsidiesRev, reserveFundTotal, reserveFundContribution, personnelCosts, operationsCosts, debtFinancing)
   };
 };
 
@@ -72,5 +82,12 @@ export const submitPumpInfo = (distLength, numberOfValves, numberOfMeters, numbe
   return {
     type: 'SUBMIT_PUMP_INFO',
     payload: pumpingDistHelper(distLength, numberOfValves, numberOfMeters, numberOfPumpingPlants, combinedPumpCapacity, pumpsCondition)
+  };
+};
+
+export const submitTreatmentInfo = (treatmentPlantName, treatmentType, yearOfConstruction, treatmentCapacity, treatmentCritical) => {
+  return {
+    type: 'SUBMIT_TREATMENT_INFO',
+    payload: treatmentInfoHelper(treatmentPlantName, treatmentType, yearOfConstruction, treatmentCapacity, treatmentCritical)
   };
 };

@@ -66,14 +66,14 @@ class StorageForm extends Component {
               </div>
             </div>
             <div className="ui grid">
-              <SignUpBackButton to="/signup/step4"/>
-              <div id="revenue-costs-submit-button" className="column eight wide">
-                <button className="ui button">Add More Storage &gt;</button>
+
+              <div id="revenue-costs-submit-button" className="column sixteen wide">
+                <button className="ui button">+ Add More Storage</button>
               </div>
             </div>
 
             <div className="ui grid">
-              <div className="column eight wide"></div>
+              <SignUpBackButton to="/signup/step4"/>
               <div id="revenue-costs-submit-button" className="column eight wide">
                 <button className="ui button">Continue To Pumping &gt;</button>
               </div>
