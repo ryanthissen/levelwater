@@ -33,10 +33,14 @@
 #dashboard button {
   height: 50px;
   width: 400px;
-  background-color: #e84c4c;
+  background-color: #d87575;
   color: white;
 }
 
 #dash-button selected {
   background-color: crimson;
+}
+
+.test button {
+  background-color: crimson !important;
 }

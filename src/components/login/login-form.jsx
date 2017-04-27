@@ -40,10 +40,10 @@ class LoginForm extends Component{
           <div className="login-field column sixteen wide">
 
             <div>
-              <Field name="email" component="input" type="email" placeholder="Email Address" />
+              <Field name="email" component="input" type="email" placeholder="Email Address" required />
             </div>
             <div>
-              <Field name="password" component="input" type="password" placeholder="Password" />
+              <Field name="password" component="input" type="password" placeholder="Password" required />
             </div>
           </div>
 
