@@ -51,12 +51,12 @@ class PumpingDistForm extends Component {
               </div>
 
               <div className="column nine wide">
-                <Field name="DistLength" component="input" type="number" />
-                <Field name="NumberOfValves" component="input" type="number" />
-                <Field name="NumberOfMeters" component="input" type="number" />
-                <Field name="NumberOfPumpingPlants" component="input" type="number" />
-                <Field name="CombinedPumpCapacity" component="input" type="number" />
-                <Field name="PumpsCondition" component="select" className="ui dropdown">
+                <Field name="DistLength" component="input" type="number" required />
+                <Field name="NumberOfValves" component="input" type="number" required />
+                <Field name="NumberOfMeters" component="input" type="number" required />
+                <Field name="NumberOfPumpingPlants" component="input" type="number" required />
+                <Field name="CombinedPumpCapacity" component="input" type="number" required />
+                <Field name="PumpsCondition" component="select" className="ui dropdown" required>
                   <option value="Great">Great</option>
                   <option value="Fair">Fair</option>
                   <option value="Poor">Poor</option>

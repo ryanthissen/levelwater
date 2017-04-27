@@ -1,0 +1,17 @@
+/*footer*/
+
+#form-footer {
+  height: 40px;
+  background-color: #78bec8;
+  text-align: right;
+  padding-right: 40px;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding-top: 10px;
+}
+
+#form-footer .column {
+  padding-bottom: 0;
+}

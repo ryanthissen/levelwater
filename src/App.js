@@ -18,6 +18,7 @@ import Dashboard from './components/dashboard/dashboard';
 
 import TreatmentForm from './components/forms/treatment/treatment-form';
 import SourceForm from './components/forms/source/source-form';
+import FormFooter from './components/forms/form-footer/form-footer';
 
 
 
@@ -54,28 +55,35 @@ class App extends Component {
         <Route exact path="/signup/step1" component={FormNavbar}  />
         {/* <Route exact path="/signup/step1" component={() => (<SignUpStep step="1" />)}  /> */}
         <Route exact path="/signup/step1" component={BasicInfoForm}  />
+        <Route exact path="/signup/step1" component={FormFooter}  />
 
         <Route exact path="/signup/step2" component={FormNavbar} />
         <Route exact path="/signup/step2" component={RevenueCostsForm} />
+        <Route exact path="/signup/step2" component={FormFooter}  />
 
         <Route exact path="/signup/step3" component={FormNavbar} />
         <Route exact path="/signup/step3" component={SourceForm} />
+        <Route exact path="/signup/step3" component={FormFooter}  />
 
 
 
         <Route exact path="/signup/step4" component={FormNavbar} />
         <Route exact path="/signup/step4" component={TreatmentForm} />
+        <Route exact path="/signup/step4" component={FormFooter}  />
 
         <Route exact path="/signup/step5" component={FormNavbar} />
         <Route exact path="/signup/step5" component={StorageForm} />
+        <Route exact path="/signup/step5" component={FormFooter}  />
 
         <Route exact path="/signup/step6" component={FormNavbar} />
         <Route exact path="/signup/step6" component={PumpingDistForm} />
+        <Route exact path="/signup/step6" component={FormFooter}  />
 
         <Route exact path="/dashboard" component={FormNavbar} />
         <Route exact path="/dashboard" component={Dashboard} />
+        <Route exact path="/dashboard" component={FormFooter} />
 
-        <Route path="/" component={Footer} />
+        <Route exact path="/" component={Footer} />
       </div>
     </Router>
     );

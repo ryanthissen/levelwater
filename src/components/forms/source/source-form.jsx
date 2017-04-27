@@ -60,7 +60,7 @@ class SourceForm extends Component {
               </div>
 
               <div className="column nine wide">
-                <Field name="SourceName" component="input" type="text" />
+                <Field name="SourceName" component="input" type="text" required />
                 <Field name="SourceType" component="select" className="ui dropdown">
                   <option value="Groundwater">Groundwater</option>
                   <option value="SurfaceWater">Surface Water</option>
@@ -73,8 +73,8 @@ class SourceForm extends Component {
                   <option value="NoSourceDoesNotReceiveTreatment">No</option>
                   <option value="YesSourceDoesReceiveTreatment">Yes</option>
                 </Field>
-                <Field name="YearOfConstruction" component="input" type="number" />
-                <Field name="SourceCapacity" component="input" type="number" />
+                <Field name="YearOfConstruction" component="input" type="number" required />
+                <Field name="SourceCapacity" component="input" type="number" required />
                 <Field name="SourceCondition" component="select" className="ui dropdown">
                   <option value="Great">Great</option>
                   <option value="Fair">Fair</option>

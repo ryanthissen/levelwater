@@ -53,7 +53,7 @@ class TreatmentForm extends Component {
               </div>
 
               <div className="column nine wide">
-                <Field name="TreatmentPlantName" component="input" type="text" />
+                <Field name="TreatmentPlantName" component="input" type="text" required />
                 <Field name="TreatmentType" component="select" className="ui dropdown">
                   <option value="Conventional Surface Water">Conventional Surface Water</option>
                   <option value="Alternative Surface Water">Alternative Surface Water</option>
@@ -62,8 +62,8 @@ class TreatmentForm extends Component {
                   <option value="Granular Activated Carbon">Granular Activated Carbon</option>
                   <option value="Corrosion Control">Corrosion Control</option>
                 </Field>
-                <Field name="YearOfConstruction" component="input" type="number" />
-                <Field name="TreatmentCapacity" component="input" type="number" />
+                <Field name="YearOfConstruction" component="input" type="number" required />
+                <Field name="TreatmentCapacity" component="input" type="number" required />
                 <Field name="TreatmentCondition" component="select" className="ui dropdown">
                   <option value="Great">Great</option>
                   <option value="Fair">Fair</option>

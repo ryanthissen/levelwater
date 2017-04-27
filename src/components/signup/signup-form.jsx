@@ -43,19 +43,19 @@ class SignupForm extends Component{
           <div className="login-field signup-field column sixteen wide">
 
             <div>
-              <Field name="email" component="input" type="email" placeholder="Email" />
+              <Field name="email" component="input" type="email" placeholder="Email" required />
             </div>
             <div>
-              <Field name="firstName" component="input" type="text" placeholder="First Name" />
+              <Field name="firstName" component="input" type="text" placeholder="First Name" required />
             </div>
             <div>
-              <Field name="lastName" component="input" type="text" placeholder="Last Name" />
+              <Field name="lastName" component="input" type="text" placeholder="Last Name" required />
             </div>
             <div>
-              <Field name="password" component="input" type="password" placeholder="Password" />
+              <Field name="password" component="input" type="password" placeholder="Password" required />
             </div>
             <div>
-              <Field name="passwordConfirm" component="input" type="password" placeholder="Confirm Password" />
+              <Field name="passwordConfirm" component="input" type="password" placeholder="Confirm Password" required />
             </div>
           </div>
 
