@@ -11,6 +11,7 @@ import Cookies from 'js-cookie';
 
 //api URLs
 const loginURL = 'http://levelwater-server.herokuapp.com/login';
+const signupURL = 'http://levelwater-server.herokuapp.com/users';
 
 
 //Authentication
@@ -23,19 +24,42 @@ function loginUser(email, password) {
       password: password
     })
     .then((response) => {
+      if (response.data.ErrorMessage) {
+        alert('bad username or password');
+      }
+      else {
+        console.log('response', response);
+        Cookies.set('token', response.data.token);
+        let x = Cookies.get('token');
+        console.log('x',x);
+      }
+
+    })
+    // .then(() => {
+    //   return axios
+    //     .get('http://levelwater-server.herokuapp.com/users/1')
+    //     .then((response) => {
+    //       console.log(response);
+    //     });
+    // })
+    .catch((error) => console.log(error))
+}
+
+function signupUser(email, firstName, lastName, password) {
+  return axios
+    .post(signupURL, {
+      email: email,
+      password: password,
+      first_name: firstName,
+      last_name: lastName
+    })
+    .then((response) => {
       console.log('response', response);
       Cookies.set('token', response.data.token);
       let x = Cookies.get('token');
-      console.log('x',x);
+      console.log('x', x);
     })
-    .then(() => {
-      return axios
-        .get('http://levelwater-server.herokuapp.com/users/1')
-        .then((response) => {
-          console.log(response);
-        })
-    })
-    .catch((error) => console.log(error))
+    .catch((error) => console.log(error));
 }
 
 export const logUserIn = (email, password) => {
@@ -48,12 +72,7 @@ export const logUserIn = (email, password) => {
 export const signUserUp = (email, firstName, lastName, password) => {
   return {
     type: 'SIGN_USER_UP',
-    payload: {
-      email: email,
-      firstName: firstName,
-      lastName: lastName,
-      password: password
-    }
+    payload: signupUser(email, firstName, lastName, password)
   };
 };
 

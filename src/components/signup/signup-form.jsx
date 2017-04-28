@@ -8,7 +8,7 @@ import styles from '../login/login.css'
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    formData: state.signupForm
+    signupFormData: state.form
   };
 };
 
@@ -22,7 +22,8 @@ class SignupForm extends Component{
     return (
       <form id="signup-form" onSubmit={(event) => {
         event.preventDefault();
-        let x = this.props;
+        let x = this.props.signupFormData.signup.values;
+        console.log(x);
         this.props.signUserUp(x.email, x.firstName, x.lastName, x.password);
       }}>
       <Link to="/"><div id="close-login"><img
