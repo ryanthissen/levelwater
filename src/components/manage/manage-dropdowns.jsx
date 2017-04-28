@@ -4,15 +4,15 @@ import styles from './manage.css';
 
 const ManageDropdowns = () => (
   <div id="manage-dropdowns">
-    <ManageDropdown text="Basic Info" />
-    <ManageDropdown text="Revenue And Costs" />
-    <ManageDropdown text="Source #1" />
-    <ManageDropdown text="Add New Source" />
-    <ManageDropdown text="Treatment Plant #1" />
-    <ManageDropdown text="Add New Treatment" />
-    <ManageDropdown text="Storage #1" />
-    <ManageDropdown text="Add New Storage" />
-    <ManageDropdown text="Pumping And Distribution" />
+    <ManageDropdown menu="basicInfo" text="Basic Info" />
+    <ManageDropdown menu="revenueAndCosts" text="Revenue And Costs" />
+    <ManageDropdown menu="source1" text="Source #1" />
+    <ManageDropdown menu="addNewSource" text="Add New Source" />
+    <ManageDropdown menu="treatmentPlant1" text="Treatment Plant #1" />
+    <ManageDropdown menu="addNewTreatment" text="Add New Treatment" />
+    <ManageDropdown menu="storage1" text="Storage #1" />
+    <ManageDropdown menu="addNewStorage" text="Add New Storage" />
+    <ManageDropdown menu="pumpingAndDistribution" text="Pumping And Distribution" />
   </div>
 );
 
