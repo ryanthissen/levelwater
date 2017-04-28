@@ -19,11 +19,13 @@ import Dashboard from './components/dashboard/dashboard';
 import TreatmentForm from './components/forms/treatment/treatment-form';
 import SourceForm from './components/forms/source/source-form';
 import FormFooter from './components/forms/form-footer/form-footer';
+import Manage from './components/manage/manage';
 
 
 
 
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route} from 'react-router-dom';
+
 
 class App extends Component {
   render() {
@@ -82,6 +84,12 @@ class App extends Component {
         <Route exact path="/dashboard" component={FormNavbar} />
         <Route exact path="/dashboard" component={Dashboard} />
         <Route exact path="/dashboard" component={FormFooter} />
+
+        <Route exact path="/manage" component={FormNavbar} />
+        <Route exact path="/manage" component={Manage} />
+        <Route exact path="/manage" component={FormFooter} />
+
+
 
         <Route exact path="/" component={Footer} />
       </div>

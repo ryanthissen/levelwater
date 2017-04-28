@@ -1,0 +1,53 @@
+#manage-header {
+  margin-top: 20px;
+}
+
+#manage-header h2 {
+  font-size: 2.3em;
+}
+
+.manage-dropdown {
+  padding: 20px 0;
+  border-bottom: 2px solid black;
+}
+
+.manage-dropdown:first-of-type {
+  border-top: 2px solid black;
+}
+
+.manage-dropdown img {
+  width: 50px;
+}
+
+.manage-dropdown .column {
+  padding: 0 !important;
+  height: 40px;
+}
+
+.manage-dropdown .thirteen {
+  font-size: 2em;
+  text-align: left;
+  padding-top: 14px !important;
+}
+
+#manage-dropdowns {
+  margin-top: 50px;
+}
+
+#manage-button {
+  text-align: right;
+  padding: 40px 40px 40px 0;
+}
+
+#manage-button button {
+    /*margin: 40px 40px 40px 0;*/
+  color: white;
+  background-color: crimson;
+  width: 400px;
+  height: 70px;
+  font-size: 2.4em;
+  padding: 0;
+  text-align: right;
+  padding-right: 14px;
+  border-radius: 10px;
+}

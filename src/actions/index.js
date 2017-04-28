@@ -4,29 +4,83 @@ import {
   Link,
   Redirect,
   withRouter
-} from 'react-router-dom'
+} from 'react-router-dom';
+import axios from 'axios';
+import Cookies from 'js-cookie';
+
+
+
+//api URLs
+const loginURL = 'http://levelwater-server.herokuapp.com/login';
+const signupURL = 'http://levelwater-server.herokuapp.com/users';
 
 
 //Authentication
-export const logUserIn = (email, password) => {
-  return {
-    type: 'LOG_USER_IN',
-    payload: {
+
+//helper function to make login api calls
+function loginUser(email, password, callback) {
+  return axios
+    .post(loginURL, {
       email: email,
       password: password
-    }
+    })
+    .then((response) => {
+      if (response.data.ErrorMessage) {
+        alert('bad username or password');
+      }
+      else {
+        console.log('response', response);
+        Cookies.set('token', response.data.token);
+        let x = Cookies.get('token');
+        console.log('x',x);
+        callback();
+        // browserHistory.push('/');
+      }
+    })
+    // .then(() => {
+    //   return axios
+    //     .get('http://levelwater-server.herokuapp.com/users/1')
+    //     .then((response) => {
+    //       console.log(response);
+    //     });
+    // })
+    .catch((error) => console.log(error))
+}
+
+function signupUser(email, firstName, lastName, password, callback) {
+  return axios
+    .post(signupURL, {
+      email: email,
+      password: password,
+      first_name: firstName,
+      last_name: lastName
+    })
+    .then((response) => {
+      if(response.data.errorMessage) {
+        alert('Something Went Wrong, Please Try Again')
+      }
+      else {
+        console.log('response', response);
+        Cookies.set('token', response.data.token);
+        let x = Cookies.get('token');
+        console.log('x', x);
+        callback();
+      }
+    })
+    .catch((error) => console.log(error));
+}
+
+export const logUserIn = (email, password, callback) => {
+  return {
+    type: 'LOG_USER_IN',
+    payload: loginUser(email, password, callback)
   };
 };
 
-export const signUserUp = (email, firstName, lastName, password) => {
+export const signUserUp = (email, firstName, lastName, password, callback) => {
   return {
     type: 'SIGN_USER_UP',
-    payload: {
-      email: email,
-      firstName: firstName,
-      lastName: lastName,
-      password: password
-    }
+    payload: signupUser(email, firstName, lastName, password, callback)
   };
 };
 
