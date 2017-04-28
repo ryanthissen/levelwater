@@ -4,17 +4,44 @@ import {
   Link,
   Redirect,
   withRouter
-} from 'react-router-dom'
+} from 'react-router-dom';
+import axios from 'axios';
+import Cookies from 'js-cookie';
+
+
+//api URLs
+const loginURL = 'http://levelwater-server.herokuapp.com/login';
 
 
 //Authentication
+
+//helper function to make login api calls
+function loginUser(email, password) {
+  return axios
+    .post(loginURL, {
+      email: email,
+      password: password
+    })
+    .then((response) => {
+      console.log('response', response);
+      Cookies.set('token', response.data.token);
+      let x = Cookies.get('token');
+      console.log('x',x);
+    })
+    .then(() => {
+      return axios
+        .get('http://levelwater-server.herokuapp.com/users/1')
+        .then((response) => {
+          console.log(response);
+        })
+    })
+    .catch((error) => console.log(error))
+}
+
 export const logUserIn = (email, password) => {
   return {
     type: 'LOG_USER_IN',
-    payload: {
-      email: email,
-      password: password
-    }
+    payload: loginUser(email, password)
   };
 };
 
