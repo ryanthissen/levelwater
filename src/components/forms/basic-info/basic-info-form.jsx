@@ -8,8 +8,8 @@ import {
   BrowserRouter as Router,
   Route,
   Link,
-  Redirect,
-  withRouter
+
+
 } from 'react-router-dom'
 import styles from '../forms.css';
 import styles2 from './basic-info-form.css';

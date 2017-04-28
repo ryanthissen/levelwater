@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Route } from 'react-router-dom';
 import { Field, reduxForm } from 'redux-form';
 import { signUserUp } from '../../actions';
 import { bindActionCreators } from 'redux';
@@ -20,11 +20,14 @@ class SignupForm extends Component{
   render(props) {
     const { handleSubmit, pristine, reset, submitting } = this.props;
     return (
+      <Route render={({ history }) => (
       <form id="signup-form" onSubmit={(event) => {
         event.preventDefault();
         let x = this.props.signupFormData.signup.values;
         console.log(x);
-        this.props.signUserUp(x.email, x.firstName, x.lastName, x.password);
+        this.props.signUserUp(x.email, x.firstName, x.lastName, x.password, () => {
+          history.push('/signup/step1');
+        });
       }}>
       <Link to="/"><div id="close-login"><img
     src={require('../../img/white-icon.png')}
@@ -66,7 +69,8 @@ class SignupForm extends Component{
         </div>
         <div id="login-border"></div>
       </form>
-    )
+      )} />
+    );
   }
 }
 
