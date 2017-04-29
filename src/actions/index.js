@@ -26,10 +26,10 @@ export const logUserIn = (email, password, callback) => {
   };
 };
 
-export const signUserUp = (email, firstName, lastName, password, callback) => {
+export const signUserUp = (email, firstName, lastName, password, passwordConfirm, callback) => {
   return {
     type: 'SIGN_USER_UP',
-    payload: signupUser(email, firstName, lastName, password, callback)
+    payload: signupUser(email, firstName, lastName, password, passwordConfirm, callback)
   };
 };
 
