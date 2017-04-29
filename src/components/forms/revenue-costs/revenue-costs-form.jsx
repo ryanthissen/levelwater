@@ -4,14 +4,11 @@ import { Field, reduxForm } from 'redux-form';
 import { submitRevenueCostInfo } from '../../../actions'
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-// import RevenueCostsSubmitButton from './revenue-costs-submit-button';
 import SignUpBackButton from '../sign-up-back-button';
 import {
   BrowserRouter as Router,
   Route,
-  Link,
-  Redirect,
-  withRouter
+  Link
 } from 'react-router-dom'
 import styles from '../forms.css';
 
@@ -19,7 +16,7 @@ import styles from '../forms.css';
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    formData: state.revenueCostsForm
+    costRevenueFormData: state.form
   };
 };
 
@@ -30,6 +27,7 @@ const mapDispatchToProps = (dispatch) => {
 class RevenueCostsForm extends Component {
 
   render() {
+    const { handleSubmit, pristine, reset, submitting } = this.props;
     return (
       <Route render={({ history }) => (
         <div id="revenue-costs-form" className="form-step">
@@ -42,9 +40,22 @@ class RevenueCostsForm extends Component {
 
           <form id="step2" onSubmit={(event) => {
             event.preventDefault();
-            let x = this.props;
-            this.props.submitRevenueCostInfo();
-            history.push('/signup/step3')
+            let x = this.props.costRevenueFormData.revenueCosts.values;
+            console.log(x);
+            this.props.submitRevenueCostInfo(
+              x.water_systems_id,
+              x.current_average_water_rate,
+              x.total_financial_reserves,
+              x.annual_revenue_water_sales,
+              x.annual_revenue_fees_charges,
+              x.annual_revenue_subsidies,
+              x.annual_savings_to_financial_reserve,
+              x.annual_personnel_costs,
+              x.annual_operational_costs,
+              x.annual_debt_costs,
+              () => {
+                history.push('/signup/step3');
+              });
           }}>
             <div className="ui grid">
               <div className="column seven wide">
@@ -60,15 +71,15 @@ class RevenueCostsForm extends Component {
               </div>
 
               <div className="column nine wide">
-                <Field name="ratePerConnection" component="input" type="number" required />
-                <Field name="waterSalesRev" component="input" type="number" required />
-                <Field name="feesChargesRev" component="input" type="number" required />
-                <Field name="subsidiesRev" component="input" type="number" required />
-                <Field name="reserveFundTotal" component="input" type="number" required />
-                <Field name="reserveFundContribution" component="input" type="number" required />
-                <Field name="personnelCosts" component="input" type="number" required />
-                <Field name="operationCosts" component="input" type="number" required />
-                <Field name="debtFinancing" component="input" type="number" required />
+                <Field name="current_average_water_rate" component="input" type="number" required />
+                <Field name="annual_revenue_water_sales" component="input" type="number" required />
+                <Field name="annual_revenue_fees_charges" component="input" type="number" required />
+                <Field name="annual_revenue_subsidies" component="input" type="number" required />
+                <Field name="total_financial_reserves" component="input" type="number" required />
+                <Field name="annual_savings_to_financial_reserve" component="input" type="number" required />
+                <Field name="annual_personnel_costs" component="input" type="number" required />
+                <Field name="annual_operational_costs" component="input" type="number" required />
+                <Field name="annual_debt_costs" component="input" type="number" required />
               </div>
             </div>
             <div className="ui grid">
