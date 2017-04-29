@@ -14,6 +14,7 @@ import basicUserInfoHelper from './helpers/basic-user-info-helper';
 import pumpingDistHelper from './helpers/pumping-dist-helper';
 import sourceInfoHelper from './helpers/source-info-helper';
 import treatmentInfoHelper from './helpers/treatment-info-helper';
+import storageInfoHelper from './helpers/storage-info-helper';
 
 
 
@@ -47,10 +48,10 @@ export const submitRevenueCostInfo = (water_systems_id, current_average_water_ra
   };
 };
 
-export const submitSourceInfo = (ratePerConnection, waterSalesrev, feesChargesRev, subsidiesRev, reserveFundTotal, reserveFundContribution, personnelCosts, operationsCosts, debtFinancing) => {
+export const submitSourceInfo = (water_systems_id, source_name, source_type, treatment, critical_to_operations, year_constructed, capacity, condition, continuous_chlorination, callback) => {
   return {
     type: 'SUBMIT_SOURCE_INFO',
-    payload: sourceInfoHelper(ratePerConnection, waterSalesrev, feesChargesRev, subsidiesRev, reserveFundTotal, reserveFundContribution, personnelCosts, operationsCosts, debtFinancing)
+    payload: sourceInfoHelper(water_systems_id, source_name, source_type, treatment, critical_to_operations, year_constructed, capacity, condition, continuous_chlorination, callback)
   };
 };
 
@@ -65,5 +66,12 @@ export const submitTreatmentInfo = (treatmentPlantName, treatmentType, yearOfCon
   return {
     type: 'SUBMIT_TREATMENT_INFO',
     payload: treatmentInfoHelper(treatmentPlantName, treatmentType, yearOfConstruction, treatmentCapacity, treatmentCritical)
+  };
+};
+
+export const submitStorageInfo = (water_systems_id, reservoir_type, reservoir_name, year_constructed, capacity, condition, callback) => {
+  return {
+    type: 'SUBMIT_STORAGE_INFO',
+    payload: storageInfoHelper(water_systems_id, reservoir_type, reservoir_name, year_constructed, capacity, condition, callback)
   };
 };

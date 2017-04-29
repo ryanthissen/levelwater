@@ -7,9 +7,8 @@ import { connect } from 'react-redux';
 import SignUpBackButton from '../sign-up-back-button';
 import {
   BrowserRouter as Router,
-  Route,
-  Link
-} from 'react-router-dom'
+  Route
+} from 'react-router-dom';
 import styles from '../forms.css';
 
 

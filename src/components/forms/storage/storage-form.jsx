@@ -3,13 +3,11 @@ import SignUpStep from '../sign-up-step';
 import SignUpBackButton from '../sign-up-back-button';
 import { Field, reduxForm } from 'redux-form';
 import { connect } from 'react-redux';
-import { submitStorage } from '../../../actions'
+import { submitStorageInfo } from '../../../actions'
+import { bindActionCreators } from 'redux';
 import {
   BrowserRouter as Router,
   Route,
-  Link,
-  Redirect,
-  withRouter
 } from 'react-router-dom';
 import styles from '../forms.css';
 import styles2 from './storage-form.css';
@@ -19,16 +17,17 @@ import styles2 from './storage-form.css';
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    formData: state.storageForm
+    storageFormData: state.form
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
-
+  return bindActionCreators ({ submitStorageInfo }, dispatch)
 };
 
 class StorageForm extends Component {
   render() {
+    const { handleSubmit, pristine, reset, submitting } = this.props;
     return (
       <Route render = {({ history }) => (
         <div className="storage-form" className="form-step">
@@ -41,8 +40,19 @@ class StorageForm extends Component {
 
           <form id="step5" onSubmit = {(event) => {
             event.preventDefault();
-            let x = this.props;
-            history.push('/signup/step6');
+            let x = this.props.storageFormData.storage.values;
+            console.log(x);
+            this.props.submitStorageInfo(
+              //replace with correct wsID
+              1,
+              x.reservoir_type,
+              x.reservoir_name,
+              x.year_constructed,
+              x.capacity,
+              x.condition,
+              () => {
+                history.push('./signup/step6');
+              });
           }}>
             <div className="ui grid">
               <div className="column seven wide">
@@ -54,16 +64,16 @@ class StorageForm extends Component {
               </div>
 
               <div className="column nine wide">
-                <Field name="ReservoirName" component="input" type="text" required />
-                <Field name="StorageType" component="select" className="ui dropdown">
+                <Field name="reservoir_name" component="input" type="text" required />
+                <Field name="reservoir_type" component="select" className="ui dropdown">
                   <option value="Concrete">Concrete</option>
                   <option value="Steel">Steel</option>
                   <option value="Redwood">Redwood</option>
                   <option value="Plastic">Plastic</option>
                 </Field>
-                <Field name="YearOfConstruction" component="input" type="number" required />
-                <Field name="StorageCapacity" component="input" type="number" required />
-                <Field name="StorageCondition" component="select" className="ui dropdown">
+                <Field name="year_constructed" component="input" type="number" required />
+                <Field name="capacity" component="input" type="number" required />
+                <Field name="condition" component="select" className="ui dropdown">
                   <option value="Great">Great</option>
                   <option value="Fair">Fair</option>
                   <option value="Poor">Poor</option>
