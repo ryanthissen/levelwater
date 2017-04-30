@@ -25,7 +25,7 @@ class SignupForm extends Component{
         event.preventDefault();
         let x = this.props.signupFormData.signup.values;
         console.log(x);
-        this.props.signUserUp(x.email, x.firstName, x.lastName, x.password, () => {
+        this.props.signUserUp(x.email, x.firstName, x.lastName, x.password, x.passwordConfirm, () => {
           history.push('/signup/step1');
         });
       }}>

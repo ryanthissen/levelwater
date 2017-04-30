@@ -5,71 +5,20 @@ import {
   Redirect,
   withRouter
 } from 'react-router-dom';
-import axios from 'axios';
-import Cookies from 'js-cookie';
+
+//import helper functions
+import revenueCostHelper from './helpers/revenue-cost-helper';
+import loginUser from './helpers/login-user';
+import signupUser from './helpers/signup-user';
+import basicUserInfoHelper from './helpers/basic-user-info-helper';
+import pumpingDistHelper from './helpers/pumping-dist-helper';
+import sourceInfoHelper from './helpers/source-info-helper';
+import treatmentInfoHelper from './helpers/treatment-info-helper';
+import storageInfoHelper from './helpers/storage-info-helper';
 
 
 
-//api URLs
-const loginURL = 'http://levelwater-server.herokuapp.com/login';
-const signupURL = 'http://levelwater-server.herokuapp.com/users';
-
-
-//Authentication
-
-//helper function to make login api calls
-function loginUser(email, password, callback) {
-  return axios
-    .post(loginURL, {
-      email: email,
-      password: password
-    })
-    .then((response) => {
-      if (response.data.ErrorMessage) {
-        alert('bad username or password');
-      }
-      else {
-        console.log('response', response);
-        Cookies.set('token', response.data.token);
-        let x = Cookies.get('token');
-        console.log('x',x);
-        callback();
-        // browserHistory.push('/');
-      }
-    })
-    // .then(() => {
-    //   return axios
-    //     .get('http://levelwater-server.herokuapp.com/users/1')
-    //     .then((response) => {
-    //       console.log(response);
-    //     });
-    // })
-    .catch((error) => console.log(error))
-}
-
-function signupUser(email, firstName, lastName, password, callback) {
-  return axios
-    .post(signupURL, {
-      email: email,
-      password: password,
-      first_name: firstName,
-      last_name: lastName
-    })
-    .then((response) => {
-      if(response.data.errorMessage) {
-        alert('Something Went Wrong, Please Try Again')
-      }
-      else {
-        console.log('response', response);
-        Cookies.set('token', response.data.token);
-        let x = Cookies.get('token');
-        console.log('x', x);
-        callback();
-      }
-    })
-    .catch((error) => console.log(error));
-}
-
+//Auth
 export const logUserIn = (email, password, callback) => {
   return {
     type: 'LOG_USER_IN',
@@ -77,58 +26,32 @@ export const logUserIn = (email, password, callback) => {
   };
 };
 
-export const signUserUp = (email, firstName, lastName, password, callback) => {
+export const signUserUp = (email, firstName, lastName, password, passwordConfirm, callback) => {
   return {
     type: 'SIGN_USER_UP',
-    payload: signupUser(email, firstName, lastName, password, callback)
+    payload: signupUser(email, firstName, lastName, password, passwordConfirm, callback)
   };
 };
 
-//Forms
-
-const basicUserInfoHelper = () => {
-  console.log('yo!');
-  return 'stuff';
-};
-
-const revenueCostHelper = () => {
-  console.log('yo');
-  return 'stuff';
-};
-
-const pumpingDistHelper = () => {
-  console.log('yo');
-  return 'stuff';
-};
-
-const sourceInfoHelper = () => {
-  console.log('yo');
-  return 'stuff';
-};
-
-const treatmentInfoHelper = () => {
-  console.log('yo');
-  return 'stuff';
-};
-
-export const submitBasicUserInfo = (waterSystemName, PWSNum, numberOfConnections, CustomerPop) => {
+//forms
+export const submitBasicUserInfo = (pws_name, pws_id, population, connections, callback) => {
   return {
     type: 'SUBMIT_BASIC_USER_INFO',
-    payload: basicUserInfoHelper(waterSystemName, PWSNum, numberOfConnections, CustomerPop)
+    payload: basicUserInfoHelper(pws_name, pws_id, population, connections, callback)
   };
 };
 
-export const submitRevenueCostInfo = (ratePerConnection, waterSalesrev, feesChargesRev, subsidiesRev, reserveFundTotal, reserveFundContribution, personnelCosts, operationsCosts, debtFinancing) => {
+export const submitRevenueCostInfo = (water_systems_id, current_average_water_rate, total_financial_reserves, annual_revenue_water_sales, annual_revenue_fees_charges, annual_revenue_subsidies, annual_savings_to_financial_reserve, annual_personnel_costs, annual_operational_costs, annual_debt_costs, callback) => {
   return {
     type: 'SUBMIT_REVENUE_COST_INFO',
-    payload: revenueCostHelper(ratePerConnection, waterSalesrev, feesChargesRev, subsidiesRev, reserveFundTotal, reserveFundContribution, personnelCosts, operationsCosts, debtFinancing)
+    payload: revenueCostHelper(water_systems_id, current_average_water_rate, total_financial_reserves, annual_revenue_water_sales, annual_revenue_fees_charges, annual_revenue_subsidies, annual_savings_to_financial_reserve, annual_personnel_costs, annual_operational_costs, annual_debt_costs, callback)
   };
 };
 
-export const submitSourceInfo = (ratePerConnection, waterSalesrev, feesChargesRev, subsidiesRev, reserveFundTotal, reserveFundContribution, personnelCosts, operationsCosts, debtFinancing) => {
+export const submitSourceInfo = (water_systems_id, source_name, source_type, treatment, critical_to_operations, year_constructed, capacity, condition, continuous_chlorination, callback) => {
   return {
     type: 'SUBMIT_SOURCE_INFO',
-    payload: sourceInfoHelper(ratePerConnection, waterSalesrev, feesChargesRev, subsidiesRev, reserveFundTotal, reserveFundContribution, personnelCosts, operationsCosts, debtFinancing)
+    payload: sourceInfoHelper(water_systems_id, source_name, source_type, treatment, critical_to_operations, year_constructed, capacity, condition, continuous_chlorination, callback)
   };
 };
 
@@ -143,5 +66,12 @@ export const submitTreatmentInfo = (treatmentPlantName, treatmentType, yearOfCon
   return {
     type: 'SUBMIT_TREATMENT_INFO',
     payload: treatmentInfoHelper(treatmentPlantName, treatmentType, yearOfConstruction, treatmentCapacity, treatmentCritical)
+  };
+};
+
+export const submitStorageInfo = (water_systems_id, reservoir_type, reservoir_name, year_constructed, capacity, condition, callback) => {
+  return {
+    type: 'SUBMIT_STORAGE_INFO',
+    payload: storageInfoHelper(water_systems_id, reservoir_type, reservoir_name, year_constructed, capacity, condition, callback)
   };
 };
