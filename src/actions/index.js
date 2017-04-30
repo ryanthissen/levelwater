@@ -62,10 +62,10 @@ export const submitPumpInfo = (distLength, numberOfValves, numberOfMeters, numbe
   };
 };
 
-export const submitTreatmentInfo = (treatmentPlantName, treatmentType, yearOfConstruction, treatmentCapacity, treatmentCritical) => {
+export const submitTreatmentInfo = (water_systems_id, treatment_name, treatment_type, critical_to_operations, year_constructed, capacity, condition, callback) => {
   return {
     type: 'SUBMIT_TREATMENT_INFO',
-    payload: treatmentInfoHelper(treatmentPlantName, treatmentType, yearOfConstruction, treatmentCapacity, treatmentCritical)
+    payload: treatmentInfoHelper(water_systems_id, treatment_name, treatment_type, critical_to_operations, year_constructed, capacity, condition, callback)
   };
 };
 
