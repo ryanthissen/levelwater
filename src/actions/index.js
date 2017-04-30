@@ -34,10 +34,10 @@ export const signUserUp = (email, firstName, lastName, password, passwordConfirm
 };
 
 //forms
-export const submitBasicUserInfo = (waterSystemName, PWSNum, numberOfConnections, CustomerPop) => {
+export const submitBasicUserInfo = (pws_name, pws_id, population, connections, callback) => {
   return {
     type: 'SUBMIT_BASIC_USER_INFO',
-    payload: basicUserInfoHelper(waterSystemName, PWSNum, numberOfConnections, CustomerPop)
+    payload: basicUserInfoHelper(pws_name, pws_id, population, connections, callback)
   };
 };
 
