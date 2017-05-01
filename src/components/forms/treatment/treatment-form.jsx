@@ -45,7 +45,6 @@ class TreatmentForm extends Component {
             let x = this.props.treatmentFormData.treatment.values;
             console.log(x);
             this.props.submitTreatmentInfo(
-              1,
               x.treatment_name,
               x.treatment_type,
               x.critical_to_operations,
@@ -69,7 +68,7 @@ class TreatmentForm extends Component {
               <div className="column nine wide">
                 <Field name="treatment_name" component="input" type="text" required />
                 <Field name="treatment_type" component="select" className="ui dropdown">
-
+                  <option value="select">select:</option>
                   <option value="conventional-sw">Conventional Surface Water</option>
                   <option value="ion-exchange">Ion Exchange</option>
                   <option value="corrosion-control">Corrosion Control</option>
@@ -80,13 +79,15 @@ class TreatmentForm extends Component {
 
                 <Field name="capacity" component="input" type="number" required />
                 <Field name="condition" component="select" className="ui dropdown">
-                  <option value="Great">Great</option>
-                  <option value="Fair">Fair</option>
-                  <option value="Poor">Poor</option>
+                  <option value="select">select:</option>
+                  <option value="great">Great</option>
+                  <option value="fair">Fair</option>
+                  <option value="poor">Poor</option>
                 </Field>
                 <Field name="critical_to_operations" component="select" className="ui dropdown">
-                  <option value="Yes">Yes</option>
-                  <option value="No">No</option>
+                  <option value="select">select:</option>
+                  <option value="true">Yes</option>
+                  <option value="false">No</option>
                 </Field>
               </div>
             </div>

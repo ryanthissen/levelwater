@@ -48,10 +48,10 @@ export const submitRevenueCostInfo = ( current_average_water_rate, total_financi
   };
 };
 
-export const submitSourceInfo = (water_systems_id, source_name, source_type, treatment, critical_to_operations, year_constructed, capacity, condition, continuous_chlorination, callback) => {
+export const submitSourceInfo = (source_name, source_type, treatment, critical_to_operations, year_constructed, capacity, condition, continuous_chlorination, callback) => {
   return {
     type: 'SUBMIT_SOURCE_INFO',
-    payload: sourceInfoHelper(water_systems_id, source_name, source_type, treatment, critical_to_operations, year_constructed, capacity, condition, continuous_chlorination, callback)
+    payload: sourceInfoHelper(source_name, source_type, treatment, critical_to_operations, year_constructed, capacity, condition, continuous_chlorination, callback)
   };
 };
 
@@ -62,10 +62,10 @@ export const submitPumpInfo = (distLength, numberOfValves, numberOfMeters, numbe
   };
 };
 
-export const submitTreatmentInfo = (water_systems_id, treatment_name, treatment_type, critical_to_operations, year_constructed, capacity, condition, callback) => {
+export const submitTreatmentInfo = (treatment_name, treatment_type, critical_to_operations, year_constructed, capacity, condition, callback) => {
   return {
     type: 'SUBMIT_TREATMENT_INFO',
-    payload: treatmentInfoHelper(water_systems_id, treatment_name, treatment_type, critical_to_operations, year_constructed, capacity, condition, callback)
+    payload: treatmentInfoHelper(treatment_name, treatment_type, critical_to_operations, year_constructed, capacity, condition, callback)
   };
 };
 

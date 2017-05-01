@@ -43,8 +43,6 @@ class SourceForm extends Component {
             let x = this.props.sourceFormData.source.values;
             console.log(x);
             this.props.submitSourceInfo(
-              //1 needs to be replaced with user's water system id
-              1,
               x.source_name,
               x.source_type,
               x.treatment,
@@ -67,39 +65,38 @@ class SourceForm extends Component {
                 <label>Maximum Available Capacity:</label>
                 <label>What Is The Source's Condition:</label>
                 <label>Is This Source Critical To Being Able To Provide Safe Water:</label>
-                <label>Does This Source Recieve Continuous Chlorination?</label>
               </div>
 
               <div className="column nine wide">
                 <Field name="source_name" component="input" type="text" required />
                 <Field name="source_type" component="select" className="ui dropdown">
-                  <option value="Groundwater">Groundwater</option>
-                  <option value="SurfaceWater">Surface Water</option>
+                  <option value="default">select</option>
+                  <option value="gw">Groundwater</option>
+                  <option value="sw">Surface Water</option>
                 </Field>
 
-                <Field name="SourceReceivesContinuousChlorination" component="select" className="ui dropdown">
-                  <option value="NoSourceDoesNotReceiveContinuousChlorination">No</option>
-                  <option value="YesSourceDoesReceiveContinuousChlorination">Yes</option>
+                <Field name="continuous_chlorination" component="select" className="ui dropdown">
+                  <option value="default">select</option>
+                  <option value="false">No</option>
+                  <option value="true">Yes</option>
                 </Field>
                 <Field name="treatment" component="select" className="ui dropdown">
-
-                  <option value="NoSourceDoesNotReceiveTreatment">No</option>
-                  <option value="YesSourceDoesReceiveTreatment">Yes</option>
+                  <option value="default">select</option>
+                  <option value="false">No</option>
+                  <option value="true">Yes</option>
                 </Field>
                 <Field name="year_constructed" component="input" type="number" required />
                 <Field name="capacity" component="input" type="number" required />
                 <Field name="condition" component="select" className="ui dropdown">
-                  <option value="Great">Great</option>
-                  <option value="Fair">Fair</option>
-                  <option value="Poor">Poor</option>
+                  <option value="default">select</option>
+                  <option value="great">Great</option>
+                  <option value="fair">Fair</option>
+                  <option value="poor">Poor</option>
                 </Field>
                 <Field name="critical_to_operations" component="select" className="ui dropdown">
-                  <option value="NoSourceIsNotCritical">No</option>
-                  <option value="YesSourceIsCritical">Yes</option>
-                </Field>
-                <Field name="continous_chlorination" component="select" className="ui dropdown">
-                  <option value="NoContinuousChlorination">No</option>
-                  <option value="YesContinuousChlorination">Yes</option>
+                  <option value="default">select</option>
+                  <option value="false">No</option>
+                  <option value="true">Yes</option>
                 </Field>
               </div>
             </div>
