@@ -2,6 +2,7 @@ import React from 'react';
 import DemoButton from './demo-button';
 import RightNavHome from './right-nav-home';
 import { Link } from 'react-router-dom';
+import styles from './nav.css';
 
 const NavbarHome = () => (
   <div id="navbar">

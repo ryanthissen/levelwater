@@ -1,8 +1,8 @@
 import React from 'react';
-import styles from './footer.css';
+import styles from './form-footer.css';
 
-const Footer = () => (
-  <div id="footer">
+const FormFooter = () => (
+  <div id="form-footer">
     <div className="ui grid">
       <div className="column sixteen wide">
         2017 Infinity Worldwide Inc.
@@ -11,4 +11,4 @@ const Footer = () => (
   </div>
 );
 
-export default Footer;
+export default FormFooter;

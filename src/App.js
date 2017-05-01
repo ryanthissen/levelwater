@@ -12,11 +12,20 @@ import SignUpStep from './components/forms/sign-up-step';
 import FormNavbar from './components/forms/navbar/form-navbar';
 import BasicInfoForm from './components/forms/basic-info/basic-info-form';
 import RevenueCostsForm from './components/forms/revenue-costs/revenue-costs-form';
+import StorageForm from './components/forms/storage/storage-form';
+import PumpingDistForm from './components/forms/pumping-dist/pumping-dist-form';
+import Dashboard from './components/dashboard/dashboard';
+
 import TreatmentForm from './components/forms/treatment/treatment-form';
+import SourceForm from './components/forms/source/source-form';
+import FormFooter from './components/forms/form-footer/form-footer';
+import Manage from './components/manage/manage';
 
 
 
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+
+import { BrowserRouter as Router, Route} from 'react-router-dom';
+
 
 class App extends Component {
   render() {
@@ -48,14 +57,41 @@ class App extends Component {
         <Route exact path="/signup/step1" component={FormNavbar}  />
         {/* <Route exact path="/signup/step1" component={() => (<SignUpStep step="1" />)}  /> */}
         <Route exact path="/signup/step1" component={BasicInfoForm}  />
+        <Route exact path="/signup/step1" component={FormFooter}  />
 
         <Route exact path="/signup/step2" component={FormNavbar} />
         <Route exact path="/signup/step2" component={RevenueCostsForm} />
+        <Route exact path="/signup/step2" component={FormFooter}  />
+
+        <Route exact path="/signup/step3" component={FormNavbar} />
+        <Route exact path="/signup/step3" component={SourceForm} />
+        <Route exact path="/signup/step3" component={FormFooter}  />
+
+
 
         <Route exact path="/signup/step4" component={FormNavbar} />
         <Route exact path="/signup/step4" component={TreatmentForm} />
+        <Route exact path="/signup/step4" component={FormFooter}  />
 
-        <Route path="/" component={Footer} />
+        <Route exact path="/signup/step5" component={FormNavbar} />
+        <Route exact path="/signup/step5" component={StorageForm} />
+        <Route exact path="/signup/step5" component={FormFooter}  />
+
+        <Route exact path="/signup/step6" component={FormNavbar} />
+        <Route exact path="/signup/step6" component={PumpingDistForm} />
+        <Route exact path="/signup/step6" component={FormFooter}  />
+
+        <Route exact path="/dashboard" component={FormNavbar} />
+        <Route exact path="/dashboard" component={Dashboard} />
+        <Route exact path="/dashboard" component={FormFooter} />
+
+        <Route exact path="/manage" component={FormNavbar} />
+        <Route exact path="/manage" component={Manage} />
+        <Route exact path="/manage" component={FormFooter} />
+
+
+
+        <Route exact path="/" component={Footer} />
       </div>
     </Router>
     );

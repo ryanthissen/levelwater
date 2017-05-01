@@ -1,0 +1,46 @@
+/*dashboard */
+#dashboard {
+  margin-bottom: 40px;
+}
+#dash-header {
+  height: 80px;
+  border: solid white 1px;
+}
+
+#dash-header h2 {
+  padding-top: 10px;
+  font-size: 3em;
+}
+
+#c3-visuals {
+  border: solid limegreen 1px;
+  height: 300px;
+}
+
+#dash-buttons {
+  border: solid limegreen 1px;
+  height: 250px;
+}
+
+#dash-buttons-header {
+  margin: 30px 0;
+}
+
+#dash-buttons-header h3 {
+  font-size: 1.8em;
+}
+
+#dashboard button {
+  height: 50px;
+  width: 400px;
+  background-color: #d87575;
+  color: white;
+}
+
+#dash-button selected {
+  background-color: crimson;
+}
+
+.test button {
+  background-color: crimson !important;
+}

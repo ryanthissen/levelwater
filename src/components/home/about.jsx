@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './home.css';
 
 const About = () => (
   <div className="about-container">

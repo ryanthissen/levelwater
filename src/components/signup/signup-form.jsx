@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Route } from 'react-router-dom';
 import { Field, reduxForm } from 'redux-form';
 import { signUserUp } from '../../actions';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import styles from '../login/login.css'
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    formData: state.signupForm
+    signupFormData: state.form
   };
 };
 
@@ -19,10 +20,14 @@ class SignupForm extends Component{
   render(props) {
     const { handleSubmit, pristine, reset, submitting } = this.props;
     return (
+      <Route render={({ history }) => (
       <form id="signup-form" onSubmit={(event) => {
         event.preventDefault();
-        let x = this.props;
-        this.props.signUserUp(x.email, x.firstName, x.lastName, x.password);
+        let x = this.props.signupFormData.signup.values;
+        console.log(x);
+        this.props.signUserUp(x.email, x.firstName, x.lastName, x.password, x.passwordConfirm, () => {
+          history.push('/signup/step1');
+        });
       }}>
       <Link to="/"><div id="close-login"><img
     src={require('../../img/white-icon.png')}
@@ -42,19 +47,19 @@ class SignupForm extends Component{
           <div className="login-field signup-field column sixteen wide">
 
             <div>
-              <Field name="email" component="input" type="email" placeholder="Email" />
+              <Field name="email" component="input" type="email" placeholder="Email" required />
             </div>
             <div>
-              <Field name="firstName" component="input" type="text" placeholder="First Name" />
+              <Field name="firstName" component="input" type="text" placeholder="First Name" required />
             </div>
             <div>
-              <Field name="lastName" component="input" type="text" placeholder="Last Name" />
+              <Field name="lastName" component="input" type="text" placeholder="Last Name" required />
             </div>
             <div>
-              <Field name="password" component="input" type="password" placeholder="Password" />
+              <Field name="password" component="input" type="password" placeholder="Password" required />
             </div>
             <div>
-              <Field name="passwordConfirm" component="input" type="password" placeholder="Confirm Password" />
+              <Field name="passwordConfirm" component="input" type="password" placeholder="Confirm Password" required />
             </div>
           </div>
 
@@ -64,7 +69,8 @@ class SignupForm extends Component{
         </div>
         <div id="login-border"></div>
       </form>
-    )
+      )} />
+    );
   }
 }
 
