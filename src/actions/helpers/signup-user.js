@@ -22,9 +22,11 @@ function signupUser(email, firstName, lastName, password, passwordConfirm, callb
         }
         else {
           console.log('response', response);
-          Cookies.set('token', response.data.token);
-          let x = Cookies.get('token');
-          console.log('x', x);
+          // Cookies.set('token', response.data.token);
+          // let x = Cookies.get('token');
+          // console.log('x', x);
+          localStorage.setItem('token', response.data.token);
+          localStorage.setItem('water_systems_id', response.data.user.water_systems_id);
           callback();
         }
       })

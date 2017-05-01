@@ -1,6 +1,10 @@
 import axios from 'axios';
 const treatmentURL = 'http://levelwater-server.herokuapp.com/treatment';
 
+let config = {
+  headers: {'token': localStorage.getItem('token')}
+};
+
 const treatmentInfoHelper = (water_systems_id, treatment_name, treatment_type, critical_to_operations, year_constructed, capacity, condition, callback) => {
   return axios
     .post(treatmentURL, {
@@ -11,7 +15,7 @@ const treatmentInfoHelper = (water_systems_id, treatment_name, treatment_type, c
       year_constructed: year_constructed,
       capacity: capacity,
       condition: condition,
-    })
+    }, config)
     .then((response) => {
       if (response.data.errorMessage) {
         console.log('response', response);

@@ -1,5 +1,12 @@
 import axios from 'axios';
-const basicInfoURL = 'http://levelwater-server.herokuapp.com/water_systems';
+const basicInfoURL = 'http://levelwater-server.herokuapp.com/water-systems';
+
+let config = {
+  headers: {'token': localStorage.getItem('token')}
+};
+
+console.log(localStorage.getItem('token'));
+
 
 const basicUserInfoHelper = (pws_name, pws_id, population, connections, callback) => {
   return axios
@@ -8,7 +15,7 @@ const basicUserInfoHelper = (pws_name, pws_id, population, connections, callback
       pws_id: pws_id,
       population: population,
       connections: connections
-    })
+    }, config)
   .then((response) => {
     if (response.data.errorMessage) {
       console.log('response', response);
@@ -16,6 +23,7 @@ const basicUserInfoHelper = (pws_name, pws_id, population, connections, callback
     }
     else {
       console.log('response', response);
+      localStorage.setItem('water_systems_id', response.data)
       callback();
     }
   });

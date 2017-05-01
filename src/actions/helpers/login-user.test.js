@@ -1,12 +1,16 @@
 const loginUser = require('./login-user');
 const expect = require('chai').expect;
-const sinon = require('sinon');
-const clock = sinon.useFakeTimers();
 
-describe ('loginUSer function', function() {
-  it('should return a status code', done => {
-    this.timeout(5000);
-    expect(loginUser('alex83@gmail.com', 'something', () => {return 'foo'})).to.include.keys('status');
+global.localStorage = { setItem: function (key) {
+        if( key === 'token' ){ return 'ewrewr'; }
+        return null;
+    }
+  }
 
-  })
-})
+
+describe ('loginUser function', function() {
+  it('should not throw an error', done => {
+    expect(loginUser).to.not.throw(Error);
+
+  });
+});
