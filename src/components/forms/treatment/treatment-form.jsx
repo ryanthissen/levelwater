@@ -69,11 +69,15 @@ class TreatmentForm extends Component {
               <div className="column nine wide">
                 <Field name="treatment_name" component="input" type="text" required />
                 <Field name="treatment_type" component="select" className="ui dropdown">
+
                   <option value="conventional-sw">Conventional Surface Water</option>
                   <option value="ion-exchange">Ion Exchange</option>
                   <option value="corrosion-control">Corrosion Control</option>
                 </Field>
-                <Field name="year_of_construction" component="input" type="number" required />
+
+
+                <Field name="year_constructed" component="input" type="number" required />
+
                 <Field name="capacity" component="input" type="number" required />
                 <Field name="condition" component="select" className="ui dropdown">
                   <option value="Great">Great</option>
