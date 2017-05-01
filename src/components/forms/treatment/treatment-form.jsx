@@ -53,8 +53,8 @@ class TreatmentForm extends Component {
               </div>
 
               <div className="column nine wide">
-                <Field name="TreatmentPlantName" component="input" type="text" required />
-                <Field name="TreatmentType" component="select" className="ui dropdown">
+                <Field name="treatment_name" component="input" type="text" required />
+                <Field name="treatment_type" component="select" className="ui dropdown">
                   <option value="Conventional Surface Water">Conventional Surface Water</option>
                   <option value="Alternative Surface Water">Alternative Surface Water</option>
                   <option value="Oxidation/Filtration">Oxidation/Filtration</option>
@@ -62,14 +62,14 @@ class TreatmentForm extends Component {
                   <option value="Granular Activated Carbon">Granular Activated Carbon</option>
                   <option value="Corrosion Control">Corrosion Control</option>
                 </Field>
-                <Field name="YearOfConstruction" component="input" type="number" required />
-                <Field name="TreatmentCapacity" component="input" type="number" required />
-                <Field name="TreatmentCondition" component="select" className="ui dropdown">
+                <Field name="year_constructed" component="input" type="number" required />
+                <Field name="capacity" component="input" type="number" required />
+                <Field name="condition" component="select" className="ui dropdown">
                   <option value="Great">Great</option>
                   <option value="Fair">Fair</option>
                   <option value="Poor">Poor</option>
                 </Field>
-                <Field name="TreatmentCritical" component="select" className="ui dropdown">
+                <Field name="critical_to_operations" component="select" className="ui dropdown">
                   <option value="Yes">Yes</option>
                   <option value="No">No</option>
                 </Field>
