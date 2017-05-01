@@ -21,6 +21,7 @@ function loginUser(email, password, callback) {
         let x = Cookies.get('token');
         console.log('x',x);
         callback();
+        return response;
         // browserHistory.push('/');
       }
     })
@@ -35,3 +36,5 @@ function loginUser(email, password, callback) {
 }
 
 export default loginUser;
+
+module.exports = loginUser;
