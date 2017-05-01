@@ -1,7 +1,7 @@
 import axios from 'axios';
 import Cookies from 'js-cookie';
 
-const loginURL = 'https://levelwater-server.herokuapp.com/login';
+const loginURL = 'http://levelwater-server.herokuapp.com/login';
 
 
 //helper function to make login api calls
