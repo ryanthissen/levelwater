@@ -1,6 +1,10 @@
 import axios from 'axios';
 const sourcesURL = 'http://levelwater-server.herokuapp.com/sources';
 
+let config = {
+  headers: {'token': localStorage.getItem('token')}
+};
+
 
 const sourceInfoHelper = (water_systems_id, source_name, source_type, treatment, critical_to_operations, year_constructed, capacity, condition, continuous_chlorination, callback) => {
   return axios
@@ -14,7 +18,7 @@ const sourceInfoHelper = (water_systems_id, source_name, source_type, treatment,
       capacity: capacity,
       condition: condition,
       continuous_chlorination: continuous_chlorination,
-    })
+    }, config)
     .then((response) => {
       if (response.data.errorMessage) {
         console.log('response', response);
