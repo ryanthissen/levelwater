@@ -1,14 +1,17 @@
 import axios from 'axios';
-
 const storageURL = 'http://levelwater-server.herokuapp.com/storage-reservoirs';
 
-let config = {
-  headers: {'token': localStorage.getItem('token')}
-};
 
-let id = parseInt(localStorage.getItem('water_systems_id'));
+
+
 
 const storageInfoHelper = (reservoir_type, reservoir_name, year_constructed, capacity, condition, critical_to_operations, callback) => {
+
+  const config = {
+    headers: {'token': localStorage.getItem('token')}
+  };
+  let id = parseInt(localStorage.getItem('water_systems_id'));
+
   console.log('request', {
     water_systems_id: id,
     reservoir_type: reservoir_type,
@@ -17,7 +20,7 @@ const storageInfoHelper = (reservoir_type, reservoir_name, year_constructed, cap
     capacity: parseInt(capacity),
     condition: condition,
     critical_to_operations: critical_to_operations
-  });
+  }, config);
   return axios
     .post(storageURL, {
       water_systems_id: id,

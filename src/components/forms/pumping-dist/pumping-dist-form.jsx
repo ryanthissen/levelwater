@@ -38,7 +38,7 @@ class PumpingDistForm extends Component {
 
           <form id="step6" onSubmit = {(event) => {
             event.preventDefault();
-            let x = this.props.distribtionFormData.pumpingDist.values;
+            let x = this.props.distributionformData.pumpingDist.values;
             console.log('x', x);
             this.props.submitPumpInfo(
               x.total_length_miles,

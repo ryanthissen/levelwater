@@ -18,8 +18,7 @@ const basicUserInfoHelper = (pws_name, pws_id, population, connections, callback
       pws_id: pws_id,
       population: population,
       connections: connections
-    }, {headers: {'token': token}
-  })
+    }, config)
   .then((response) => {
     if (response.data.errorMessage) {
       console.log('response', response);

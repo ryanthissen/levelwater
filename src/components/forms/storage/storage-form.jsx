@@ -50,7 +50,7 @@ class StorageForm extends Component {
               x.condition,
               x.critical_to_operations,
               () => {
-                history.push('./signup/step6');
+                history.push('/signup/step6');
               });
           }}>
             <div className="ui grid">

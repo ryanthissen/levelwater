@@ -2,15 +2,17 @@ import axios from 'axios';
 
 const ratesFinancesURL = 'http://levelwater-server.herokuapp.com/rates-finances-fixedcosts';
 
-let config = {
-  headers: {'token': localStorage.getItem('token')}
-};
 
-let id = parseInt(localStorage.getItem('water_systems_id'));
 
 
 const revenueCostHelper = ( current_average_water_rate, total_financial_reserves, annual_revenue_water_sales, annual_revenue_fees_charges, annual_revenue_subsidies, annual_savings_to_financial_reserve, annual_personnel_costs, annual_operational_costs, annual_debt_costs, callback) => {
+  let config = {
+    headers: {'token': localStorage.getItem('token')}
+  };
+  let id = parseInt(localStorage.getItem('water_systems_id'));
+
   console.log('id', id);
+
   return axios
     .post(ratesFinancesURL, {
       water_systems_id: id,
