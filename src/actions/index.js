@@ -55,10 +55,10 @@ export const submitSourceInfo = (source_name, source_type, treatment, critical_t
   };
 };
 
-export const submitPumpInfo = (distLength, numberOfValves, numberOfMeters, numberOfPumpingPlants, combinedPumpCapacity, pumpsCondition) => {
+export const submitPumpInfo = (total_length_miles, average_age_of_pipes, average_main_diameter_inches, callback) => {
   return {
     type: 'SUBMIT_PUMP_INFO',
-    payload: pumpingDistHelper(distLength, numberOfValves, numberOfMeters, numberOfPumpingPlants, combinedPumpCapacity, pumpsCondition)
+    payload: pumpingDistHelper(total_length_miles, average_age_of_pipes, average_main_diameter_inches, callback)
   };
 };
 
@@ -69,9 +69,9 @@ export const submitTreatmentInfo = (treatment_name, treatment_type, critical_to_
   };
 };
 
-export const submitStorageInfo = (water_systems_id, reservoir_type, reservoir_name, year_constructed, capacity, condition, callback) => {
+export const submitStorageInfo = (reservoir_type, reservoir_name, year_constructed, capacity, condition, critical_to_operations, callback) => {
   return {
     type: 'SUBMIT_STORAGE_INFO',
-    payload: storageInfoHelper(water_systems_id, reservoir_type, reservoir_name, year_constructed, capacity, condition, callback)
+    payload: storageInfoHelper(reservoir_type, reservoir_name, year_constructed, capacity, condition, critical_to_operations, callback)
   };
 };
