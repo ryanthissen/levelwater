@@ -20,6 +20,8 @@ const sourceInfoHelper = (source_name, source_type, treatment, critical_to_opera
       capacity: parseInt(capacity),
       condition: condition,
       continuous_chlorination: continuous_chlorination,
+    }, {
+      headers: {'token': localStorage.getItem('token')}
     } );
   return axios
     .post(sourcesURL, {
