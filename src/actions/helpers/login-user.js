@@ -16,12 +16,14 @@ function loginUser(email, password, callback) {
         alert('bad username or password');
       }
       else {
-        console.log('response', response);
-        Cookies.set('token', response.data.token);
-        let x = Cookies.get('token');
-        console.log('x',x);
+        console.log('response', response.data.user);
+        localStorage.setItem('token', response.data.user.token);
+        localStorage.setItem('water_systems_id', response.data.user.water_systems_id);
+        // Cookies.set('token', response.data.token);
+        // let x = Cookies.get('token');
+        // console.log('x',x);
         callback();
-        return response;
+        // return response;
         // browserHistory.push('/');
       }
     })

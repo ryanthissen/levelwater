@@ -42,7 +42,6 @@ class RevenueCostsForm extends Component {
             let x = this.props.costRevenueFormData.revenueCosts.values;
             console.log(x);
             this.props.submitRevenueCostInfo(
-              x.water_systems_id,
               x.current_average_water_rate,
               x.total_financial_reserves,
               x.annual_revenue_water_sales,
