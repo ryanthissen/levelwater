@@ -5,17 +5,33 @@ let config = {
   headers: {'token': localStorage.getItem('token')}
 };
 
+let id = parseInt(localStorage.getItem('water_systems_id'));
 
-const sourceInfoHelper = (water_systems_id, source_name, source_type, treatment, critical_to_operations, year_constructed, capacity, condition, continuous_chlorination, callback) => {
-  return axios
-    .post(sourcesURL, {
-      water_systems_id: water_systems_id,
+
+const sourceInfoHelper = (source_name, source_type, treatment, critical_to_operations, year_constructed, capacity, condition, continuous_chlorination, callback) => {
+  console.log('id', id);
+    console.log('body', {
+      water_systems_id: id,
       source_name: source_name,
       source_type: source_type,
       treatment: treatment,
       critical_to_operations: critical_to_operations,
-      year_constructed: year_constructed,
-      capacity: capacity,
+      year_constructed: parseInt(year_constructed),
+      capacity: parseInt(capacity),
+      condition: condition,
+      continuous_chlorination: continuous_chlorination,
+    }, {
+      headers: {'token': localStorage.getItem('token')}
+    } );
+  return axios
+    .post(sourcesURL, {
+      water_systems_id: id,
+      source_name: source_name,
+      source_type: source_type,
+      treatment: treatment,
+      critical_to_operations: critical_to_operations,
+      year_constructed: parseInt(year_constructed),
+      capacity: parseInt(capacity),
       condition: condition,
       continuous_chlorination: continuous_chlorination,
     }, config)

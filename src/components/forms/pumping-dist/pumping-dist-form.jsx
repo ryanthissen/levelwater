@@ -1,65 +1,69 @@
 import React, { Component } from 'react';
 import SignUpStep from '../sign-up-step';
 import { Field, reduxForm } from 'redux-form';
-import { submitRevenueCostInfo } from '../../../actions'
+import { submitPumpInfo } from '../../../actions';
+import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import SignUpBackButton from '../sign-up-back-button';
 import {
   BrowserRouter as Router,
   Route,
-  Link,
-  Redirect,
-  withRouter
 } from 'react-router-dom';
 import styles from '../forms.css';
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    formData: state.pumpingDistForm
+    distributionformData: state.form
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
+  return bindActionCreators ({
+    submitPumpInfo }, dispatch);
 };
 
 
 class PumpingDistForm extends Component {
   render() {
+    const { handleSubmit, pristine, reset, submitting } = this.props;
     return (
       <Route render = {({ history }) => (
         <div id="pumping-dist-form" className="form-step">
           <SignUpStep step="6" />
           <div className="ui grid">
             <div className="column sixteen wide">
-              <h3>Pumping And Distribution</h3>
+              <h3>Distribution System</h3>
             </div>
           </div>
 
           <form id="step6" onSubmit = {(event) => {
             event.preventDefault();
-            let x = this.props;
-            history.push('/dashboard');
+            let x = this.props.distribtionFormData.pumpingDist.values;
+            console.log('x', x);
+            this.props.submitPumpInfo(
+              x.total_length_miles,
+              x.average_age_of_pipes, x.average_main_diameter_inches,
+              () => {
+                history.push('/dashboard');
+              });
           }}>
             <div className="ui grid">
               <div className="column seven wide">
-                <label>Est. Length Of Distribution System(Miles):</label>
-                <label>Est. Number Of Valves:</label>
-                <label>Est. Number Of Meters:</label>
-                <label>Number Of Pumping Plants:</label>
-                <label>Combined Pumping Capacity:</label>
-                <label>Condition:</label>
+                <label>Est. Length Of Distribution System (miles):</label>
+                <label>Average Age Of Pipes (years):</label>
+                <label>Average Main Diameter (inches):</label>
               </div>
 
               <div className="column nine wide">
-                <Field name="DistLength" component="input" type="number" required />
-                <Field name="NumberOfValves" component="input" type="number" required />
-                <Field name="NumberOfMeters" component="input" type="number" required />
-                <Field name="NumberOfPumpingPlants" component="input" type="number" required />
-                <Field name="CombinedPumpCapacity" component="input" type="number" required />
-                <Field name="PumpsCondition" component="select" className="ui dropdown" required>
-                  <option value="Great">Great</option>
-                  <option value="Fair">Fair</option>
-                  <option value="Poor">Poor</option>
+                <Field name="total_length_miles" component="input" type="number" required />
+                <Field name="average_age_of_pipes" component="input" type="number" required />
+                <Field name="average_main_diameter_inches" component="select" className="ui dropdown" required>
+                  <option value="select">select:</option>
+                  <option value="4">4</option>
+                  <option value="6">6</option>
+                  <option value="8">8</option>
+                  <option value="12">12</option>
+                  <option value="24">24</option>
                 </Field>
               </div>
             </div>

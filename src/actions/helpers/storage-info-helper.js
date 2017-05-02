@@ -1,25 +1,37 @@
 import axios from 'axios';
 
-const storageURL = 'http://levelwater-server.herokuapp.com/storageReservoirs';
+const storageURL = 'http://levelwater-server.herokuapp.com/storage-reservoirs';
 
 let config = {
   headers: {'token': localStorage.getItem('token')}
 };
 
-const storageInfoHelper = (water_systems_id, reservoir_type, reservoir_name, year_constructed, capacity, condition, callback) => {
+let id = parseInt(localStorage.getItem('water_systems_id'));
+
+const storageInfoHelper = (reservoir_type, reservoir_name, year_constructed, capacity, condition, critical_to_operations, callback) => {
+  console.log('request', {
+    water_systems_id: id,
+    reservoir_type: reservoir_type,
+    reservoir_name: reservoir_name,
+    year_constructed: parseInt(year_constructed),
+    capacity: parseInt(capacity),
+    condition: condition,
+    critical_to_operations: critical_to_operations
+  });
   return axios
     .post(storageURL, {
-      water_systems_id: water_systems_id,
+      water_systems_id: id,
       reservoir_type: reservoir_type,
       reservoir_name: reservoir_name,
-      year_constructed: year_constructed,
-      capacity: capacity,
-      condition: condition
+      year_constructed: parseInt(year_constructed),
+      capacity: parseInt(capacity),
+      condition: condition,
+      critical_to_operations: critical_to_operations
     }, config)
     .then((response) => {
-      if (response.data.errorMessage) {
+      if (response.data.ErrorMessage) {
         console.log('response', response);
-        alert('something went wrong.');
+        alert(response.data.ErrorMessage);
       }
       else {
         console.log('response', response);

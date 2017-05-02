@@ -43,13 +43,12 @@ class StorageForm extends Component {
             let x = this.props.storageFormData.storage.values;
             console.log(x);
             this.props.submitStorageInfo(
-              //replace with correct wsID
-              1,
               x.reservoir_type,
               x.reservoir_name,
               x.year_constructed,
               x.capacity,
               x.condition,
+              x.critical_to_operations,
               () => {
                 history.push('./signup/step6');
               });
@@ -61,22 +60,30 @@ class StorageForm extends Component {
                 <label>Year Of Construction:</label>
                 <label>Storage Capacity (Gallons):</label>
                 <label>Condition</label>
+                <label>Is This Facility Critical To Operations:</label>
               </div>
 
               <div className="column nine wide">
                 <Field name="reservoir_name" component="input" type="text" required />
                 <Field name="reservoir_type" component="select" className="ui dropdown">
-                  <option value="Concrete">Concrete</option>
-                  <option value="Steel">Steel</option>
-                  <option value="Redwood">Redwood</option>
-                  <option value="Plastic">Plastic</option>
+                  <option value="select">select:</option>
+                  <option value="concrete">Concrete</option>
+                  <option value="steel">Steel</option>
+                  <option value="redwood">Redwood</option>
+                  <option value="plastic">Plastic</option>
                 </Field>
                 <Field name="year_constructed" component="input" type="number" required />
                 <Field name="capacity" component="input" type="number" required />
                 <Field name="condition" component="select" className="ui dropdown">
-                  <option value="Great">Great</option>
-                  <option value="Fair">Fair</option>
-                  <option value="Poor">Poor</option>
+                  <option value="select">select:</option>
+                  <option value="great">Great</option>
+                  <option value="fair">Fair</option>
+                  <option value="poor">Poor</option>
+                </Field>
+                <Field name="critical_to_operations" component="select" className="ui dropdown">
+                  <option value="default">select</option>
+                  <option value="false">No</option>
+                  <option value="true">Yes</option>
                 </Field>
               </div>
             </div>

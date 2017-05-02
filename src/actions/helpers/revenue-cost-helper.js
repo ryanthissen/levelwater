@@ -25,9 +25,9 @@ const revenueCostHelper = ( current_average_water_rate, total_financial_reserves
       annual_debt_costs: parseInt(annual_debt_costs)
     }, config)
     .then((response) => {
-      if (response.data.errorMessage) {
+      if (response.data.ErrorMessage) {
         console.log('response', response);
-        alert(response.data.errorMessage);
+        alert(response.data.ErrorMessage);
       }
       else {
         console.log('response', response);
