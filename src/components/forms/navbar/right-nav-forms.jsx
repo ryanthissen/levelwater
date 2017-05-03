@@ -1,10 +1,20 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Route } from 'react-router-dom';
+
+const logUserOut = (callback) => {
+  localStorage.clear();
+  callback();
+}
 
 const RightNavForms = () => (
-  <div className="ui buttons">
-    <Link to="/"><button className="ui button">Log Out</button></Link>
-  </div>
+  <Route render={({ history }) => (
+    <div className="ui buttons">
+    <button className="ui button" onClick={(event) => {
+      event.preventDefault();
+      logUserOut(() => history.push('/'));
+    }}>Log Out</button>
+    </div>
+  )} />
 );
 
 export default RightNavForms;
