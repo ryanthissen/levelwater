@@ -12,7 +12,7 @@ import { submitRatesCostsButton } from '../../actions';
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    ratesCostsData: state.ratesCosts
+    ratesCostsData: state.dashButtons
   };
 };
 
@@ -24,20 +24,27 @@ class DashButtons extends Component {
 
   render() {
     return (
-      <div id="dash-buttons">
-        <DashButtonsHeader />
-        <div className="ui grid">
-          <div className="column eight wide test"><DashButton buttonText="Recommended Rate Schedule"/></div>
-          <div className="column eight wide"><DashButton buttonText="Fixed Costs" onClick={(event) => {
-            console.log('clicked!', this);
-            event.preventDefault();
-            this.props.submitRatesCostsButton();
-          }}/>
+      <Route render={({ history }) => (
+        <div id="dash-buttons">
+          <DashButtonsHeader />
+          <div className="ui grid">
+            <div className="column eight wide test"><DashButton buttonText="Recommended Rate Schedule"/></div>
+            <div className="column eight wide"><DashButton buttonText="Fixed Costs" onClick={(event) => {
+              console.log('clicked!', this);
+              event.preventDefault();
+              this.props.submitRatesCostsButton(
+                () => {
+                  history.push('/dashboard/costs');
+                }
+              );
+            }}/>
+            </div>
+            <div className="column eight wide"><DashButton buttonText="Projected Future Needs"/></div>
+            <div className="column eight wide"><DashButton buttonText="Edit System Info"/></div>
           </div>
-          <div className="column eight wide"><DashButton buttonText="Projected Future Needs"/></div>
-          <div className="column eight wide"><DashButton buttonText="Edit System Info"/></div>
         </div>
-      </div>
+      )} />
+
     );
   }
 }

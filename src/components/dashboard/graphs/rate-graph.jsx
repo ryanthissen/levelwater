@@ -131,7 +131,7 @@ export default class RateGraph extends Component {
 
   render() {
     return (
-    <div className="c3">
+    <div className="c3" id="c3-visuals">
       <C3Chart data={data} axis={axis} grid={grid} size={size} />
 
     </div>

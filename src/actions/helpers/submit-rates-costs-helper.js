@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const ratesCostsURL = 'http://levelwater-server.herokuapp.com/rates-finances-fixedcosts/';
 
-const submitRatesCostsHelper = () => {
+const submitRatesCostsHelper = (callback) => {
   let config = {
     headers: {'token': localStorage.getItem('token')}
   };
@@ -13,7 +13,10 @@ const submitRatesCostsHelper = () => {
     .get(`${ratesCostsURL}${water_systems_id}`,config )
     .then((response) => {
       console.log(response);
-    });
+      callback();
+      return(response.data[0]);
+
+    })
 };
 
 export default submitRatesCostsHelper;

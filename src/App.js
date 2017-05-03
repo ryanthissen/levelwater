@@ -81,9 +81,9 @@ class App extends Component {
         <Route exact path="/signup/step6" component={PumpingDistForm} />
         <Route exact path="/signup/step6" component={FormFooter}  />
 
-        <Route exact path="/dashboard" component={FormNavbar} />
-        <Route exact path="/dashboard" component={Dashboard} />
-        <Route exact path="/dashboard" component={FormFooter} />
+        <Route path="/dashboard" component={FormNavbar} />
+        <Route path="/dashboard" component={Dashboard} />
+        <Route path="/dashboard" component={FormFooter} />
 
         <Route exact path="/manage" component={FormNavbar} />
         <Route exact path="/manage" component={Manage} />

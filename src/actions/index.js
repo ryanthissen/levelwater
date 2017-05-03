@@ -56,10 +56,10 @@ export const submitSourceInfo = (source_name, source_type, treatment, critical_t
   };
 };
 
-export const submitPumpInfo = (total_length_miles, average_age_of_pipes, average_main_diameter_inches, callback) => {
+export const submitPumpInfo = (total_length_miles, average_age_of_pipes, average_main_diameter_inches, condition, callback) => {
   return {
     type: 'SUBMIT_PUMP_INFO',
-    payload: pumpingDistHelper(total_length_miles, average_age_of_pipes, average_main_diameter_inches, callback)
+    payload: pumpingDistHelper(total_length_miles, average_age_of_pipes, average_main_diameter_inches, condition, callback)
   };
 };
 
@@ -78,9 +78,9 @@ export const submitStorageInfo = (reservoir_type, reservoir_name, year_construct
 };
 
 //dashboard
-export const submitRatesCostsButton = () => {
+export const submitRatesCostsButton = (callback) => {
   return {
     type: 'SUBMIT_RATES_COSTS_BUTTON',
-    payload: submitRatesCostsHelper()
+    payload: submitRatesCostsHelper(callback)
   };
 };
