@@ -4,21 +4,18 @@
 }
 #dash-header {
   height: 80px;
-  border: solid white 1px;
 }
 
 #dash-header h2 {
   padding-top: 10px;
-  font-size: 3em;
+  font-size: 2em;
 }
 
 #c3-visuals {
-  border: solid limegreen 1px;
   height: 300px;
 }
 
 #dash-buttons {
-  border: solid limegreen 1px;
   height: 250px;
 }
 
@@ -27,7 +24,7 @@
 }
 
 #dash-buttons-header h3 {
-  font-size: 1.8em;
+  font-size: 1.4em;
 }
 
 #dashboard button {

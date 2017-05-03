@@ -15,6 +15,7 @@ import pumpingDistHelper from './helpers/pumping-dist-helper';
 import sourceInfoHelper from './helpers/source-info-helper';
 import treatmentInfoHelper from './helpers/treatment-info-helper';
 import storageInfoHelper from './helpers/storage-info-helper';
+import submitRatesCostsHelper from './helpers/submit-rates-costs-helper';
 
 
 
@@ -73,5 +74,13 @@ export const submitStorageInfo = (reservoir_type, reservoir_name, year_construct
   return {
     type: 'SUBMIT_STORAGE_INFO',
     payload: storageInfoHelper(reservoir_type, reservoir_name, year_constructed, capacity, condition, critical_to_operations, callback)
+  };
+};
+
+//dashboard
+export const submitRatesCostsButton = () => {
+  return {
+    type: 'SUBMIT_RATES_COSTS_BUTTON',
+    payload: submitRatesCostsHelper()
   };
 };

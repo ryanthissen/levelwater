@@ -7,7 +7,7 @@ import { connect } from 'react-redux';
 import {
   BrowserRouter as Router,
   Route,
-} from 'react-router-dom'
+} from 'react-router-dom';
 import styles from '../forms.css';
 import styles2 from './basic-info-form.css';
 
