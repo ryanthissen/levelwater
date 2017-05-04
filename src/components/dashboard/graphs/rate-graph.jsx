@@ -53,6 +53,7 @@ const size =  {
 class RateGraph extends Component {
 
   componentDidMount() {
+    console.log('thisprops', this.props)
     this.props.loadChart();
 
   }
