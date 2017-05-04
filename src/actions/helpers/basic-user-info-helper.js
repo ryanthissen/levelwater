@@ -25,7 +25,7 @@ const basicUserInfoHelper = (pws_name, pws_id, population, connections, callback
     }
     else {
       console.log('response', response);
-      localStorage.setItem('water_systems_id', response.data);
+      localStorage.setItem('water_systems_id', response.data.id);
       callback();
     }
   });
