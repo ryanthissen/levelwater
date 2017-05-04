@@ -22,3 +22,17 @@ h2 {
 h3 {
   font-family: 'Roboto' !important;
 }
+
+
+@media only screen and (max-width: 767px) {
+    #revenue-costs-form .seven  {
+        text-align: center !important;
+    }
+    #revenue-costs-form .nine {
+      padding-left: 40% !important;
+    }
+
+    #revenue-costs-form input, #revenue-costs-form label {
+      margin: 0 !important;
+    }
+}

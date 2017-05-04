@@ -43,6 +43,7 @@ class PumpingDistForm extends Component {
             this.props.submitPumpInfo(
               x.total_length_miles,
               x.average_age_of_pipes, x.average_main_diameter_inches,
+              x.condition,
               () => {
                 history.push('/dashboard');
               });
@@ -52,6 +53,7 @@ class PumpingDistForm extends Component {
                 <label>Est. Length Of Distribution System (miles):</label>
                 <label>Average Age Of Pipes (years):</label>
                 <label>Average Main Diameter (inches):</label>
+                <label>Condition</label>
               </div>
 
               <div className="column nine wide">
@@ -64,6 +66,12 @@ class PumpingDistForm extends Component {
                   <option value="8">8</option>
                   <option value="12">12</option>
                   <option value="24">24</option>
+                </Field>
+                <Field name="condition" component="select" className="ui dropdown">
+                  <option value="select">select:</option>
+                  <option value="great">Great</option>
+                  <option value="fair">Fair</option>
+                  <option value="poor">Poor</option>
                 </Field>
               </div>
             </div>

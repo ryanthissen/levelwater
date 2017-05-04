@@ -55,31 +55,47 @@ class RevenueCostsForm extends Component {
                 history.push('/signup/step3');
               });
           }}>
-            <div className="ui grid">
-              <div className="column seven wide">
-                <label >Average Monthly Rate per Connection:</label>
-                <label >Annual Revenue From Water Sales:</label>
-                <label >Annual Revenue From Fees And Charges:</label>
-                <label >Annual Revenue From Subsidies:</label>
-                <label >Total Amount in Reserve Fund:</label>
-                <label >Annual Reserve Fund Contribution:</label>
-                <label >Annual Personnel Costs:</label>
-                <label >Annual Operations Costs:</label>
-                <label >Annual Debt Financing:</label>
+            <div className="ui grid stackable">
+              <div className="row">
+                <div className="column seven wide"><label >Average Monthly Rate per Connection:</label></div>
+                <div className="column nine wide"><Field name="current_average_water_rate" component="input" type="number" required /></div>
               </div>
+                <div className="row">
+                  <div className="column seven wide"><label >Annual Revenue From Water Sales:</label></div>
+                  <div className="column nine wide"><Field name="annual_revenue_water_sales" component="input" type="number" required /></div>
+                </div>
+                <div className="row">
+                  <div className="column seven wide"><label >Annual Revenue From Fees And Charges:</label></div>
+                  <div className="column nine wide"><Field name="annual_revenue_fees_charges" component="input" type="number" required /></div>
+                </div>
+                <div className="row">
+                  <div className="column seven wide"><label >Annual Revenue From Subsidies:</label></div>
+                  <div className="column nine wide">  <Field name="annual_revenue_subsidies" component="input" type="number" required /></div>
+                </div>
+                <div className="row">
+                  <div className="column seven wide"><label >Total Amount in Reserve Fund:</label></div>
+                  <div className="column nine wide"><Field name="total_financial_reserves" component="input" type="number" required /></div>
+                </div>
+                <div className="row">
+                  <div className="column seven wide"><label >Annual Reserve Fund Contribution:</label></div>
+                  <div className="column nine wide"><Field name="annual_savings_to_financial_reserve" component="input" type="number" required /></div>
+                </div>
+                <div className="row">
+                  <div className="column seven wide">  <label >Annual Personnel Costs:</label></div>
+                  <div className="column nine wide"><Field name="annual_personnel_costs" component="input" type="number" required /></div>
+                </div>
+                <div className="row">
+                  <div className="column seven wide"><label >Annual Operations Costs:</label></div>
+                  <div className="column nine wide"><Field name="annual_operational_costs" component="input" type="number" required /></div>
+                </div>
+                <div className="row">
+                  <div className="column seven wide"><label >Annual Debt Financing:</label></div>
+                  <div className="column nine wide"><Field name="annual_debt_costs" component="input" type="number" required /></div>
+                </div>
 
-              <div className="column nine wide">
-                <Field name="current_average_water_rate" component="input" type="number" required />
-                <Field name="annual_revenue_water_sales" component="input" type="number" required />
-                <Field name="annual_revenue_fees_charges" component="input" type="number" required />
-                <Field name="annual_revenue_subsidies" component="input" type="number" required />
-                <Field name="total_financial_reserves" component="input" type="number" required />
-                <Field name="annual_savings_to_financial_reserve" component="input" type="number" required />
-                <Field name="annual_personnel_costs" component="input" type="number" required />
-                <Field name="annual_operational_costs" component="input" type="number" required />
-                <Field name="annual_debt_costs" component="input" type="number" required />
-              </div>
+
             </div>
+
             <div className="ui grid">
               <SignUpBackButton to="/signup/step1"/>
               <div id="revenue-costs-submit-button" className="column eight wide">
