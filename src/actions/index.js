@@ -16,6 +16,7 @@ import sourceInfoHelper from './helpers/source-info-helper';
 import treatmentInfoHelper from './helpers/treatment-info-helper';
 import storageInfoHelper from './helpers/storage-info-helper';
 import submitRatesCostsHelper from './helpers/submit-rates-costs-helper';
+import loadChartHelper from './helpers/load-chart-helper';
 
 
 
@@ -82,5 +83,12 @@ export const submitRatesCostsButton = (callback) => {
   return {
     type: 'SUBMIT_RATES_COSTS_BUTTON',
     payload: submitRatesCostsHelper(callback)
+  };
+};
+
+export const loadChart = () => {
+  return {
+    type: 'LOAD_CHART',
+    payload: loadChartHelper()
   };
 };

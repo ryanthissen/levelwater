@@ -1,6 +1,6 @@
 import axios from 'axios';
 const distributionURL = 'http://levelwater-server.herokuapp.com/distribution-system';
-const algorithmURL = 'http://levelwater-server.herokuapp.com/dashboard/';
+const algorithmURL = 'http://levelwater-server.herokuapp.com/algorithm-results/';
 
 
 

@@ -4,8 +4,8 @@ import FixedCostsGraph from './graphs/fixed-costs-graph';
 
 const C3Visuals = () => (
   <div id="c3-visuals">
-    {/* <RateGraph /> */}
-    <FixedCostsGraph />
+    <RateGraph />
+    {/* <FixedCostsGraph /> */}
   </div>
 );
 
