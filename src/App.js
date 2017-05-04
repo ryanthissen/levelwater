@@ -20,6 +20,7 @@ import TreatmentForm from './components/forms/treatment/treatment-form';
 import SourceForm from './components/forms/source/source-form';
 import FormFooter from './components/forms/form-footer/form-footer';
 import Manage from './components/manage/manage';
+import OauthRedirect from './components/home/oauth-redirect';
 
 
 
@@ -32,6 +33,7 @@ class App extends Component {
     return (
     <Router>
       <div className ="App">
+        <Route exact path="/" component={OauthRedirect} />
         <Route exact path="/" component={NavbarHome} />
         <Route exact path="/" component={MainImage} />
         <Route exact path="/" component={About} />
