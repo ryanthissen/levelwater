@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { loadChart } from '../../../actions';
 import DashAnalysis from '../dash-analysis';
 import FixedCostsGraph from './fixed-costs-graph';
+const queryString = require('query-string');
 
 const mapStateToProps = (state, ownProps) =>  {
   return {
@@ -53,9 +54,19 @@ const size =  {
 class RateGraph extends Component {
 
   componentDidMount() {
-    console.log('thisprops', this.props)
+    if (location.search) {
+      this.parseQueryParams(location.search);
+    }
+
     this.props.loadChart();
 
+  }
+
+  parseQueryParams(string) {
+    string = string.substring(1, string.length-1);
+    string = string.split('&');
+    string[0] = (string[0].split('='))[1];
+    console.log(string);
   }
 
   getDataAndLines() {
