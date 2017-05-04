@@ -22,7 +22,7 @@ function signupUser(email, firstName, lastName, password, passwordConfirm, callb
         else {
           console.log('response', response);
           localStorage.setItem('token', response.data.token);
-          localStorage.setItem('water_systems_id', response.data.user.water_systems_id);
+          localStorage.setItem('water_systems_id', response.data.water_systems_id);
           callback();
         }
       })
