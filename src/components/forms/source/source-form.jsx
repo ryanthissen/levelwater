@@ -41,7 +41,6 @@ class SourceForm extends Component {
           <form id="step3" onSubmit = {(event) => {
             event.preventDefault();
             let x = this.props.sourceFormData.source.values;
-            console.log(x);
             this.props.submitSourceInfo(
               x.source_name,
               x.source_type,
@@ -56,6 +55,7 @@ class SourceForm extends Component {
               });
           }}>
             <div className="ui grid">
+
               <div className="column seven wide">
                 <label>Name Of Source:</label>
                 <label>Source Type:</label>
@@ -100,27 +100,23 @@ class SourceForm extends Component {
                 </Field>
               </div>
             </div>
+
             <div className="ui grid">
-
-
               <div id="revenue-costs-submit-button" className="column sixteen wide">
                 <button className="ui button">+ Add Another Source</button>
-
               </div>
             </div>
 
             <div className="ui grid">
-
                 <SignUpBackButton to="/signup/step2"/>
-
               <div id="revenue-costs-submit-button" className="column eight wide">
                 <button className="ui button">Continue To Treatment &gt;</button>
               </div>
             </div>
+
           </form>
         </div>
       )} />
-
     );
   }
 }

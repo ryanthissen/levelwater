@@ -8,7 +8,7 @@ const Dashboard = () => (
   <div id="dashboard">
     <DashHeader />
     <C3Visuals />
-    <DashButtons />
+    {/* <DashButtons /> */}
   </div>
 );
 

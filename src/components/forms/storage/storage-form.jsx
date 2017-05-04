@@ -41,7 +41,6 @@ class StorageForm extends Component {
           <form id="step5" onSubmit = {(event) => {
             event.preventDefault();
             let x = this.props.storageFormData.storage.values;
-            console.log(x);
             this.props.submitStorageInfo(
               x.reservoir_type,
               x.reservoir_name,

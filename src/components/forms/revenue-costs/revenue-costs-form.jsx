@@ -40,7 +40,6 @@ class RevenueCostsForm extends Component {
           <form id="step2" onSubmit={(event) => {
             event.preventDefault();
             let x = this.props.costRevenueFormData.revenueCosts.values;
-            console.log(x);
             this.props.submitRevenueCostInfo(
               x.current_average_water_rate,
               x.total_financial_reserves,
@@ -92,8 +91,6 @@ class RevenueCostsForm extends Component {
                   <div className="column seven wide"><label >Annual Debt Financing:</label></div>
                   <div className="column nine wide"><Field name="annual_debt_costs" component="input" type="number" required /></div>
                 </div>
-
-
             </div>
 
             <div className="ui grid">

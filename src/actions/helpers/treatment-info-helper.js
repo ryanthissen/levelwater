@@ -1,6 +1,6 @@
 import axios from 'axios';
-const treatmentURL = 'http://levelwater-server.herokuapp.com/treatment';
 
+const treatmentURL = 'http://levelwater-server.herokuapp.com/treatment';
 
 
 const treatmentInfoHelper = (treatment_name, treatment_type, critical_to_operations, year_constructed, capacity, condition, callback) => {
@@ -18,6 +18,7 @@ const treatmentInfoHelper = (treatment_name, treatment_type, critical_to_operati
     capacity: parseInt(capacity),
     condition: condition
   }, config);
+  
   return axios
     .post(treatmentURL, {
       water_systems_id: id,

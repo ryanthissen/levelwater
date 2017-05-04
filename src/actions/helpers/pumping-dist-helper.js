@@ -3,15 +3,12 @@ const distributionURL = 'http://levelwater-server.herokuapp.com/distribution-sys
 const algorithmURL = 'http://levelwater-server.herokuapp.com/algorithm-results/';
 
 
-
 const pumpingDistHelper = (total_length_miles, average_age_of_pipes, average_main_diameter_inches, condition, callback) => {
   let config = {
     headers: {'token': localStorage.getItem('token')}
   };
-
   let id = parseInt(localStorage.getItem('water_systems_id'));
 
-  console.log('id', id);
   console.log('body', {
     water_systems_id: id,
     total_length_miles: parseInt(total_length_miles),
@@ -47,7 +44,6 @@ const pumpingDistHelper = (total_length_miles, average_age_of_pipes, average_mai
             callback();
           }
         });
-
     });
 };
 

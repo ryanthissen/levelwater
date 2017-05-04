@@ -66,17 +66,15 @@ class TreatmentForm extends Component {
               </div>
 
               <div className="column nine wide">
-                <Field name="treatment_name" component="input" type="text" required />
+
+              <Field name="treatment_name" component="input" type="text" required />
                 <Field name="treatment_type" component="select" className="ui dropdown">
                   <option value="select">select:</option>
                   <option value="conventional-sw">Conventional Surface Water</option>
                   <option value="ion-exchange">Ion Exchange</option>
                   <option value="corrosion-control">Corrosion Control</option>
                 </Field>
-
-
                 <Field name="year_constructed" component="input" type="number" required />
-
                 <Field name="capacity" component="input" type="number" required />
                 <Field name="condition" component="select" className="ui dropdown">
                   <option value="select">select:</option>
@@ -89,14 +87,15 @@ class TreatmentForm extends Component {
                   <option value="true">Yes</option>
                   <option value="false">No</option>
                 </Field>
+
               </div>
             </div>
+
             <div className="ui grid">
 
               <div id="revenue-costs-submit-button" className="column sixteen wide">
                 <button className="ui button">+ Add Another Plant</button>
               </div>
-
             </div>
 
             <div className="ui grid">
@@ -108,7 +107,6 @@ class TreatmentForm extends Component {
           </form>
         </div>
       )} />
-
     );
   }
 }
