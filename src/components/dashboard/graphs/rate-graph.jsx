@@ -4,6 +4,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { loadChart } from '../../../actions';
 import DashAnalysis from '../dash-analysis';
+import FixedCostsGraph from './fixed-costs-graph';
 
 const mapStateToProps = (state, ownProps) =>  {
   return {
@@ -45,7 +46,7 @@ const zoom = {
 
 const size =  {
         height: 320,
-        width: 880
+        width: 680
     };
 
 
@@ -114,7 +115,11 @@ class RateGraph extends Component {
     return (
     <div className="c3 ui grid" id="c3-visuals">
       <DashAnalysis financialData={this.props.ratesFinancesObject} criticalInfrastructure={this.props.criticalInfrastructure} noncriticalInfrastructure={this.props.noncriticalInfrastructure} />
-      <C3Chart data={data} axis={axis} grid={grid} size={size} />
+      <div id="charts" className="column eight wide">
+          <C3Chart data={data} axis={axis} grid={grid} size={size} />
+          <FixedCostsGraph />
+      </div>
+
     </div>
     );
 

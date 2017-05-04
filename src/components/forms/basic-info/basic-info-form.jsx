@@ -30,58 +30,55 @@ class BasicInfoForm extends Component{
   render() {
     return (
       <Route render={({ history }) => (
-      <div id="basic-info-form" className="form-step">
-        <SignUpStep step="1" />
-        <div className="ui grid">
-          <div className="column sixteen wide">
-            <h3>
-              Before We Get Started, Please Provide Some Info About Your Water System
-            </h3>
-          </div>
-        </div>
-
-        <form id="step1" onSubmit={(event) => {
-          event.preventDefault();
-          let x = this.props.basicInfoFormData.basicInfo.values;
-          console.log(x);
-          this.props.submitBasicUserInfo(
-            x.pws_name,
-            x.pws_id,
-            x.population,
-            x.connections,
-            () => {
-              history.push('/signup/step2');
-            }
-          );
-        }}>
+        <div id="basic-info-form" className="form-step">
+          <SignUpStep step="1" />
           <div className="ui grid">
-            <div className="column seven wide">
-              <label>Water System Name:</label>
-              <label>PWS Number:</label>
-              <label>Number Of Connections:</label>
-              <label>Customer Population:</label>
-            </div>
-
-            <div className="column nine wide">
-              <Field name="pws_name" component="input" type="text" required />
-              <Field name="pws_id" component="input" type="number" required />
-              <Field name="connections" component="input" type="number" required />
-              <Field name="population" component="input" type="number" required />
+            <div className="column sixteen wide">
+              <h3>
+                Before We Get Started, Please Provide Some Info About Your Water System
+              </h3>
             </div>
           </div>
-            <div id="basic-info-submit-button">
-              <div className="ui grid">
-                <div className="column four wide"></div>
-                <div className="column twelve wide">
-                  <button type='submit' className="ui button">Continue To Revenue & Costs &gt;</button>
-                </div>
+
+          <form id="step1" onSubmit={(event) => {
+            event.preventDefault();
+            let x = this.props.basicInfoFormData.basicInfo.values;
+            this.props.submitBasicUserInfo(
+              x.pws_name,
+              x.pws_id,
+              x.population,
+              x.connections,
+              () => {
+                history.push('/signup/step2');
+              }
+            );
+          }}>
+            <div className="ui grid">
+              <div className="column seven wide">
+                <label>Water System Name:</label>
+                <label>PWS Number:</label>
+                <label>Number Of Connections:</label>
+                <label>Customer Population:</label>
+              </div>
+
+              <div className="column nine wide">
+                <Field name="pws_name" component="input" type="text" required />
+                <Field name="pws_id" component="input" type="number" required />
+                <Field name="connections" component="input" type="number" required />
+                <Field name="population" component="input" type="number" required />
               </div>
             </div>
-
-
-        </form>
+              <div id="basic-info-submit-button">
+                <div className="ui grid">
+                  <div className="column four wide"></div>
+                  <div className="column twelve wide">
+                    <button type='submit' className="ui button">Continue To Revenue & Costs &gt;</button>
+                  </div>
+                </div>
+              </div>
+          </form>
         </div>
-        )} />
+      )} />
     );
   }
 }

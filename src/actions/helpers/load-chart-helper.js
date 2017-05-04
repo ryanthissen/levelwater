@@ -14,7 +14,7 @@ const loadChartHelper = () => {
     .then((response) => {
       console.log(JSON.parse(response.data.algorithm_results));
       return(JSON.parse(response.data.algorithm_results));
-    })
+    });
 };
 
 export default loadChartHelper;

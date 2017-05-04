@@ -15,8 +15,7 @@ const submitRatesCostsHelper = (callback) => {
       console.log(response);
       callback();
       return(response.data[0]);
-
-    })
+    });
 };
 
 export default submitRatesCostsHelper;

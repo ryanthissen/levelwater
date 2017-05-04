@@ -4,7 +4,7 @@ import { Route } from 'react-router-dom';
 const logUserOut = (callback) => {
   localStorage.clear();
   callback();
-}
+};
 
 const RightNavForms = () => (
   <Route render={({ history }) => (

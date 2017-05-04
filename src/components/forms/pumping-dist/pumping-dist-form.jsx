@@ -11,6 +11,8 @@ import {
 } from 'react-router-dom';
 import styles from '../forms.css';
 
+
+
 const mapStateToProps = (state, ownProps) => {
   return {
     distributionformData: state.form
@@ -39,7 +41,6 @@ class PumpingDistForm extends Component {
           <form id="step6" onSubmit = {(event) => {
             event.preventDefault();
             let x = this.props.distributionformData.pumpingDist.values;
-            console.log('x', x);
             this.props.submitPumpInfo(
               x.total_length_miles,
               x.average_age_of_pipes, x.average_main_diameter_inches,

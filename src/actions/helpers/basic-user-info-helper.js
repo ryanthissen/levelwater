@@ -9,11 +9,10 @@ const basicUserInfoHelper = (pws_name, pws_id, population, connections, callback
   let config = {
     headers: {'token': localStorage.getItem('token')}
   };
-  console.log("this is the token", localStorage.getItem('token'));
-  console.log(config);
+
   return axios
     .post(basicInfoURL,
-      {
+    {
       pws_name: pws_name,
       pws_id: pws_id,
       population: population,
@@ -26,7 +25,7 @@ const basicUserInfoHelper = (pws_name, pws_id, population, connections, callback
     }
     else {
       console.log('response', response);
-      localStorage.setItem('water_systems_id', response.data)
+      localStorage.setItem('water_systems_id', response.data);
       callback();
     }
   });
