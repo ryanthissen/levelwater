@@ -15,6 +15,8 @@ import pumpingDistHelper from './helpers/pumping-dist-helper';
 import sourceInfoHelper from './helpers/source-info-helper';
 import treatmentInfoHelper from './helpers/treatment-info-helper';
 import storageInfoHelper from './helpers/storage-info-helper';
+import submitRatesCostsHelper from './helpers/submit-rates-costs-helper';
+import loadChartHelper from './helpers/load-chart-helper';
 
 
 
@@ -55,10 +57,10 @@ export const submitSourceInfo = (source_name, source_type, treatment, critical_t
   };
 };
 
-export const submitPumpInfo = (total_length_miles, average_age_of_pipes, average_main_diameter_inches, callback) => {
+export const submitPumpInfo = (total_length_miles, average_age_of_pipes, average_main_diameter_inches, condition, callback) => {
   return {
     type: 'SUBMIT_PUMP_INFO',
-    payload: pumpingDistHelper(total_length_miles, average_age_of_pipes, average_main_diameter_inches, callback)
+    payload: pumpingDistHelper(total_length_miles, average_age_of_pipes, average_main_diameter_inches, condition, callback)
   };
 };
 
@@ -73,5 +75,20 @@ export const submitStorageInfo = (reservoir_type, reservoir_name, year_construct
   return {
     type: 'SUBMIT_STORAGE_INFO',
     payload: storageInfoHelper(reservoir_type, reservoir_name, year_constructed, capacity, condition, critical_to_operations, callback)
+  };
+};
+
+//dashboard
+export const submitRatesCostsButton = (callback) => {
+  return {
+    type: 'SUBMIT_RATES_COSTS_BUTTON',
+    payload: submitRatesCostsHelper(callback)
+  };
+};
+
+export const loadChart = () => {
+  return {
+    type: 'LOAD_CHART',
+    payload: loadChartHelper()
   };
 };

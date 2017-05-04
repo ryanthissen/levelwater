@@ -1,6 +1,4 @@
 import axios from 'axios';
-import Cookies from 'js-cookie';
-
 const loginURL = 'http://levelwater-server.herokuapp.com/login';
 
 
@@ -16,24 +14,12 @@ function loginUser(email, password, callback) {
         alert('bad username or password');
       }
       else {
-        console.log('response', response.data.user);
-        localStorage.setItem('token', response.data.user.token);
-        localStorage.setItem('water_systems_id', response.data.user.water_systems_id);
-        // Cookies.set('token', response.data.token);
-        // let x = Cookies.get('token');
-        // console.log('x',x);
+        console.log('response', response.data);
+        localStorage.setItem('token', response.data.token);
+        localStorage.setItem('water_systems_id', response.data.water_systems_id);
         callback();
-        // return response;
-        // browserHistory.push('/');
       }
     })
-    // .then(() => {
-    //   return axios
-    //     .get('http://levelwater-server.herokuapp.com/users/1')
-    //     .then((response) => {
-    //       console.log(response);
-    //     });
-    // })
     .catch((error) => console.log(error));
 }
 

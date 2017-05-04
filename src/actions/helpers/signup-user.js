@@ -1,5 +1,4 @@
 import axios from 'axios';
-import Cookies from 'js-cookie';
 
 const signupURL = 'http://levelwater-server.herokuapp.com/users';
 
@@ -22,9 +21,6 @@ function signupUser(email, firstName, lastName, password, passwordConfirm, callb
         }
         else {
           console.log('response', response);
-          // Cookies.set('token', response.data.token);
-          // let x = Cookies.get('token');
-          // console.log('x', x);
           localStorage.setItem('token', response.data.token);
           localStorage.setItem('water_systems_id', response.data.user.water_systems_id);
           callback();
