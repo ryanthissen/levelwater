@@ -24,7 +24,7 @@ const mapDispatchToProps = (dispatch) => {
   return bindActionCreators ({ submitSourceInfo }, dispatch);
 };
 
-class SourceForm extends Component {
+export class SourceForm extends Component {
 
   render() {
     const { handleSubmit, pristine, reset, submitting } = this.props;
@@ -34,7 +34,7 @@ class SourceForm extends Component {
           <SignUpStep step="3" />
           <div className="ui grid">
             <div className="column sixteen wide">
-              <h3>Source #1</h3>
+              <h3>Please Enter Information About Your Source</h3>
             </div>
           </div>
 
@@ -62,9 +62,9 @@ class SourceForm extends Component {
                 <label>Does This Source Receive Continuous Chlorination:</label>
                 <label>Does This Source Receive Treatment To Meet An MCL:</label>
                 <label>Year Of Construction:</label>
-                <label>Maximum Available Capacity:</label>
+                <label>Maximum Capacity (gpm):</label>
                 <label>What Is The Source's Condition:</label>
-                <label>Is This Source Critical To Being Able To Provide Safe Water:</label>
+                <label>Is This Source Critical To Your Ability To Serve Safe Water?</label>
               </div>
 
               <div className="column nine wide">

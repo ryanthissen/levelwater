@@ -23,7 +23,7 @@ const mapDispatchToProps = (dispatch) => {
   return bindActionCreators ({ submitRevenueCostInfo }, dispatch);
 };
 
-class RevenueCostsForm extends Component {
+export class RevenueCostsForm extends Component {
 
   render() {
     const { handleSubmit, pristine, reset, submitting } = this.props;
@@ -33,7 +33,7 @@ class RevenueCostsForm extends Component {
           <SignUpStep step="2" />
           <div className="ui grid">
             <div className="column sixteen wide">
-              <h3>Please Enter Revenue, Cost, and Reserve Fund Information From Your Most Recent Year of Operations</h3>
+              <h3>Please Enter Revenue, Cost, and Reserve Fund Information From Your Most Recent Year of Operation</h3>
             </div>
           </div>
 
