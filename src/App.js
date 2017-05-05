@@ -85,7 +85,7 @@ class App extends Component {
 
         <Route path="/dashboard" component={FormNavbar} />
         <Route path="/dashboard" component={Dashboard} />
-        {/* <Route path="/dashboard" component={Footer} /> */}
+        <Route path="/dashboard" component={FormFooter} />
 
         <Route exact path="/manage" component={FormNavbar} />
         <Route exact path="/manage" component={Manage} />
