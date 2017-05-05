@@ -2,7 +2,7 @@
 
 #main-image {
   height: 320px;
-  background: url('https://media.giphy.com/media/70BItD093Mhnq/giphy.gif') no-repeat;
+  background: url('../../img/main-splash.jpg') no-repeat;
   width: 100%;
   background-size: cover;
   background-position: center;
@@ -13,7 +13,7 @@
   background: url('../../img/check.png') no-repeat;
   width: 100%;
   background-size: cover;
-  background-position: center;
+  background-position: top;
 }
 
 /*homepage about*/
@@ -45,7 +45,7 @@
 
 #details h3 {
   color: #3971AC;
-  font-size: 1.2em;
+  font-size: 1.6em;
 }
 
 #details {
@@ -58,6 +58,7 @@
 #details ul {
   list-style: none;
   line-height: 2;
+  font-size: 1.1em;
 }
 
 #details p {

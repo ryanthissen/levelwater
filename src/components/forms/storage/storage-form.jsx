@@ -29,7 +29,7 @@ export class StorageForm extends Component {
   render() {
     const { handleSubmit, pristine, reset, submitting } = this.props;
     return (
-      <Route render = {({ history }) => (
+      <Route render={({ history }) => (
         <div className="storage-form" className="form-step">
           <SignUpStep step="5" />
           <div className="ui grid">
@@ -38,7 +38,7 @@ export class StorageForm extends Component {
             </div>
           </div>
 
-          <form id="step5" onSubmit = {(event) => {
+          <form id="step5" onSubmit={(event) => {
             event.preventDefault();
             let x = this.props.storageFormData.storage.values;
             this.props.submitStorageInfo(
