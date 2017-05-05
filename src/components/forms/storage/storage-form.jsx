@@ -55,30 +55,54 @@ export class StorageForm extends Component {
             <div className="ui grid">
               <div className="column seven wide">
                 <label>Name Of Reservoir:</label>
-                <label>Type:</label>
-                <label>Year Of Construction:</label>
-                <label>Storage Capacity (gallons):</label>
-                <label>Condition</label>
-                <label>Is This Reservoir Critical To Your Ability To Serve Safe Water?</label>
+
               </div>
 
+              <div className="column nine wide computer sixteen wide tablet"><Field name="reservoir_name" component="input" type="text" required /></div>
+
+              <div className="column seven wide computer sixteen wide tablet"><label>Type:</label></div>
+
+              <div className="column nine wide computer sixteen wide tablet"><Field name="reservoir_type" component="select" className="ui dropdown">
+                <option value="select">select:</option>
+                <option value="concrete">Concrete</option>
+                <option value="steel">Steel</option>
+                <option value="redwood">Redwood</option>
+                <option value="plastic">Plastic</option>
+              </Field></div>
+
+
+              <div className="column seven wide computer sixteen wide tablet"><label>Year Of Construction:</label></div>
+
+              <div className="column nine wide computer sixteen wide tablet"><Field name="year_constructed" component="input" type="number" required /></div>
+
+
+              <div className="column seven wide computer sixteen wide tablet"><label>Storage Capacity (gallons):</label></div>
+
+              <div className="column nine wide computer sixteen wide tablet"><Field name="capacity" component="input" type="number" required /></div>
+
+              <div className="column seven wide computer sixteen wide tablet"><label>Condition</label></div>
+
+              <div className="column nine wide computer sixteen wide tablet"><Field name="condition" component="select" className="ui dropdown">
+                <option value="select">select:</option>
+                <option value="great">Great</option>
+                <option value="fair">Fair</option>
+                <option value="poor">Poor</option>
+              </Field></div>
+
+
+              <div className="column seven wide computer sixteen wide tablet"><label>Is This Reservoir Critical To Serve Safe Water?</label></div>
+
+
+
+
+
+
+
+
+
+
+
               <div className="column nine wide">
-                <Field name="reservoir_name" component="input" type="text" required />
-                <Field name="reservoir_type" component="select" className="ui dropdown">
-                  <option value="select">select:</option>
-                  <option value="concrete">Concrete</option>
-                  <option value="steel">Steel</option>
-                  <option value="redwood">Redwood</option>
-                  <option value="plastic">Plastic</option>
-                </Field>
-                <Field name="year_constructed" component="input" type="number" required />
-                <Field name="capacity" component="input" type="number" required />
-                <Field name="condition" component="select" className="ui dropdown">
-                  <option value="select">select:</option>
-                  <option value="great">Great</option>
-                  <option value="fair">Fair</option>
-                  <option value="poor">Poor</option>
-                </Field>
                 <Field name="critical_to_operations" component="select" className="ui dropdown">
                   <option value="default">select</option>
                   <option value="false">No</option>
@@ -96,7 +120,7 @@ export class StorageForm extends Component {
             <div className="ui grid">
               <SignUpBackButton to="/signup/step4"/>
               <div id="revenue-costs-submit-button" className="column eight wide">
-                <button className="ui button">Continue To Pumping &gt;</button>
+                <button className="ui button">Continue To Distro. &gt;</button>
               </div>
             </div>
           </form>

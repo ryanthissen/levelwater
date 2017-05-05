@@ -50,24 +50,31 @@ export class PumpingDistForm extends Component {
               });
           }}>
             <div className="ui grid">
-              <div className="column seven wide">
+              <div className="column seven wide computer sixteen wide tablet">
                 <label>Estimated Length Of Distribution System (miles):</label>
-                <label>Average Age Of Pipes (years):</label>
-                <label>Average Main Diameter (inches):</label>
-                <label>Condition:</label>
               </div>
 
-              <div className="column nine wide">
-                <Field name="total_length_miles" component="input" type="number" required />
-                <Field name="average_age_of_pipes" component="input" type="number" required />
-                <Field name="average_main_diameter_inches" component="select" className="ui dropdown" required>
-                  <option value="select">select:</option>
-                  <option value="4">4</option>
-                  <option value="6">6</option>
-                  <option value="8">8</option>
-                  <option value="12">12</option>
-                  <option value="24">24</option>
-                </Field>
+              <div className="column nine wide computer sixteen wide tablet"><Field name="total_length_miles" component="input" type="number" required /></div>
+
+              <div className="column seven wide computer sixteen wide tablet"><label>Average Age Of Pipes (years):</label></div>
+
+              <div className="column nine wide computer sixteen wide tablet"><Field name="average_age_of_pipes" component="input" type="number" required /></div>
+
+              <div className="column seven wide computer sixteen wide tablet"><label>Average Main Diameter (inches):</label></div>
+
+              <div className="column nine wide computer sixteen wide tablet"><Field name="average_main_diameter_inches" component="select" className="ui dropdown" required>
+                <option value="select">select:</option>
+                <option value="4">4</option>
+                <option value="6">6</option>
+                <option value="8">8</option>
+                <option value="12">12</option>
+                <option value="24">24</option>
+              </Field></div>
+
+              <div className="column seven wide computer sixteen wide tablet"><label>Condition:</label></div>
+
+
+              <div className="column nine wide computer sixteen wide tablet">
                 <Field name="condition" component="select" className="ui dropdown">
                   <option value="select">select:</option>
                   <option value="great">Great</option>
