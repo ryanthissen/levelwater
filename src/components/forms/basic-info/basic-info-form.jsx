@@ -58,7 +58,7 @@ class BasicInfoForm extends Component{
                 <label>Water System Name:</label>
                 <label>PWS Number:</label>
                 <label>Number Of Connections:</label>
-                <label>Customer Population:</label>
+                <label>Population Served:</label>
               </div>
 
               <div className="column nine wide">

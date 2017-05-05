@@ -34,7 +34,7 @@ class StorageForm extends Component {
           <SignUpStep step="5" />
           <div className="ui grid">
             <div className="column sixteen wide">
-              <h3>Storage #1</h3>
+              <h3>Please Enter Information About Your Finished Water Reservoir</h3>
             </div>
           </div>
 
@@ -57,9 +57,9 @@ class StorageForm extends Component {
                 <label>Name Of Reservoir:</label>
                 <label>Type:</label>
                 <label>Year Of Construction:</label>
-                <label>Storage Capacity (Gallons):</label>
+                <label>Storage Capacity (gallons):</label>
                 <label>Condition</label>
-                <label>Is This Facility Critical To Operations:</label>
+                <label>Is This Reservoir Critical To Your Ability To Serve Safe Water?</label>
               </div>
 
               <div className="column nine wide">

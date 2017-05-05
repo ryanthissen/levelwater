@@ -36,7 +36,7 @@ class TreatmentForm extends Component {
           <SignUpStep step="4" />
           <div className="ui grid">
             <div className="column sixteen wide">
-              <h3>Treatment Plant #1</h3>
+              <h3>Please Enter Information About Your Treatment Plant</h3>
             </div>
           </div>
 
@@ -60,7 +60,7 @@ class TreatmentForm extends Component {
                 <label>Name Of Treatment Plant:</label>
                 <label>Type of Treatment:</label>
                 <label>Year Of Construction:</label>
-                <label>Treatment Capacity:</label>
+                <label>Treatment Capacity (gpm):</label>
                 <label>Condition of Treatment Plant:</label>
                 <label>Is This Plant Critical To Your Ability To Serve Safe Water?</label>
               </div>
