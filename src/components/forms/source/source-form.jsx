@@ -67,7 +67,7 @@ export class SourceForm extends Component {
                 <label>Is This Source Critical To Your Ability To Serve Safe Water?</label>
               </div>
 
-              <div className="column seven wide computer ten wide tablet">
+              <div className="column seven wide computer ten wide tablet"></div>
 
               <div className="column nine wide computer six wide tablet">
                 <Field name="source_name" component="input" type="text" required />
