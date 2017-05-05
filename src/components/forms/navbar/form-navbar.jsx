@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import RightNavForms from './right-nav-forms';
 
-const NavbarHome = () => (
+export const NavbarHome = () => (
   <div id="navbar">
     <div className="ui grid">
       <div className="three wide column" id="demo-button"></div>

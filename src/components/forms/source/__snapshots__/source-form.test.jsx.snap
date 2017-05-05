@@ -1,0 +1,15 @@
+exports[`source form renders a snapshot 1`] = `
+<Connect(Form(SourceForm))
+  destroyOnUnmount={true}
+  enableReinitialize={false}
+  forceUnregisterOnUnmount={false}
+  form="source"
+  getFormState={[Function]}
+  keepDirtyOnReinitialize={false}
+  persistentSubmitErrors={false}
+  pure={true}
+  shouldAsyncValidate={[Function]}
+  shouldValidate={[Function]}
+  touchOnBlur={true}
+  touchOnChange={false} />
+`;

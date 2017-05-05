@@ -24,7 +24,7 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 
-class BasicInfoForm extends Component{
+export class BasicInfoForm extends Component{
 
 
   render() {

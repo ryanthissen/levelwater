@@ -25,7 +25,7 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 
-class PumpingDistForm extends Component {
+export class PumpingDistForm extends Component {
   render() {
     const { handleSubmit, pristine, reset, submitting } = this.props;
     return (

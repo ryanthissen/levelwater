@@ -1,0 +1,13 @@
+exports[`sign up step renders a snapshot 1`] = `
+<div
+  className="ui grid"
+  id="sign-up-step">
+  <div
+    className="column thirteen wide" />
+  <div
+    className="column three wide">
+    Step 
+     of 6
+  </div>
+</div>
+`;

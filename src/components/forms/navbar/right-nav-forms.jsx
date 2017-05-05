@@ -6,7 +6,7 @@ const logUserOut = (callback) => {
   callback();
 };
 
-const RightNavForms = () => (
+export const RightNavForms = () => (
   <Route render={({ history }) => (
     <div className="ui buttons">
     <button className="ui button" onClick={(event) => {

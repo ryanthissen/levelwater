@@ -27,7 +27,7 @@ const mapDispatchToProps = (dispatch) => {
   return bindActionCreators({ submitTreatmentInfo }, dispatch);
 };
 
-class TreatmentForm extends Component {
+export class TreatmentForm extends Component {
   render() {
     const { handleSubmit, pristine, reset, submitting } = this.props;
     return (

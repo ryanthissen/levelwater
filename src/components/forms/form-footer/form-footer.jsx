@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './form-footer.css';
 
-const FormFooter = () => (
+export const FormFooter = () => (
   <div id="form-footer">
     <div className="ui grid">
       <div className="column sixteen wide">

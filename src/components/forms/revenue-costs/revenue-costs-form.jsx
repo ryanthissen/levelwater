@@ -23,7 +23,7 @@ const mapDispatchToProps = (dispatch) => {
   return bindActionCreators ({ submitRevenueCostInfo }, dispatch);
 };
 
-class RevenueCostsForm extends Component {
+export class RevenueCostsForm extends Component {
 
   render() {
     const { handleSubmit, pristine, reset, submitting } = this.props;

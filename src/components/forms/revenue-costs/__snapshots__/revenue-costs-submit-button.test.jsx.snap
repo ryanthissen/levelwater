@@ -1,0 +1,10 @@
+exports[`revenue and costs submit button renders a snapshot 1`] = `
+<div
+  className="column eight wide"
+  id="revenue-costs-submit-button">
+  <button
+    className="ui button">
+    Continue To Sources >
+  </button>
+</div>
+`;

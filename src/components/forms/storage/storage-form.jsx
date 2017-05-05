@@ -25,7 +25,7 @@ const mapDispatchToProps = (dispatch) => {
   return bindActionCreators ({ submitStorageInfo }, dispatch)
 };
 
-class StorageForm extends Component {
+export class StorageForm extends Component {
   render() {
     const { handleSubmit, pristine, reset, submitting } = this.props;
     return (

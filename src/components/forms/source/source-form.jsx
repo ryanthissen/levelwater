@@ -24,7 +24,7 @@ const mapDispatchToProps = (dispatch) => {
   return bindActionCreators ({ submitSourceInfo }, dispatch);
 };
 
-class SourceForm extends Component {
+export class SourceForm extends Component {
 
   render() {
     const { handleSubmit, pristine, reset, submitting } = this.props;
