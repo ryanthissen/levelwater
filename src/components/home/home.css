@@ -41,6 +41,10 @@
   font-size: 3em;
 }
 
+.about p {
+  text-align: justify;
+}
+
 /*homepage details*/
 
 #details h3 {
@@ -68,4 +72,7 @@
 
 #details .eight {
   border-right: 1px solid black;
+  padding-left: 80px;
+  padding-right: 80px;
+  text-align: justify;
 }
