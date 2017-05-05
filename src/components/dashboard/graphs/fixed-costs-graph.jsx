@@ -16,7 +16,7 @@ const donut = {
 };
 
 
-class FixedCostsGraph extends Component {
+export class FixedCostsGraph extends Component {
 
   constructor(props) {
     super(props);

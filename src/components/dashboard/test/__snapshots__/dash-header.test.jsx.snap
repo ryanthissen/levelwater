@@ -1,0 +1,8 @@
+exports[`dash header renders a snapshot 1`] = `
+<div
+  id="dash-header">
+  <h2>
+    Your Dashboard
+  </h2>
+</div>
+`;

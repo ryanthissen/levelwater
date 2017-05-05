@@ -1,0 +1,29 @@
+exports[`navbar home renders a snapshot 1`] = `
+<div
+  id="navbar">
+  <div
+    className="ui grid">
+    <div
+      className="three wide column"
+      id="demo-button">
+      <DemoButton />
+    </div>
+    <div
+      className="nine wide column"
+      id="header">
+      <Link
+        replace={false}
+        to="/">
+        <h1>
+          levelwater.io
+        </h1>
+      </Link>
+    </div>
+    <div
+      className="four wide column"
+      id="right-nav-home">
+      <RightNavHome />
+    </div>
+  </div>
+</div>
+`;

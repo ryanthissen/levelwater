@@ -1,0 +1,159 @@
+exports[`navbar home renders a snapshot 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <div
+    id="navbar">
+    <div
+        className="ui grid">
+        <div
+            className="three wide column"
+            id="demo-button" />
+        <div
+            className="nine wide column"
+            id="header">
+            <Link
+                replace={false}
+                to="/">
+                <h1>
+                    levelwater.io
+                </h1>
+            </Link>
+        </div>
+        <div
+            className="four wide column"
+            id="right-nav-home">
+            <RightNavForms />
+        </div>
+    </div>
+</div>,
+  "nodes": Array [
+    <div
+      id="navbar">
+      <div
+            className="ui grid">
+            <div
+                  className="three wide column"
+                  id="demo-button" />
+            <div
+                  className="nine wide column"
+                  id="header">
+                  <Link
+                        replace={false}
+                        to="/">
+                        <h1>
+                              levelwater.io
+                        </h1>
+                  </Link>
+            </div>
+            <div
+                  className="four wide column"
+                  id="right-nav-home">
+                  <RightNavForms />
+            </div>
+      </div>
+</div>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 2,
+      "_context": Object {},
+      "_currentElement": <NavbarHome />,
+      "_debugID": 3,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance": StatelessComponent {
+        "_reactInternalInstance": [Circular],
+        "context": Object {},
+        "props": Object {},
+        "refs": Object {},
+        "state": null,
+        "updater": Object {
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
+      },
+      "_mountOrder": 2,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": NoopInternalComponent {
+        "_currentElement": <div
+          id="navbar">
+          <div
+                    className="ui grid">
+                    <div
+                              className="three wide column"
+                              id="demo-button" />
+                    <div
+                              className="nine wide column"
+                              id="header">
+                              <Link
+                                        replace={false}
+                                        to="/">
+                                        <h1>
+                                                  levelwater.io
+                                        </h1>
+                              </Link>
+                    </div>
+                    <div
+                              className="four wide column"
+                              id="right-nav-home">
+                              <RightNavForms />
+                    </div>
+          </div>
+</div>,
+        "_debugID": 4,
+        "_renderedOutput": <div
+          id="navbar">
+          <div
+                    className="ui grid">
+                    <div
+                              className="three wide column"
+                              id="demo-button" />
+                    <div
+                              className="nine wide column"
+                              id="header">
+                              <Link
+                                        replace={false}
+                                        to="/">
+                                        <h1>
+                                                  levelwater.io
+                                        </h1>
+                              </Link>
+                    </div>
+                    <div
+                              className="four wide column"
+                              id="right-nav-home">
+                              <RightNavForms />
+                    </div>
+          </div>
+</div>,
+      },
+      "_renderedNodeType": 0,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false,
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <NavbarHome />,
+}
+`;

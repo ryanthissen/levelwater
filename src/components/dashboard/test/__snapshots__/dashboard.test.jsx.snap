@@ -1,0 +1,7 @@
+exports[`dashboard renders a snapshot 1`] = `
+<div
+  id="dashboard">
+  <DashHeader />
+  <C3Visuals />
+</div>
+`;

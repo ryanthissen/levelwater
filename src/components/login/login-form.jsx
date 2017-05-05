@@ -20,7 +20,7 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 
-class LoginForm extends Component{
+export class LoginForm extends Component{
   constructor(props) {
     super(props);
     this.state = { value: null }

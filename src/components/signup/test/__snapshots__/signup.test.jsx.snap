@@ -1,0 +1,7 @@
+exports[`signup renders a snapshot 1`] = `
+<div
+  id="signup">
+  <Connect(ReduxForm) />
+  <OAuthButton />
+</div>
+`;
