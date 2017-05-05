@@ -1,6 +1,6 @@
 import axios from 'axios';
-const distributionURL = 'http://levelwater-server.herokuapp.com/distribution-system';
-const algorithmURL = 'http://levelwater-server.herokuapp.com/algorithm-results/';
+const distributionURL = 'https://levelwater-server.herokuapp.com/distribution-system';
+const algorithmURL = 'https://levelwater-server.herokuapp.com/algorithm-results/';
 
 
 const pumpingDistHelper = (total_length_miles, average_age_of_pipes, average_main_diameter_inches, condition, callback) => {

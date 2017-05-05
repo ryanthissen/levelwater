@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const sourcesURL = 'http://levelwater-server.herokuapp.com/sources';
+const sourcesURL = 'https://levelwater-server.herokuapp.com/sources';
 
 
 const sourceInfoHelper = (source_name, source_type, treatment, critical_to_operations, year_constructed, capacity, condition, continuous_chlorination, callback) => {

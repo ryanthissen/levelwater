@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-let algorithmURL = 'http://levelwater-server.herokuapp.com/algorithm-results/'
+let algorithmURL = 'https://levelwater-server.herokuapp.com/algorithm-results/'
 
 const loadChartHelper = () => {
   let config = {

@@ -1,5 +1,5 @@
 import axios from 'axios';
-const basicInfoURL = 'http://levelwater-server.herokuapp.com/water-systems';
+const basicInfoURL = 'https://levelwater-server.herokuapp.com/water-systems';
 
 
 

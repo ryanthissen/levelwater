@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const ratesCostsURL = 'http://levelwater-server.herokuapp.com/rates-finances-fixedcosts/';
+const ratesCostsURL = 'https://levelwater-server.herokuapp.com/rates-finances-fixedcosts/';
 
 const submitRatesCostsHelper = (callback) => {
   let config = {

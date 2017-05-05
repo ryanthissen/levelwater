@@ -1,5 +1,5 @@
 import axios from 'axios';
-const loginURL = 'http://levelwater-server.herokuapp.com/login';
+const loginURL = 'https://levelwater-server.herokuapp.com/login';
 
 
 //helper function to make login api calls
