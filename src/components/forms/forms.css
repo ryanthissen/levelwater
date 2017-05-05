@@ -22,7 +22,7 @@
 
 .form-step input, .form-step select {
   font-size: 1.6em;
-  margin: 30px 0;
+  margin: 10px 0;
   width: 160px;
   color: #414141;
 }
@@ -64,4 +64,41 @@
   text-align: right;
   padding-right: 14px;
   border-radius: 10px;
+}
+
+@media only screen and (max-width: 992px) {
+ .form-step .nine {
+    margin-left: 20%;
+  }
+  .form-step label {
+    height: 30px;
+    line-height: normal;
+  }
+  .form-step label:first-of-type {
+    margin-top: 40px;
+  }
+
+  .form-step .nine:last-of-type {
+    margin-bottom: 40px;
+  }
+
+  #revenue-costs-submit-button button {
+    width: 200px;
+    height: 60px;
+    font-size: 1em;
+  }
+
+  #revenue-costs-submit-button {
+    text-align: right !important;
+  }
+
+  #sign-up-back-button button {
+    width: 200px;
+    height: 60px;
+    font-size: 1em;
+  }
+
+.sixteen {
+    text-align: center !important;
+  }
 }
