@@ -25,7 +25,7 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 
-class PumpingDistForm extends Component {
+export class PumpingDistForm extends Component {
   render() {
     const { handleSubmit, pristine, reset, submitting } = this.props;
     return (
@@ -34,7 +34,7 @@ class PumpingDistForm extends Component {
           <SignUpStep step="6" />
           <div className="ui grid">
             <div className="column sixteen wide">
-              <h3>Distribution System</h3>
+              <h3>Please Enter Information About Your Distribution System</h3>
             </div>
           </div>
 
@@ -51,10 +51,10 @@ class PumpingDistForm extends Component {
           }}>
             <div className="ui grid">
               <div className="column seven wide">
-                <label>Est. Length Of Distribution System (miles):</label>
+                <label>Estimated Length Of Distribution System (miles):</label>
                 <label>Average Age Of Pipes (years):</label>
                 <label>Average Main Diameter (inches):</label>
-                <label>Condition</label>
+                <label>Condition:</label>
               </div>
 
               <div className="column nine wide">

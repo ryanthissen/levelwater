@@ -1,4 +1,5 @@
 exports[`navbar home renders a snapshot 1`] = `
+
 ShallowWrapper {
   "complexSelector": ComplexSelector {
     "buildPredicate": [Function],
@@ -156,4 +157,5 @@ ShallowWrapper {
   "root": [Circular],
   "unrendered": <NavbarHome />,
 }
+
 `;

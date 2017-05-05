@@ -1,0 +1,12 @@
+exports[`footer renders a snapshot 1`] = `
+<div
+  id="footer">
+  <div
+    className="ui grid">
+    <div
+      className="column sixteen wide">
+      2017 Infinity Worldwide Inc.
+    </div>
+  </div>
+</div>
+`;

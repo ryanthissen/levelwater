@@ -9,7 +9,15 @@ const About = () => (
     <div className="about">
       <div className="ui grid">
         <div className="sixteen wide column">
-          <p>This year the American Society of Civil Engineers evaluated the USA's drinking water infrastructure and rated it a 'D'. There are 155,000 public water systems in the country, the majority of which are smaller systems that lack the economies of scale and the technical, manegerial, and financial capacity that large systems have. This lack of asset management means that many are not meeting state requirements or those of the Safe Drinking Water Act, and may be one capital malfunction away from going bankrupt and leaving their customers dry.</p>
+          <p>
+            There are 155,000 public water systems in the USA.  The vast majority of these public water systems are considered small or very small, meaning they serve less than 3,300 connections.   These small systems often lack the technical, manegerial, and financial capacity that large systems have. These systems also lack the economies of scale that come with having a large rate base.  This can lead to a diverse array of problems, including not meeting the Safe Drinking Water Act.
+          </p>
+          <p>
+            Every year, the American Society of Civil Engineers (ASCE) grades the nation's infrastructure based on factors including capacity, condition, funding, future need, and other factors.  In 2017, the nation's drinking water infrastructure received a grade of <b>D</b>.  From that 2017 report, ASCE noted:
+          </p>
+          <p>
+            "While drinking water infrastructure is funded primarily through a rate-based system, the investment has been inadequate for decades and will continue to be underfunded without significant changes as the revenue generated will fall short as needs grow.  To address deteriorating water infrastructure, asset management provides utility managers and decision-makers with critical information on capital infrastructure assets and timing of investments. Some key steps for asset management include making an inventory of critical assets; evaluating their condition and performance; developing plans to maintain, repair, and replace assets; and funding these activities."
+          </p>
         </div>
       </div>
     </div>
@@ -19,7 +27,7 @@ const About = () => (
     <div className="about">
       <div className="ui grid">
         <div className="sixteen wide column">
-          <p>At levelwater.io we believe that America's drinking water deserves an 'A'. We strive to help small water systems improve their infrastructure by providing a user-friendly, low-overhead asset management system to help ensure that they are keeping track of all of their capital assets and when they need to be replaced, as well as using a complex algorithm to let them know how they should be setting their rates currently as well as in the years to come.</p>
+          <p>At levelwater.io, we believe that America's drinking water deserves an <b>A</b>. We strive to help public water systems plan for future capital investment needs by providing a user-friendly, low-overhead asset management tool.   levelwater.io allows public water systems to develop an inventory of critical assets, and by analyzing the year of construction, current condition, capacity, and other factors, estimates the remaining useful life of assets and provides cost estimates for replacement.  Using this information, public water systems can set water rates that capture the full cost of providing water and anticipate when major capital investments should be expected.</p>
         </div>
       </div>
     </div>

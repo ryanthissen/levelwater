@@ -1,0 +1,13 @@
+exports[`sign up back button renders a snapshot 1`] = `
+<div
+  className="column eight wide"
+  id="sign-up-back-button">
+  <Link
+    replace={false}>
+    <button
+      className="ui button">
+      < Go Back
+    </button>
+  </Link>
+</div>
+`;

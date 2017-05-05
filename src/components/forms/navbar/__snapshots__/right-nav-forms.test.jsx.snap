@@ -1,0 +1,4 @@
+exports[`right navbar forms renders a snapshot 1`] = `
+<Route
+  render={[Function]} />
+`;
