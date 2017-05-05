@@ -2,7 +2,7 @@ At levelwater.io, we believe that America's drinking water deserves an A. We str
 
 To run this app locally, fork or clone this repo, and in the project directory run the following commands:
 
-'''
+```
 npm install
 npm start
-'''
+```
