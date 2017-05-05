@@ -113,11 +113,17 @@ class RateGraph extends Component {
             }
         }
     return (
-    <div className="c3 ui grid" id="c3-visuals">
+    <div className="c3" id="c3-visuals">
+      <div className="ui grid">
+        <FixedCostsGraph />
+        <div id="charts" className="column eight wide">
+            <C3Chart data={data} axis={axis} grid={grid} size={size} />
+      </div>
+
+
       <DashAnalysis financialData={this.props.ratesFinancesObject} criticalInfrastructure={this.props.criticalInfrastructure} noncriticalInfrastructure={this.props.noncriticalInfrastructure} />
-      <div id="charts" className="column eight wide">
-          <C3Chart data={data} axis={axis} grid={grid} size={size} />
-          <FixedCostsGraph />
+
+
       </div>
 
     </div>

@@ -40,10 +40,13 @@ const pumpingDistHelper = (total_length_miles, average_age_of_pipes, average_mai
             alert(response.data.error);
           }
           else {
-            console.log('response', JSON.parse(response.data.algorithm_results));
+            console.log('response', response);
             callback();
           }
-        });
+        })
+        .catch((err) => {
+          console.log(err);
+        })
     });
 };
 
