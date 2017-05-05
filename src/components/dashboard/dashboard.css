@@ -43,5 +43,41 @@
 }
 
 #c3-visuals {
-  padding-right: 20px;
+
+}
+
+#dash-analysis {
+  margin: 40px 0;
+  margin-left: 5%;
+  width: 100%;
+}
+
+#dash-analysis li {
+  list-style-type: none;
+  text-align: center;
+  border-bottom: 1px solid white;
+}
+
+#dash-analysis ul {
+  padding: 0;
+}
+
+#dash-analysis h3 {
+  font-size: 1.2em;
+  font-weight: 800;
+}
+
+#dash-analysis p {
+  font-weight: 800;
+  height: 40px;
+  margin-bottom: 30px;
+}
+
+#dash-analysis .five {
+  border-left: 2px solid white;
+  border-right: 1px solid white;
+}
+
+#dash-analysis .five .five {
+  border: none;
 }

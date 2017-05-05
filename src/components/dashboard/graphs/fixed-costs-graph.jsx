@@ -32,7 +32,7 @@ class FixedCostsGraph extends Component {
 
   render() {
     return (
-    <div className="c3" id="c3-visuals">
+    <div className="c3 column eight wide" id="c3-visuals">
       <C3Chart data={this.data} donut={donut} />
     </div>
     );
