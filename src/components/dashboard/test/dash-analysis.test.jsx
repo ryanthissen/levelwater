@@ -1,17 +1,11 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { NavbarHome } from './form-navbar.jsx';
 import toJson from 'enzyme-to-json';
+import DashAnalysis from '../dash-analysis.jsx';
 
-
-
-
-describe('navbar home', () => {
-
-  
+describe('dash analysis', () => {
   it('renders a snapshot', () => {
-    const tree = shallow(<NavbarHome />);
+    const tree = shallow(<DashAnalysis />);
     expect(toJson(tree)).toMatchSnapshot();
-  })
-})
-
+  });
+});

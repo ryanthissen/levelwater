@@ -1,0 +1,11 @@
+exports[`oauth button renders a snapshot 1`] = `
+<div
+  className="o-auth-button">
+  <a
+    href="http://levelwater-server.herokuapp.com/auth/google">
+    <img
+      alt="Login With Facebook"
+      src="fb-login.png" />
+  </a>
+</div>
+`;

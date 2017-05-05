@@ -1,0 +1,4 @@
+exports[`support image renders a snapshot 1`] = `
+<div
+  id="support-image" />
+`;

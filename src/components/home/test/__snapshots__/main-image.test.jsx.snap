@@ -1,0 +1,4 @@
+exports[`main image renders a snapshot 1`] = `
+<div
+  id="main-image" />
+`;
