@@ -29,7 +29,7 @@ export class PumpingDistForm extends Component {
   render() {
     const { handleSubmit, pristine, reset, submitting } = this.props;
     return (
-      <Route render = {({ history }) => (
+      <Route render={({ history }) => (
         <div id="pumping-dist-form" className="form-step">
           <SignUpStep step="6" />
           <div className="ui grid">
@@ -38,7 +38,7 @@ export class PumpingDistForm extends Component {
             </div>
           </div>
 
-          <form id="step6" onSubmit = {(event) => {
+          <form id="step6" onSubmit={(event) => {
             event.preventDefault();
             let x = this.props.distributionformData.pumpingDist.values;
             this.props.submitPumpInfo(
