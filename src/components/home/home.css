@@ -10,7 +10,7 @@
 
 #support-image {
   height: 240px;
-  background: url('../../img/check.png') no-repeat;
+  background: url('https://images.unsplash.com/photo-1491357047415-28ddf4206e62?dpr=1&auto=format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=&bg=') no-repeat;
   width: 100%;
   background-size: cover;
   background-position: center;
