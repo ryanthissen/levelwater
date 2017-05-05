@@ -1,17 +1,11 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { NavbarHome } from './form-navbar.jsx';
 import toJson from 'enzyme-to-json';
+import OauthRedirect from '../oauth-redirect.jsx';
 
-
-
-
-describe('navbar home', () => {
-
-  
+describe('oauth redirect', () => {
   it('renders a snapshot', () => {
-    const tree = shallow(<NavbarHome />);
+    const tree = shallow(<OauthRedirect />);
     expect(toJson(tree)).toMatchSnapshot();
-  })
-})
-
+  });
+});

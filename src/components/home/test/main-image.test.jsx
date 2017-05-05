@@ -1,17 +1,11 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { NavbarHome } from './form-navbar.jsx';
 import toJson from 'enzyme-to-json';
+import MainImage from '../main-image.jsx';
 
-
-
-
-describe('navbar home', () => {
-
-  
+describe('main image', () => {
   it('renders a snapshot', () => {
-    const tree = shallow(<NavbarHome />);
+    const tree = shallow(<MainImage />);
     expect(toJson(tree)).toMatchSnapshot();
-  })
-})
-
+  });
+});

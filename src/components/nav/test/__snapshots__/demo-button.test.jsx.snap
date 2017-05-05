@@ -1,0 +1,6 @@
+exports[`oauth button renders a snapshot 1`] = `
+<button
+  className="ui button">
+  Try It!
+</button>
+`;

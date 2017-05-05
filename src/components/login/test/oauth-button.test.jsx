@@ -1,17 +1,12 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { NavbarHome } from './form-navbar.jsx';
 import toJson from 'enzyme-to-json';
+import OauthButton from '../oauth-button.jsx';
 
 
-
-
-describe('navbar home', () => {
-
-  
+describe('oauth button', () => {
   it('renders a snapshot', () => {
-    const tree = shallow(<NavbarHome />);
+    const tree = shallow(<OauthButton />);
     expect(toJson(tree)).toMatchSnapshot();
-  })
-})
-
+  });
+});

@@ -16,7 +16,7 @@ const mapDispatchToProps = (dispatch) => {
   return bindActionCreators ({ signUserUp }, dispatch);
 };
 
-class SignupForm extends Component{
+export class SignupForm extends Component{
   render(props) {
     const { handleSubmit, pristine, reset, submitting } = this.props;
     return (

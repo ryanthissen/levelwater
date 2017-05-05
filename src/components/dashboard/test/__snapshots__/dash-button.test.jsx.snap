@@ -1,0 +1,7 @@
+exports[`dash button renders a snapshot 1`] = `
+<div
+  id="dash-button">
+  <button
+    className="ui button" />
+</div>
+`;
