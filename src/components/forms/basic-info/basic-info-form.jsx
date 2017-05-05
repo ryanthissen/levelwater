@@ -54,25 +54,40 @@ export class BasicInfoForm extends Component{
             );
           }}>
             <div className="ui grid">
-              <div className="column seven wide">
+              <div className="column seven wide computer sixteen wide tablet">
                 <label>Water System Name:</label>
-                <label>PWS Number:</label>
-                <label>Number Of Connections:</label>
-                <label>Population Served:</label>
               </div>
 
+              <div className="column nine wide computer sixteen wide tablet"><Field name="pws_name" component="input" type="text" required /></div>
+
+              <div className="column seven wide computer sixteen wide tablet"><label>PWS Number:</label></div>
+
+              <div className="column nine wide computer sixteen wide tablet"><Field name="pws_id" component="input" type="number" required /></div>
+
+              <div className="column seven wide computer sixteen wide tablet"><label>Number Of Connections:</label></div>
+
+              <div className="column nine wide computer sixteen wide tablet"><Field name="connections" component="input" type="number" required /></div>
+
+              <div className="column seven wide computer sixteen wide tablet"><label>Population Served:</label></div>
+
+
+
+
+
+
+
+
+
               <div className="column nine wide">
-                <Field name="pws_name" component="input" type="text" required />
-                <Field name="pws_id" component="input" type="number" required />
-                <Field name="connections" component="input" type="number" required />
                 <Field name="population" component="input" type="number" required />
               </div>
+
             </div>
-              <div id="basic-info-submit-button">
+              <div>
                 <div className="ui grid">
                   <div className="column four wide"></div>
-                  <div className="column twelve wide">
-                    <button type='submit' className="ui button">Continue To Revenue & Costs &gt;</button>
+                  <div className="column twelve wide" id="revenue-costs-submit-button">
+                    <button type='submit' className="ui button" >Add Revenue & Costs &gt;</button>
                   </div>
                 </div>
               </div>
