@@ -1,0 +1,4 @@
+exports[`dash buttons renders a snapshot 1`] = `
+<Route
+  render={[Function]} />
+`;

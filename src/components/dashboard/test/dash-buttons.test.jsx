@@ -1,12 +1,11 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import About from '../about.jsx';
 import toJson from 'enzyme-to-json';
+import {DashButtons} from '../dash-buttons.jsx';
 
-
-describe('about', () => {
+describe('dash buttons', () => {
   it('renders a snapshot', () => {
-    const tree = shallow(<About />);
+    const tree = shallow(<DashButtons />);
     expect(toJson(tree)).toMatchSnapshot();
   });
 });

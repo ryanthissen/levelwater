@@ -1,12 +1,11 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import About from '../about.jsx';
 import toJson from 'enzyme-to-json';
+import { FixedCostsGraph } from '../fixed-costs-graph.jsx';
 
-
-describe('about', () => {
+describe('fixed costs graph', () => {
   it('renders a snapshot', () => {
-    const tree = shallow(<About />);
+    const tree = shallow(<FixedCostsGraph />);
     expect(toJson(tree)).toMatchSnapshot();
   });
 });

@@ -20,7 +20,7 @@ const mapDispatchToProps = (dispatch) => {
   return bindActionCreators ({ submitRatesCostsButton }, dispatch);
 };
 
-class DashButtons extends Component {
+export class DashButtons extends Component {
 
   render() {
     return (
