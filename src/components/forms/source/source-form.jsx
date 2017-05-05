@@ -56,7 +56,7 @@ export class SourceForm extends Component {
           }}>
             <div className="ui grid">
 
-              <div className="column seven wide">
+              <div className="column seven wide computer ten wide tablet">
                 <label>Name Of Source:</label>
                 <label>Source Type:</label>
                 <label>Does This Source Receive Continuous Chlorination:</label>
@@ -67,7 +67,9 @@ export class SourceForm extends Component {
                 <label>Is This Source Critical To Your Ability To Serve Safe Water?</label>
               </div>
 
-              <div className="column nine wide">
+              <div className="column seven wide computer ten wide tablet">
+
+              <div className="column nine wide computer six wide tablet">
                 <Field name="source_name" component="input" type="text" required />
                 <Field name="source_type" component="select" className="ui dropdown">
                   <option value="default">select</option>

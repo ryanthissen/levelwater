@@ -62,6 +62,8 @@ export class StorageForm extends Component {
                 <label>Is This Reservoir Critical To Your Ability To Serve Safe Water?</label>
               </div>
 
+
+
               <div className="column nine wide">
                 <Field name="reservoir_name" component="input" type="text" required />
                 <Field name="reservoir_type" component="select" className="ui dropdown">
