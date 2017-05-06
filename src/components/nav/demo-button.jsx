@@ -19,8 +19,10 @@ export class DemoButton extends Component{
           event.preventDefault();
           this.props.logUserIn('alex83@gmail.com', 'something',() => {
             history.push('/dashboard');
-          });
-        }}>Try It!</button>
+          }
+        )}}>
+          Try It!</button>
+
         )} />
     );
   }
