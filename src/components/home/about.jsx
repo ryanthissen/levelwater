@@ -27,7 +27,9 @@ const About = () => (
     <div className="about">
       <div className="ui grid">
         <div className="sixteen wide column">
-          <p>At levelwater.io, we believe that America's drinking water deserves an <b>A</b>. We strive to help public water systems plan for future capital investment needs by providing a user-friendly, low-overhead asset management tool.   levelwater.io allows public water systems to develop an inventory of critical assets, and by analyzing the year of construction, current condition, capacity, and other factors, estimates the remaining useful life of assets and provides cost estimates for replacement.  Using this information, public water systems can set water rates that capture the full cost of providing water and anticipate when major capital investments should be expected.</p>
+          <p>At levelwater.io, we believe that America's drinking water deserves an <b>A</b>. We strive to help public water systems plan for future capital investment needs by providing a user-friendly, low-overhead asset management tool.</p>
+
+          <p>levelwater.io allows public water systems to develop an inventory of critical assets, which includes estimated remaining useful life and replacement cost.  By analyzing a wealth of information pertinent to public water systems, users are able to anticipate major capital investments and set water rates that capture the full cost of providing safe water.</p>
         </div>
       </div>
     </div>
