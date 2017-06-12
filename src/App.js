@@ -8,7 +8,6 @@ import Details from './components/home/details';
 import Footer from './components/footer/footer';
 import Login from './components/login/login';
 import Signup from './components/signup/signup';
-import SignUpStep from './components/forms/sign-up-step';
 import FormNavbar from './components/forms/navbar/form-navbar';
 import BasicInfoForm from './components/forms/basic-info/basic-info-form';
 import RevenueCostsForm from './components/forms/revenue-costs/revenue-costs-form';
@@ -32,7 +31,7 @@ class App extends Component {
   render() {
     return (
     <Router>
-      <div className ="App">
+      <div className="App">
         <Route exact path="/" component={OauthRedirect} />
         <Route exact path="/" component={NavbarHome} />
         <Route exact path="/" component={MainImage} />
@@ -57,7 +56,6 @@ class App extends Component {
 
 
         <Route exact path="/signup/step1" component={FormNavbar}  />
-        {/* <Route exact path="/signup/step1" component={() => (<SignUpStep step="1" />)}  /> */}
         <Route exact path="/signup/step1" component={BasicInfoForm}  />
         <Route exact path="/signup/step1" component={FormFooter}  />
 

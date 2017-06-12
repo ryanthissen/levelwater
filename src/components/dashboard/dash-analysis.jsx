@@ -23,7 +23,7 @@ export default class DashAnalysis extends Component {
 
   renderCriticalInfrastructureAnnualContribution() {
     return this.props.criticalInfrastructure.map((element) => {
-      return <li>{element[3]}</li>;
+      return <li>${element[3]}</li>;
     });
   }
 
@@ -41,7 +41,7 @@ export default class DashAnalysis extends Component {
 
   renderNoncriticalInfrastructureAnnualContribution() {
     return this.props.noncriticalInfrastructure.map((element) => {
-      return <li>{element[3]}</li>;
+      return <li>${element[3]}</li>;
     });
   }
 
@@ -50,6 +50,7 @@ export default class DashAnalysis extends Component {
     return (
       <div id="dash-analysis" className="ui grid">
         <div className="column five wide"><h3>Current Financial Picture</h3>
+        <br/>
         <ul>
           <li>Current Average Rate: ${this.props.financialData.current_average_water_rate}</li>
           <li>Annual Total Revenue: ${totalRevenue}</li>
@@ -59,7 +60,7 @@ export default class DashAnalysis extends Component {
 
         <div className="column five wide"><h3>Critical Infrastructure Analysis</h3>
         <div className="ui grid">
-          <div className="column five wide">
+          <div className="flex-center-vertically column five wide">
             <p>Name</p>
             <ul>{this.renderCriticalInfrastructureName()}</ul>
           </div>
@@ -75,7 +76,7 @@ export default class DashAnalysis extends Component {
 
         <div className="column five wide">  <h3>Noncritical Infrastructure Analysis</h3>
           <div className="ui grid">
-            <div className="column five wide">
+            <div className="flex-center-vertically column five wide">
               <p>Name</p>
               <ul>{this.renderNoncriticalInfrastructureName()}</ul>
             </div>

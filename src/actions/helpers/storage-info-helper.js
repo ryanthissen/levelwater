@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const storageURL = 'http://levelwater-server.herokuapp.com/storage-reservoirs';
+const storageURL = 'https://levelwater-server.herokuapp.com/storage-reservoirs';
 
 
 const storageInfoHelper = (reservoir_type, reservoir_name, year_constructed, capacity, condition, critical_to_operations, callback) => {
@@ -29,7 +29,7 @@ const storageInfoHelper = (reservoir_type, reservoir_name, year_constructed, cap
       condition: condition,
       critical_to_operations: critical_to_operations
     }, config)
-    
+
     .then((response) => {
       if (response.data.ErrorMessage) {
         console.log('response', response);

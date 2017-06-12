@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const signupURL = 'http://levelwater-server.herokuapp.com/users';
+const signupURL = 'https://levelwater-server.herokuapp.com/users';
 
 function signupUser(email, firstName, lastName, password, passwordConfirm, callback) {
   if (password !== passwordConfirm) {
