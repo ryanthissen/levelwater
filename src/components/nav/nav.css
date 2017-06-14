@@ -6,7 +6,8 @@
 
 #navbar h1 {
   color: white;
-  font-size: 3em;
+  font-size: 2.4em;
+  padding-top: 6px;
 }
 
 #right-nav-home {
@@ -45,5 +46,5 @@
 }
 
 #header h1, #about h3 {
-  font-weight: 100 !important;
+  font-weight: 100;
 }
