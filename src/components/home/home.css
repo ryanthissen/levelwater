@@ -9,6 +9,7 @@
   background-size: cover;
   background-position: 50% 40%;
   border-radius: 2px;
+  /*border: 10px solid #000;*/
 }
 
 #support-image {
@@ -18,7 +19,7 @@
   margin-left: 5%;
   background-size: cover;
   background-position: 50% 25%;
-  border-radius: 3px;
+  border-radius: 2px;
 }
 
 /*homepage about*/
@@ -55,7 +56,8 @@
 
 #details h3 {
   color: #484848;
-  font-size: 1.6em;
+  font-size: 2em;
+  font-weight: 300;
 }
 
 #details {
@@ -71,10 +73,10 @@
   font-size: 1.1em;
 }
 
-#details p {
+/*#details p {
   color: #000;
   font-weight: 800;
-}
+}*/
 
 #details .eight {
   border-right: 1px solid black;
