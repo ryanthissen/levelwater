@@ -33,7 +33,7 @@ export class RevenueCostsForm extends Component {
           <SignUpStep step="2" />
           <div className="ui grid">
             <div className="column sixteen wide">
-              <h3>Please Enter Revenue, Cost, and Reserve Fund Information From Your Most Recent Year of Operation</h3>
+              <h3>Financial Information From Your Most Recent Year of Operation</h3>
             </div>
           </div>
 
@@ -96,7 +96,7 @@ export class RevenueCostsForm extends Component {
             <div className="ui grid">
               <SignUpBackButton to="/signup/step1"/>
               <div id="revenue-costs-submit-button" className="column eight wide">
-                <button type='submit' className="ui button">Continue To Sources &gt;</button>
+                <button type='submit' className="ui button">Sources &gt;</button>
               </div>
             </div>
           </form>

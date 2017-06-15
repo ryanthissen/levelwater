@@ -43,6 +43,8 @@
 #demo-button button {
   background-color: #EA4335;
   color: white;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
 }
 
 #header {

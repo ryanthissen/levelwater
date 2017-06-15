@@ -6,7 +6,7 @@
 
 .form-step label, .form-step input, .form-step select {
   display: block !important;
-  font-size: 1.6em;
+  font-size: 1.2em;
 }
 
 .form-step select, .form-step input {
@@ -14,14 +14,14 @@
 }
 
 .form-step label {
-  font-size: 1.3em;
+  font-size: 1.4em;
   /*padding: 22px 0;*/
   height: 61px;
   line-height: 61px;
 }
 
 .form-step input, .form-step select {
-  font-size: 1.6em;
+  font-size: 1.4em;
   margin: 10px 0;
   width: 160px;
   color: #414141;
@@ -39,7 +39,8 @@
 }
 
 .form-step h3 {
-  font-size: 1.8em;
+  font-size: 2em;
+  font-weight: 600;
 }
 
 .form-step .sixteen button {
@@ -56,14 +57,16 @@
 
 #revenue-costs-submit-button button {
   color: white;
-  background-color: crimson;
-  width: 400px;
-  height: 70px;
-  font-size: 2.4em;
+  background-color: #EA4335;
+  width: 150px;
+  height: 45px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 1.6em;
   padding: 0;
   text-align: right;
   padding-right: 14px;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 @media only screen and (max-width: 992px) {
