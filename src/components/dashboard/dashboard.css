@@ -35,11 +35,11 @@
 }
 
 #dash-button selected {
-  background-color: crimson;
+  background-color: #EA4335;
 }
 
 .test button {
-  background-color: crimson !important;
+  background-color: #EA4335 !important;
 }
 
 #c3-visuals {

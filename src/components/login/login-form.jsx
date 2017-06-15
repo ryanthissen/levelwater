@@ -33,8 +33,8 @@ export class LoginForm extends Component{
       <form id="login-form" onSubmit={(event) => {
         event.preventDefault();
         let x = this.props.loginFormData.login.values;
-        this.props.logUserIn(x.email, x.password, (water_systems_id) => {
-          if (water_systems_id) {
+        this.props.logUserIn(x.email, x.password, (profileCompleted) => {
+          if (profileCompleted === 'true') {
             history.push('/dashboard');
           } else {
             history.push('/signup/step1')

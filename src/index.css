@@ -5,22 +5,22 @@
 body {
   margin: 0;
   padding: 0;
-  color: white;
-  background-color: #414141;
-  font-family: 'Roboto' !important;
+  color: #484848;
+  background-color: #F2F2F2;
+  font-family: 'Raleway', sans-serif;
 
 }
 
 h1 {
-  font-family: 'Roboto' !important;
+  font-family: 'Raleway', sans-serif;
 }
 
 h2 {
-  font-family: 'Roboto' !important;
+  font-family: 'Raleway', sans-serif;
 }
 
 h3 {
-  font-family: 'Roboto' !important;
+  font-family: 'Raleway', sans-serif;
 }
 
 

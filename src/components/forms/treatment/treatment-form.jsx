@@ -36,7 +36,7 @@ export class TreatmentForm extends Component {
           <SignUpStep step="4" />
           <div className="ui grid">
             <div className="column sixteen wide">
-              <h3>Please Enter Information About Your Treatment Plant</h3>
+              <h3>Treatment Plant Information</h3>
             </div>
           </div>
 
@@ -108,38 +108,10 @@ export class TreatmentForm extends Component {
                 <option value="true">Yes</option>
                 <option value="false">No</option>
               </Field></div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-              </div>
-
-
-            <div className="ui grid">
-
-              <div id="revenue-costs-submit-button" className="column sixteen wide">
-                <button className="ui button">+ Add Another Plant</button>
-              </div>
             </div>
-
             <div className="ui grid">
               <SignUpBackButton to="/signup/step3"/>
-              <div id="revenue-costs-submit-button" className="column eight wide">
+              <div id="treatment-submit-button" className="column eight wide">
                 <button className="ui button">Continue To Storage &gt;</button>
               </div>
             </div>

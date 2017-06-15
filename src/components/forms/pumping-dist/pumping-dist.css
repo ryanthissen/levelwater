@@ -1,19 +1,7 @@
-/*revenue & costs form*/
-
-/*media queries*/
-
-#revenue-costs-submit-button {
-  text-align: right;
-}
-
-#revenue-costs-submit-button button {
-  margin-right: 50px;
-}
-
-#revenue-costs-submit-button button {
+#distribution-submit-button button {
   color: white;
   background-color: #EA4335;
-  width: 280px;
+  width: 260px;
   height: 45px;
   font-family: 'Raleway', sans-serif;
   font-weight: 400;
@@ -22,4 +10,9 @@
   text-align: right;
   padding-right: 14px;
   border-radius: 5px;
+}
+
+#distribution-submit-button {
+  text-align: right;
+  padding-right: 50px;
 }

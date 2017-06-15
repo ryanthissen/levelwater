@@ -34,7 +34,7 @@ export class StorageForm extends Component {
           <SignUpStep step="5" />
           <div className="ui grid">
             <div className="column sixteen wide">
-              <h3>Please Enter Information About Your Finished Water Reservoir</h3>
+              <h3>Finished Water Reservoir Information</h3>
             </div>
           </div>
 
@@ -91,17 +91,6 @@ export class StorageForm extends Component {
 
 
               <div className="column seven wide computer sixteen wide tablet"><label>Is This Reservoir Critical To Serve Safe Water?</label></div>
-
-
-
-
-
-
-
-
-
-
-
               <div className="column nine wide">
                 <Field name="critical_to_operations" component="select" className="ui dropdown">
                   <option value="default">select</option>
@@ -111,16 +100,9 @@ export class StorageForm extends Component {
               </div>
             </div>
             <div className="ui grid">
-
-              <div id="revenue-costs-submit-button" className="column sixteen wide">
-                <button className="ui button">+ Add More Storage</button>
-              </div>
-            </div>
-
-            <div className="ui grid">
               <SignUpBackButton to="/signup/step4"/>
-              <div id="revenue-costs-submit-button" className="column eight wide">
-                <button className="ui button">Continue To Distro. &gt;</button>
+              <div id="storage-submit-button" className="column eight wide">
+                <button className="ui button">Continue To Distribution &gt;</button>
               </div>
             </div>
           </form>

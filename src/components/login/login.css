@@ -1,24 +1,24 @@
 /*login*/
 #login, #signup {
-  width: 50%;
+  width: 30%;
   border: 1px solid black;
-  border-radius: 10px;
+  border-radius: 5px;
   z-index: 1;
   position: absolute;
-  top: 100px;
-  left: 26%;
-  right: 26%;
-  background-color: #414141;
+  top: 140px;
+  left: 35%;
+  right: 35%;
+  background-color: #F2F2F2;
   padding-top: 40px;
-  color: #414141;
+  color: #484848;
 }
 
 #login {
-  height: 360px;
+  height: 320px;
 }
 
 #signup {
-  height: 540px;
+  height: 460px;
 }
 
 #login-form {
@@ -28,13 +28,13 @@
 #login-border {
   border-bottom: 3px solid black;
   width: 80%;
-  padding-bottom: 20px;
+  padding-bottom: 28px;
   margin: 0 auto;
 }
 
 .login-field label {
   display: block;
-  font-size: 2em;
+  font-size: 1.4em;
 }
 
 .login-field label:first-of-type {
@@ -47,10 +47,10 @@
 }
 
 .login-field input {
-  height: 40px;
+  height: 34px;
   width: 80%;
   border-radius: 5px;
-  font-size: 2em;
+  font-size: 1.4em;
 }
 
 .login-field div:first-of-type {
@@ -77,33 +77,36 @@
 
 .login-field button {
   border-radius: 5px;
-  width: 160px;
-  height: 50px;
-  background-color: crimson;
+  width: 110px;
+  height: 36px;
+  background-color: #EA4335;
   color: white;
-  font-size: 2em;
+  font-size: 1.4em;
+  font-family: 'Raleway', sans-serif;
 }
 
 .o-auth-button {
-  margin-top: 10px;
+  margin-top: 30px;
 }
 
 .o-auth-button img {
-  width: 60%;
+  width: 40%;
 }
 
 /*back button*/
 
 #sign-up-back-button button {
   color: white;
-  background-color: crimson;
-  width: 220px;
-  height: 70px;
-  font-size: 2.4em;
+  background-color: #EA4335;
+  width: 175px;
+  height: 45px;
+  font-size: 1.6em;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
   padding: 0;
-  text-align: right;
-  padding-right: 14px;
-  border-radius: 10px;
+  text-align: left;
+  padding-left: 14px;
+  border-radius: 5px;
 }
 
 #sign-up-back-button {
@@ -119,7 +122,7 @@
 
 
 #sign-up-step {
-  font-weight: 800;
+  font-weight: 500;
 }
 
 #close-login {

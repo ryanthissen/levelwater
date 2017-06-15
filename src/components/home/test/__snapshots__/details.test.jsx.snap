@@ -6,46 +6,30 @@ exports[`details renders a snapshot 1`] = `
     <div
       className="column sixteen wide">
       <h3>
-        More Details
+        How It Works
       </h3>
     </div>
     <div
       className="column eight wide">
-      <p>
-        More
-      </p>
+      <p />
       <ul>
         <li>
-          -Lorem ipsum dolor sit amet,
+          - You enter information about the financial status of your system, including current rates, revenue, and costs.
         </li>
         <li>
-          -consectetur adipisicing elit.
-        </li>
-        <li>
-          -Tempora dolores, dolore quisquam ea minus
-        </li>
-        <li>
-          -veniam labore minima cupiditate sunt
+          - You enter information about the capacity, condition, and age of your system\'s assets.
         </li>
       </ul>
     </div>
     <div
       className="column eight wide">
-      <p>
-        Details
-      </p>
+      <p />
       <ul>
         <li>
-          -Lorem ipsum dolor sit amet,
+          - You are provided with a dashboard showing the estimated remaining life and replacement costs for your system\'s infrastructure.
         </li>
         <li>
-          -consectetur adipisicing elit.
-        </li>
-        <li>
-          -Tempora dolores, dolore quisquam ea minus
-        </li>
-        <li>
-          -veniam labore minima cupiditate sunt
+          - You raise rates, as necessary, to account for future needs of your water system.
         </li>
       </ul>
     </div>
