@@ -33,8 +33,12 @@ export class LoginForm extends Component{
       <form id="login-form" onSubmit={(event) => {
         event.preventDefault();
         let x = this.props.loginFormData.login.values;
-        this.props.logUserIn(x.email, x.password, () => {
-          history.push('/dashboard');
+        this.props.logUserIn(x.email, x.password, (water_systems_id) => {
+          if (water_systems_id) {
+            history.push('/dashboard');
+          } else {
+            history.push('/signup/step1')
+          }
         });
         //trying to reset forms, needs work!
         // console.log(this.refs.email.value);

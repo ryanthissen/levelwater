@@ -12,8 +12,9 @@ const loadChartHelper = () => {
   return axios
     .get(`${algorithmURL}${id}`, config)
     .then((response) => {
-      console.log(JSON.parse(response.data.algorithm_results));
-      return(JSON.parse(response.data.algorithm_results));
+      if (response) {
+        return(JSON.parse(response.data.algorithm_results));
+      }
     });
 };
 
