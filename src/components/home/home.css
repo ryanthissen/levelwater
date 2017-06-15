@@ -56,7 +56,7 @@
 
 #details h3 {
   color: #484848;
-  font-size: 2em;
+  font-size: 2.4em;
   font-weight: 300;
 }
 
@@ -70,17 +70,10 @@
 #details ul {
   list-style: none;
   line-height: 2;
-  font-size: 1.1em;
+  font-size: 1.2em;
+
 }
 
-/*#details p {
-  color: #000;
-  font-weight: 800;
-}*/
-
-#details .eight {
-  border-right: 1px solid black;
-  padding-left: 80px;
-  padding-right: 80px;
-  text-align: justify;
+#details .sixteen {
+  padding: 0 0 !important;
 }
