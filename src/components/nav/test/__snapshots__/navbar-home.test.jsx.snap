@@ -6,7 +6,7 @@ exports[`navbar home renders a snapshot 1`] = `
     <div
       className="three wide column"
       id="demo-button">
-      <DemoButton />
+      <Connect(DemoButton) />
     </div>
     <div
       className="nine wide column"

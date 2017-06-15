@@ -35,7 +35,7 @@ export class BasicInfoForm extends Component{
           <div className="ui grid">
             <div className="column sixteen wide">
               <h3>
-                Before We Get Started, Please Provide Some Info About Your Water System
+                Basic Water System Information
               </h3>
             </div>
           </div>
@@ -86,8 +86,8 @@ export class BasicInfoForm extends Component{
               <div>
                 <div className="ui grid">
                   <div className="column four wide"></div>
-                  <div className="column twelve wide" id="revenue-costs-submit-button">
-                    <button type='submit' className="ui button" >Add Revenue & Costs &gt;</button>
+                  <div className="column twelve wide" id="basic-info-submit-button">
+                    <button type='submit' className="ui button" >Continue to Financial Information &gt;</button>
                   </div>
                 </div>
               </div>

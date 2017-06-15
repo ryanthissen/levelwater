@@ -34,7 +34,7 @@ export class SourceForm extends Component {
           <SignUpStep step="3" />
           <div className="ui grid">
             <div className="column sixteen wide">
-              <h3>Please Enter Information About Your Source</h3>
+              <h3>Source Information</h3>
             </div>
           </div>
 
@@ -114,15 +114,15 @@ export class SourceForm extends Component {
               </Field></div>
             </div>
 
-            <div className="ui grid">
+            {/* <div className="ui grid">
               <div id="revenue-costs-submit-button" className="column sixteen wide">
                 <button className="ui button">+ Add Another Source</button>
               </div>
-            </div>
+            </div> */}
 
             <div className="ui grid">
                 <SignUpBackButton to="/signup/step2"/>
-              <div id="revenue-costs-submit-button" className="column eight wide">
+              <div id="source-submit-button" className="column eight wide">
                 <button className="ui button">Continue To Treatment &gt;</button>
               </div>
             </div>

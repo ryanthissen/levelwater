@@ -4,8 +4,8 @@ exports[`oauth button renders a snapshot 1`] = `
   <a
     href="http://levelwater-server.herokuapp.com/auth/google">
     <img
-      alt="Login With Facebook"
-      src="fb-login.png" />
+      alt="Login With Google"
+      src="google-oauth-button.png" />
   </a>
 </div>
 `;
