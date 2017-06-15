@@ -10,6 +10,7 @@ export default class DashAnalysis extends Component {
   }
 
   renderCriticalInfrastructureName() {
+    console.log('props', this.props)
     return this.props.criticalInfrastructure.map((element) => {
       return <li>{element[0]}</li>;
     });
