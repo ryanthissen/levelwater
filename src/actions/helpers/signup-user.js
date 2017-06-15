@@ -20,7 +20,6 @@ function signupUser(email, firstName, lastName, password, passwordConfirm, callb
           alert(response.data.errorMessage);
         }
         else {
-          console.log('response', response);
           localStorage.setItem('token', response.data.token);
           localStorage.setItem('water_systems_id', response.data.water_systems_id);
           callback();
