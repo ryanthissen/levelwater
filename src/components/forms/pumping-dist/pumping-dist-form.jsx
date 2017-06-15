@@ -10,6 +10,8 @@ import {
   Route,
 } from 'react-router-dom';
 import styles from '../forms.css';
+import styles2 from './pumping-dist.css';
+
 
 
 
@@ -85,7 +87,7 @@ export class PumpingDistForm extends Component {
             </div>
             <div className="ui grid">
               <SignUpBackButton to="/signup/step5"/>
-              <div id="revenue-costs-submit-button" className="column eight wide">
+              <div id="distribution-submit-button" className="column eight wide">
                 <button type='submit' className="ui button">See My Dashboard &gt;</button>
               </div>
             </div>

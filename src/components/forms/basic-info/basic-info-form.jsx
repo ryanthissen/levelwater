@@ -87,7 +87,7 @@ export class BasicInfoForm extends Component{
                 <div className="ui grid">
                   <div className="column four wide"></div>
                   <div className="column twelve wide" id="basic-info-submit-button">
-                    <button type='submit' className="ui button" >Financial Information &gt;</button>
+                    <button type='submit' className="ui button" >Continue to Financial Information &gt;</button>
                   </div>
                 </div>
               </div>

@@ -10,6 +10,8 @@ import {
   Route
 } from 'react-router-dom';
 import styles from '../forms.css';
+import styles2 from './revenue-costs-form.css';
+
 
 
 
@@ -96,7 +98,7 @@ export class RevenueCostsForm extends Component {
             <div className="ui grid">
               <SignUpBackButton to="/signup/step1"/>
               <div id="revenue-costs-submit-button" className="column eight wide">
-                <button type='submit' className="ui button">Sources &gt;</button>
+                <button type='submit' className="ui button">Continue to Sources &gt;</button>
               </div>
             </div>
           </form>
