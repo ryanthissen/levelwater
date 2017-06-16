@@ -14,10 +14,9 @@ function loginUser(email, password, callback) {
         alert('bad username or password');
       }
       else {
-        console.log('response', response.data);
         localStorage.setItem('token', response.data.token);
         localStorage.setItem('water_systems_id', response.data.water_systems_id);
-        callback();
+        callback(response.data.profileStepCompleted);
       }
     })
     .catch((error) => console.log(error));

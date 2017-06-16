@@ -16,11 +16,10 @@ function signupUser(email, firstName, lastName, password, passwordConfirm, callb
         last_name: lastName
       })
       .then((response) => {
-        if(response.data.errorMessage) {
-          alert(response.data.errorMessage);
+        if(response.data.ErrorMessage) {
+          alert(response.data.ErrorMessage);
         }
         else {
-          console.log('response', response);
           localStorage.setItem('token', response.data.token);
           localStorage.setItem('water_systems_id', response.data.water_systems_id);
           callback();
