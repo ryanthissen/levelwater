@@ -2,12 +2,12 @@
 
 #main-image {
   height: 390px;
-  background: url('../../img/main-splash.jpg') no-repeat;
+  background: url('../../img/compressedsplash.jpg') no-repeat;
   margin-left: 5%;
   margin-top: 48px;
   width: 90%;
   background-size: cover;
-  background-position: 50% 40%;
+  background-position: 50% 32%;
   border-radius: 2px;
   /*border: 10px solid #000;*/
 }
