@@ -34,7 +34,7 @@ export class LoginForm extends Component{
         event.preventDefault();
         let x = this.props.loginFormData.login.values;
         this.props.logUserIn(x.email, x.password, (profileStepCompleted) => {
-          if (profileCompleted === 'none') {
+          if (profileStepCompleted === 'none') {
             history.push('/signup/step1');
           } else if (profileStepCompleted === 'basic') {
             history.push('/signup/step2')
