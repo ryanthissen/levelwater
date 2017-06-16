@@ -6,7 +6,6 @@ function signupUser(email, firstName, lastName, password, passwordConfirm, callb
   if (password !== passwordConfirm) {
     alert('Your passwords do not match!');
   }
-
   else {
     return axios.post(signupURL, {
       email: email,
