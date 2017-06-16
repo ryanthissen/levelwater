@@ -16,7 +16,7 @@ function loginUser(email, password, callback) {
       else {
         localStorage.setItem('token', response.data.token);
         localStorage.setItem('water_systems_id', response.data.water_systems_id);
-        callback(response.data.profileCompleted);
+        callback(response.data.profileStepCompleted);
       }
     })
     .catch((error) => console.log(error));
