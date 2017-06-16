@@ -33,11 +33,23 @@ export class LoginForm extends Component{
       <form id="login-form" onSubmit={(event) => {
         event.preventDefault();
         let x = this.props.loginFormData.login.values;
-        this.props.logUserIn(x.email, x.password, (profileCompleted) => {
-          if (profileCompleted === 'true') {
-            history.push('/dashboard');
-          } else {
-            history.push('/signup/step1')
+        this.props.logUserIn(x.email, x.password, (profileStepCompleted) => {
+          if (profileCompleted === 'none') {
+            history.push('/signup/step1');
+          } else if (profileStepCompleted === 'basic') {
+            history.push('/signup/step2')
+          } else if (profileStepCompleted === 'revenue') {
+            history.push('/signup/step3')
+          } else if (profileStepCompleted === 'source') {
+            history.push('/signup/step4')
+          } else if (profileStepCompleted === 'treatment') {
+            history.push('/signup/step5')
+          } else if (profileStepCompleted === 'storage') {
+            history.push('/signup/step6')
+          } else if (profileStepCompleted === 'distribution') {
+            history.push('/dashboard')
+          } else if (profileStepCompleted === 'algorithm') {
+            history.push('/dashboard')
           }
         });
         //trying to reset forms, needs work!
