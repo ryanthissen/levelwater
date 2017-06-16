@@ -19,11 +19,8 @@ class OauthRedirect extends Component {
     string = string.split('&');
     let token = (string[0].split('='))[1];
     let water_systems_id = (string[1].split('='))[1];
-
     localStorage.setItem('token', token);
     localStorage.setItem('water_systems_id', water_systems_id);
-
-    console.log('token',token, 'watersysid', water_systems_id);
 
     if (water_systems_id === 'null') {
       this.props.history.push('/signup/step1')

@@ -54,3 +54,47 @@
 #header h1, #about h3 {
   font-weight: 100;
 }
+
+#mobile-buttons {
+  display: none;
+}
+
+/*media queries*/
+
+@media only screen and (max-width: 992px) {
+  #mobile-buttons {
+    display: block;
+  }
+
+  #right-nav-home, #demo-button button {
+    display: none;
+  }
+  #mobile-right-nav-home, #mobile-demo-button {
+    display: inline-block;
+  }
+  #mobile-right-nav-home {
+    width: 66%;
+  }
+  #mobile-right-nav-home button {
+    width: 48%;
+  }
+  #mobile-demo-button button {
+    width: 98%;
+  }
+  #mobile-demo-button {
+    width: 33%;
+  }
+  #mobile-buttons {
+    margin-top: 16px;
+  }
+  #navbar {
+    margin-bottom: 120px;
+  }
+  .button {
+    font-family: 'Raleway', sans-serif !important;
+    height: 60px;
+    font-weight: 500 !important;
+    font-size: 1.9em !important;
+    padding-top: 16px !important;
+  }
+}
