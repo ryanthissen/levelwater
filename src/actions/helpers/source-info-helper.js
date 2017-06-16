@@ -9,7 +9,7 @@ const sourceInfoHelper = (source_name, source_type, treatment, critical_to_opera
   };
   let id = parseInt(localStorage.getItem('water_systems_id'));
 
-  console.log('body', {
+  return axios.post(sourcesURL, {
     water_systems_id: id,
     source_name: source_name,
     source_type: source_type,
@@ -19,30 +19,16 @@ const sourceInfoHelper = (source_name, source_type, treatment, critical_to_opera
     capacity: parseInt(capacity),
     condition: condition,
     continuous_chlorination: continuous_chlorination,
-  }, config);
-
-
-  return axios
-    .post(sourcesURL, {
-      water_systems_id: id,
-      source_name: source_name,
-      source_type: source_type,
-      treatment: treatment,
-      critical_to_operations: critical_to_operations,
-      year_constructed: parseInt(year_constructed),
-      capacity: parseInt(capacity),
-      condition: condition,
-      continuous_chlorination: continuous_chlorination,
-    }, config)
-    .then((response) => {
-      if (response.data.errorMessage) {
-        alert('something went wrong.');
-      }
-      else {
-        localStorage.setItem('profileStepCompleted', 'source');
-        callback();
-      }
-    });
+  }, config)
+  .then((response) => {
+    if (response.data.errorMessage) {
+      alert('something went wrong.');
+    }
+    else {
+      localStorage.setItem('profileStepCompleted', 'source');
+      callback();
+    }
+  });
 };
 
 export default sourceInfoHelper;

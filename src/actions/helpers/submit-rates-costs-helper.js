@@ -9,13 +9,11 @@ const submitRatesCostsHelper = (callback) => {
   let water_systems_id = localStorage.getItem('water_systems_id');
   console.log('watersysid', water_systems_id);
 
-  return axios
-    .get(`${ratesCostsURL}${water_systems_id}`,config )
-    .then((response) => {
-      console.log(response);
-      callback();
-      return(response.data[0]);
-    });
+  return axios.get(`${ratesCostsURL}${water_systems_id}`,config )
+  .then((response) => {
+    callback();
+    return(response.data[0]);
+  });
 };
 
 export default submitRatesCostsHelper;
