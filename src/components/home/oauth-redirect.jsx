@@ -21,7 +21,7 @@ class OauthRedirect extends Component {
     let profileStepCompleted = (string[1].split('='))[1];
 
     localStorage.setItem('token', token);
-    localStorage.setItem('water_systems_id', profileStepCompleted);
+    localStorage.setItem('profileStepCompleted', profileStepCompleted);
     if (profileStepCompleted === 'none') {
       this.props.history.push('/signup/step1');
     } else if (profileStepCompleted === 'basic') {
