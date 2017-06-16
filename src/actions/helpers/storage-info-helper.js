@@ -32,11 +32,10 @@ const storageInfoHelper = (reservoir_type, reservoir_name, year_constructed, cap
 
     .then((response) => {
       if (response.data.ErrorMessage) {
-        console.log('response', response);
         alert(response.data.ErrorMessage);
       }
       else {
-        console.log('response', response);
+        localStorage.setItem('profileStepCompleted', 'storage');
         callback();
       }
     });

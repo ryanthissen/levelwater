@@ -31,11 +31,10 @@ const treatmentInfoHelper = (treatment_name, treatment_type, critical_to_operati
     }, config)
     .then((response) => {
       if (response.data.errorMessage) {
-        console.log('response', response);
         alert('something went wrong');
       }
       else {
-        console.log('response', response);
+        localStorage.setItem('profileStepCompleted', 'treatment');
         callback();
       }
     });

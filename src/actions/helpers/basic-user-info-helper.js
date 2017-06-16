@@ -20,12 +20,11 @@ const basicUserInfoHelper = (pws_name, pws_id, population, connections, callback
     }, config)
   .then((response) => {
     if (response.data.errorMessage) {
-      console.log('response', response);
       alert(response.data.errorMessage);
     }
     else {
-      console.log('response', response);
       localStorage.setItem('water_systems_id', response.data.id);
+      localStorage.setItem('profileStepCompleted', 'basic');
       callback();
     }
   });
