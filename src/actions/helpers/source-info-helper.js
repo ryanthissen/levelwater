@@ -36,11 +36,10 @@ const sourceInfoHelper = (source_name, source_type, treatment, critical_to_opera
     }, config)
     .then((response) => {
       if (response.data.errorMessage) {
-        console.log('response', response);
         alert('something went wrong.');
       }
       else {
-        console.log('response', response);
+        localStorage.setItem('profileStepCompleted', 'source');
         callback();
       }
     });

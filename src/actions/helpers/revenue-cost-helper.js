@@ -24,11 +24,10 @@ const revenueCostHelper = ( current_average_water_rate, total_financial_reserves
     }, config)
     .then((response) => {
       if (response.data.ErrorMessage) {
-        console.log('response', response);
         alert(response.data.ErrorMessage);
       }
       else {
-        console.log('response', response);
+        localStorage.setItem('profileStepCompleted', 'revenue');
         callback();
       }
     });

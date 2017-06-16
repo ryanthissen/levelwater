@@ -27,20 +27,18 @@ const pumpingDistHelper = (total_length_miles, average_age_of_pipes, average_mai
     }, config)
     .then((response) => {
       if (response.data.errorMessage) {
-        console.log('response', response);
         alert(response.data.error);
         return null;
       }
-
+      localStorage.setItem('profileStepCompleted', 'distribution');
       return axios
         .post(`${algorithmURL}${id}`, {}, config)
         .then((response) => {
           if(response.data.errorMessage) {
-            console.log('response', response);
             alert(response.data.error);
           }
           else {
-            console.log('response', response);
+            localStorage.setItem('profileStepCompleted', 'algorithm');
             callback();
           }
         })
