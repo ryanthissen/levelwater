@@ -1,6 +1,7 @@
 import React from 'react';
 import DemoButton from './demo-button';
 import RightNavHome from './right-nav-home';
+import MobileButtons from './mobile-buttons';
 import { Link } from 'react-router-dom';
 import styles from './nav.css';
 
@@ -14,6 +15,7 @@ const NavbarHome = () => (
       <div className="four wide column" id="right-nav-home"><RightNavHome />
       </div>
     </div>
+    <div><MobileButtons /></div>
   </div>
 );
 

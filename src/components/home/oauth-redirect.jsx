@@ -19,7 +19,6 @@ class OauthRedirect extends Component {
     string = string.split('&');
     let token = (string[0].split('='))[1];
     let profileStepCompleted = (string[1].split('='))[1];
-
     localStorage.setItem('token', token);
     localStorage.setItem('profileStepCompleted', profileStepCompleted);
     if (profileStepCompleted === 'none') {
