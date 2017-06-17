@@ -41,8 +41,8 @@ class OauthRedirect extends Component {
     string = string.split('&');
     let token = (string[0].split('='))[1];
     let profileStepCompleted = (string[1].split('='))[1];
-    let water_systems_id = (string[2].split('='))[2];
-    let showPword = (string[3].split('='))[3];
+    let water_systems_id = (string[2].split('='))[1];
+    let showPword = (string[3].split('='))[1];
     localStorage.setItem('token', token);
     localStorage.setItem('profileStepCompleted', profileStepCompleted);
     localStorage.setItem('water_systems_id', water_systems_id);
