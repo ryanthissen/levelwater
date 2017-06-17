@@ -71,7 +71,7 @@
 
 @media only screen and (max-width: 992px) {
  .form-step .nine {
-    margin-left: 20%;
+    margin-left: 30%;
   }
   .form-step label {
     height: 30px;
@@ -101,7 +101,13 @@
     font-size: 1em;
   }
 
-.sixteen {
-    text-align: center !important;
+  .sixteen {
+      text-align: center !important;
+    }
+  .thirteen {
+    display: none !important;
+  }
+  #sign-up-step {
+    text-align: right;
   }
 }
