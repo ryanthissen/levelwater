@@ -12,6 +12,28 @@ class OauthRedirect extends Component {
     if (location.search) {
       this.parseQueryParams(location.search);
     }
+    this.redirect();
+  }
+
+  redirect() {
+    let profileStepCompleted = localStorage.getItem('profileStepCompleted');
+    if (profileStepCompleted === 'none') {
+      this.props.history.push('/signup/step1');
+    } else if (profileStepCompleted === 'basic') {
+      this.props.history.push('/signup/step2');
+    } else if (profileStepCompleted === 'revenue') {
+      this.props.history.push('/signup/step3');
+    } else if (profileStepCompleted === 'source') {
+      this.props.history.push('/signup/step4');
+    } else if (profileStepCompleted === 'treatment') {
+      this.props.history.push('/signup/step5');
+    } else if (profileStepCompleted === 'storage') {
+      this.props.history.push('/signup/step6');
+    } else if (profileStepCompleted === 'distribution') {
+      this.props.history.push('/dashboard');
+    } else if (profileStepCompleted === 'algorithm') {
+      this.props.history.push('/dashboard');
+    }
   }
 
   parseQueryParams(string) {
@@ -19,25 +41,10 @@ class OauthRedirect extends Component {
     string = string.split('&');
     let token = (string[0].split('='))[1];
     let profileStepCompleted = (string[1].split('='))[1];
+    let water_systems_id = (string[2].split('='))[2];
     localStorage.setItem('token', token);
-    localStorage.setItem('water_systems_id', profileStepCompleted);
-    if (profileStepCompleted === 'none') {
-      this.props.history.push('/signup/step1');
-    } else if (profileStepCompleted === 'basic') {
-      this.props.history.push('/signup/step2')
-    } else if (profileStepCompleted === 'revenue') {
-      this.props.history.push('/signup/step3')
-    } else if (profileStepCompleted === 'source') {
-      this.props.history.push('/signup/step4')
-    } else if (profileStepCompleted === 'treatment') {
-      this.props.history.push('/signup/step5')
-    } else if (profileStepCompleted === 'storage') {
-      this.props.history.push('/signup/step6')
-    } else if (profileStepCompleted === 'distribution') {
-      this.props.history.push('/dashboard')
-    } else if (profileStepCompleted === 'algorithm') {
-      this.props.history.push('/dashboard')
-    }
+    localStorage.setItem('profileStepCompleted', profileStepCompleted);
+    localStorage.setItem('water_systems_id', water_systems_id);
   }
 
   render() {

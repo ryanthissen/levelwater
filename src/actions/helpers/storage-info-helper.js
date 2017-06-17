@@ -10,7 +10,7 @@ const storageInfoHelper = (reservoir_type, reservoir_name, year_constructed, cap
   };
   let id = parseInt(localStorage.getItem('water_systems_id'));
 
-  console.log('request', {
+  return axios.post(storageURL, {
     water_systems_id: id,
     reservoir_type: reservoir_type,
     reservoir_name: reservoir_name,
@@ -18,28 +18,16 @@ const storageInfoHelper = (reservoir_type, reservoir_name, year_constructed, cap
     capacity: parseInt(capacity),
     condition: condition,
     critical_to_operations: critical_to_operations
-  }, config);
-  return axios
-    .post(storageURL, {
-      water_systems_id: id,
-      reservoir_type: reservoir_type,
-      reservoir_name: reservoir_name,
-      year_constructed: parseInt(year_constructed),
-      capacity: parseInt(capacity),
-      condition: condition,
-      critical_to_operations: critical_to_operations
-    }, config)
-
-    .then((response) => {
-      if (response.data.ErrorMessage) {
-        console.log('response', response);
-        alert(response.data.ErrorMessage);
-      }
-      else {
-        console.log('response', response);
-        callback();
-      }
-    });
+  }, config)
+  .then((response) => {
+    if (response.data.ErrorMessage) {
+      alert(response.data.ErrorMessage);
+    }
+    else {
+      localStorage.setItem('profileStepCompleted', 'storage');
+      callback();
+    }
+  });
 };
 
 export default storageInfoHelper;

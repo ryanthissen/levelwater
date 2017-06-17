@@ -6,26 +6,24 @@ function signupUser(email, firstName, lastName, password, passwordConfirm, callb
   if (password !== passwordConfirm) {
     alert('Your passwords do not match!');
   }
-
   else {
-    return axios
-      .post(signupURL, {
-        email: email,
-        password: password,
-        first_name: firstName,
-        last_name: lastName
-      })
-      .then((response) => {
-        if(response.data.ErrorMessage) {
-          alert(response.data.ErrorMessage);
-        }
-        else {
-          localStorage.setItem('token', response.data.token);
-          localStorage.setItem('water_systems_id', response.data.water_systems_id);
-          callback();
-        }
-      })
-      .catch((error) => console.log(error));
+    return axios.post(signupURL, {
+      email: email,
+      password: password,
+      first_name: firstName,
+      last_name: lastName
+    })
+    .then((response) => {
+      if(response.data.ErrorMessage) {
+        alert(response.data.ErrorMessage);
+      }
+      else {
+        localStorage.setItem('token', response.data.token);
+        localStorage.setItem('water_systems_id', response.data.water_systems_id);
+        callback();
+      }
+    })
+    .catch((error) => console.log(error));
   }
 }
 
