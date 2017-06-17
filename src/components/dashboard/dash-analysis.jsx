@@ -55,7 +55,13 @@ export default class DashAnalysis extends Component {
 
   criticalInfrastructureGenerate() {
     for (let i = 0; i < this.props.criticalInfrastructure.length; i++) {
-      return
+          <div className="item">
+            <div className="source-name">{this.props.criticalInfrastructure[i][0]}</div>
+            <div className="estimated-replacement-cost">Estimated Replacement Cost:       ${this.props.criticalInfrastructure[i][1]}</div>
+            <div className="estimated-useful-life">Estimated Remaining Useful Life: {this.props.criticalInfrastructure[i][2]} years</div>
+            <div className="reserve-fund-increase">Annual Increase to Reserve Fund for Eventual Replacement: ${this.props.criticalInfrastructure[i][3]}</div>
+            <div className="monthly-increase-per-connection">Monthly Increase per Connection:  ${(this.props.criticalInfrastructure[i][3]/(12 * 550)).toFixed(2)}</div>
+          </div>
     }
   }
 
@@ -71,13 +77,7 @@ export default class DashAnalysis extends Component {
           <h3 className="section-title">Infrastructure Analysis</h3>
           <h4 className="crit-inf-title">Critical Infrastructure</h4>
             <div className="ui list critical-inftrastructure-list">
-              <div className="item">
-                <div className="source-name">{this.props.criticalInfrastructure[0][0]}</div>
-                <div className="estimated-replacement-cost">Estimated Replacement Cost:       {this.props.criticalInfrastructure[0][1]}</div>
-                <div className="estimated-useful-life">Estimated Remaining Useful Life: {this.props.criticalInfrastructure[0][2]}</div>
-                <div className="reserve-fund-increase">Annual Increase to Reserve Fund for Eventual Replacement: {this.props.criticalInfrastructure[0][3]}</div>
-              </div>
-
+              <div>{this.criticalInfrastructureGenerate()}</div>
             </div>
 
         </div>
@@ -159,3 +159,13 @@ export default class DashAnalysis extends Component {
 //       </tr>
 //     </tbody>
 //   </table>
+//
+//
+//
+// <div className="item">
+//   <div className="source-name">{this.props.criticalInfrastructure[0][0]}</div>
+//   <div className="estimated-replacement-cost">Estimated Replacement Cost:       ${this.props.criticalInfrastructure[0][1]}</div>
+//   <div className="estimated-useful-life">Estimated Remaining Useful Life: {this.props.criticalInfrastructure[0][2]} years</div>
+//   <div className="reserve-fund-increase">Annual Increase to Reserve Fund for Eventual Replacement: ${this.props.criticalInfrastructure[0][3]}</div>
+//   <div className="monthly-increase-per-connection">Monthly Increase per Connection:  ${(this.props.criticalInfrastructure[0][3]/(12 * 550)).toFixed(2)}</div>
+// </div>
