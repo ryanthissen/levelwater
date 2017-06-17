@@ -2,7 +2,7 @@ import React from 'react';
 
 const DashHeader = () => (
   <div id="dash-header">
-    <h2>Your Dashboard</h2>
+      <h2>My Dashboard</h2>
   </div>
 );
 

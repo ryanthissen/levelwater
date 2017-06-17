@@ -6,6 +6,7 @@
     "axios": "^0.16.1",
     "babel-register": "^6.24.1",
     "js-cookie": "^2.1.4",
+    "node-gyp": "^3.6.2",
     "react": "^15.5.4",
     "react-c3js": "^0.1.18",
     "react-dom": "^15.5.4",

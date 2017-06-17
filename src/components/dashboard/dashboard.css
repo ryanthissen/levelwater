@@ -9,6 +9,9 @@
 #dash-header h2 {
   padding-top: 10px;
   font-size: 2em;
+  font-weight: 400;
+  text-align: left;
+  padding-left: 10%;
 }
 
 #c3-visuals {
@@ -71,11 +74,11 @@
 
 #dash-analysis h3 {
   font-size: 1.2em;
-  font-weight: 800;
+  font-weight: 600;
 }
 
 #dash-analysis p {
-  font-weight: 800;
+  font-weight: 500;
   height: 40px;
   margin-bottom: 30px;
 }

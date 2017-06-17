@@ -32,4 +32,4 @@ export class DemoButton extends Component{
 
 
 
-export default connect (mapDispatchToProps)(DemoButton);
+export default connect (null, mapDispatchToProps)(DemoButton);
