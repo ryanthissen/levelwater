@@ -57,7 +57,7 @@ export class LoginForm extends Component{
         // this.refs.email.value="";
       }}>
         <Link to="/"><div id="close-login"><img
-      src={require('../../img/white-icon.png')}
+      src={require('../../img/black-icon.png')}
        alt="close window"
      /></div></Link>
         <div className="ui grid">
