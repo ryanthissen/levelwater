@@ -26,6 +26,12 @@ const mapDispatchToProps = (dispatch) => {
 
 export class BasicInfoForm extends Component{
 
+  componentDidMount() {
+    if (localStorage.getItem('showPword')) {
+      alert('Thankyou for signing up to Levelwater.io with Google!  Your password is your first name on google followed by eight 9s.  The ability to change your password is coming soon!');
+    }
+  }
+
 
   render() {
     return (
