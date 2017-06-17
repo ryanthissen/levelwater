@@ -28,7 +28,7 @@ export class BasicInfoForm extends Component{
 
   componentDidMount() {
     if (localStorage.getItem('showPword')) {
-      alert('Thankyou for signing up to Levelwater.io with Google!  Your password is your first name on google followed by eight 9s.  The ability to change your password is coming soon!');
+      alert('Thankyou for signing up to Levelwater.io with Google!  If you want to sign in traditionally sign in with your gmail address and your password is your first name on google followed by eight 9s.  The ability to change your password is coming soon!');
     }
   }
 
