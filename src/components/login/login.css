@@ -145,4 +145,7 @@
     width: 90%;
     left: 5%;
   }
+  .login-field button {
+    width: 140px;
+  }
 }
