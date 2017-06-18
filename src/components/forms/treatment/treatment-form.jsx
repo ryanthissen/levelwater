@@ -111,7 +111,7 @@ export class TreatmentForm extends Component {
             </div>
             <div className="ui grid">
               <SignUpBackButton to="/signup/step3"/>
-              <div id="treatment-submit-button" className="column eight wide">
+              <div id="treatment-submit-button" className="column eight wide computer sixteen wide tablet">
                 <button className="ui button">Continue To Storage &gt;</button>
               </div>
             </div>
