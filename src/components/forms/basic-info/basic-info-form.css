@@ -32,4 +32,7 @@
   #basic-info-submit-button {
     margin-bottom: 50px;
   }
+  .four {
+    display: none !important;
+  }
 }
