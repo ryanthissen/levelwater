@@ -54,10 +54,37 @@ export default class DashAnalysis extends Component {
   }
 
   criticalInfrastructureGenerate() {
-    
+    let generatedJSX = [];
     for (let i = 0; i < this.props.criticalInfrastructure.length; i++) {
-
+      let generatedItem = (
+          <div className="item">
+            <div className="asset-name">{this.props.criticalInfrastructure[i][0]}</div>
+            <div className="estimated-replacement-cost">Estimated Replacement Cost:       ${this.props.criticalInfrastructure[i][1]}</div>
+            <div className="estimated-useful-life">Estimated Remaining Useful Life: {this.props.criticalInfrastructure[i][2]} years</div>
+            <div className="reserve-fund-increase">Annual Increase to Reserve Fund for Eventual Replacement: ${this.props.criticalInfrastructure[i][3]}</div>
+            <div className="monthly-increase-per-connection">Monthly Increase per Connection:  ${(this.props.criticalInfrastructure[i][3]/(12 * 550)).toFixed(2)}</div>
+            <br/>
+          </div>)
+      generatedJSX.push(generatedItem)
     }
+    return generatedJSX;
+  }
+
+  noncriticalInfrastructureGenerate() {
+    let generatedJSX = [];
+    for (let i = 0; i < this.props.noncriticalInfrastructure.length; i++) {
+      let generatedItem = (
+          <div className="item">
+            <div className="asset-name">{this.props.noncriticalInfrastructure[i][0]}</div>
+            <div className="estimated-replacement-cost">Estimated Replacement Cost:       ${this.props.noncriticalInfrastructure[i][1]}</div>
+            <div className="estimated-useful-life">Estimated Remaining Useful Life: {this.props.noncriticalInfrastructure[i][2]} years</div>
+            <div className="reserve-fund-increase">Annual Increase to Reserve Fund for Eventual Replacement: ${this.props.noncriticalInfrastructure[i][3]}</div>
+            <div className="monthly-increase-per-connection">Monthly Increase per Connection:  ${(this.props.noncriticalInfrastructure[i][3]/(12 * 550)).toFixed(2)}</div>
+          <br/>
+          </div>)
+      generatedJSX.push(generatedItem)
+    }
+    return generatedJSX;
   }
 
   render() {
@@ -66,38 +93,20 @@ export default class DashAnalysis extends Component {
       <div id="dash-analysis" className="house">
         <div className="rate-finance-status">
           <h3 className="section-title">Rate and Finances Status</h3>
-            <div className="rfs-table">
-              <table className="ui very basic table">
-                <tbody>
-                  <tr><td>{console.log(this.props)}</td></tr>
-                  <tr>
-                    <td>Current Average Water Rate:</td>
-                    <td>${this.props.financialData.current_average_water_rate}</td>
-                  </tr>
-                  <tr>
-                    <td>{`${budgetStatus}`}</td>
-                    <td>${revCostDiff}</td>
-                  </tr>
-                  <tr>
-                    <td>Annual Contribution to Reserve Fund:</td>
-                    <td>${this.props.financialData.annual_savings_to_financial_reserves}</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+            <div>Current Average Water Rate:  ${this.props.financialData.current_average_water_rate}</div>
+            <div>{budgetStatus}  ${revCostDiff}</div>
+            <div>Annual Contribution to Reserve Fund:  ${this.props.financialData.annual_savings_to_financial_reserves}</div>
         </div>
         <div className="infrastructure-analysis">
           <h3 className="section-title">Infrastructure Analysis</h3>
           <h4 className="crit-inf-title">Critical Infrastructure</h4>
-          <h5 className="source-name">Source Name</h5>
-            <table className="ui very basic table">
-              <tbody>
-                <tr>
-                  <td>Estimated Remaining Useful Life</td>
-                </tr>
-              </tbody>
-            </table>
-
+            <div className="ui list critical-inftrastructure-list">
+              <div>{this.criticalInfrastructureGenerate()}</div>
+            </div>
+          <h4 className="noncrit-inf-title">Noncritical Infrastructure</h4>
+            <div className="ui list noncritical-inftrastructure-list">
+              <div>{this.noncriticalInfrastructureGenerate()}</div>
+            </div>
         </div>
       </div>
     );
@@ -145,4 +154,45 @@ export default class DashAnalysis extends Component {
 //       <ul>{this.renderNoncriticalInfrastructureAnnualContribution()}</ul>
 //     </div>
 //   </div>
+// </div>
+
+
+//
+//  <div className="rfs-table">
+//   <table className="ui very basic table">
+//     <tbody>
+//       <tr><td>{console.log(this.props)}</td></tr>
+//       <tr>
+//         <td>Current Average Water Rate:</td>
+//         <td>${this.props.financialData.current_average_water_rate}</td>
+//       </tr>
+//       <tr>
+//         <td>{`${budgetStatus}`}</td>
+//         <td>${revCostDiff}</td>
+//       </tr>
+//       <tr>
+//         <td>Annual Contribution to Reserve Fund:</td>
+//         <td>${this.props.financialData.annual_savings_to_financial_reserves}</td>
+//       </tr>
+//     </tbody>
+//   </table>
+// </div>
+//
+// <h5 className="source-name">Source Name</h5>
+//   <table className="ui very basic table">
+//     <tbody>
+//       <tr>
+//         <td>Estimated Remaining Useful Life</td>
+//       </tr>
+//     </tbody>
+//   </table>
+//
+//
+//
+// <div className="item">
+//   <div className="source-name">{this.props.criticalInfrastructure[0][0]}</div>
+//   <div className="estimated-replacement-cost">Estimated Replacement Cost:       ${this.props.criticalInfrastructure[0][1]}</div>
+//   <div className="estimated-useful-life">Estimated Remaining Useful Life: {this.props.criticalInfrastructure[0][2]} years</div>
+//   <div className="reserve-fund-increase">Annual Increase to Reserve Fund for Eventual Replacement: ${this.props.criticalInfrastructure[0][3]}</div>
+//   <div className="monthly-increase-per-connection">Monthly Increase per Connection:  ${(this.props.criticalInfrastructure[0][3]/(12 * 550)).toFixed(2)}</div>
 // </div>
