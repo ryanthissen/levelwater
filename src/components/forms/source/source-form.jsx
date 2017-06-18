@@ -122,7 +122,7 @@ export class SourceForm extends Component {
 
             <div className="ui grid">
                 <SignUpBackButton to="/signup/step2"/>
-              <div id="source-submit-button" className="column eight wide">
+              <div id="source-submit-button" className="column eight wide computer sixteen wide tablet">
                 <button className="ui button">Continue To Treatment &gt;</button>
               </div>
             </div>
