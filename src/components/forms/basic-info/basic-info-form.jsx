@@ -78,7 +78,7 @@ export class BasicInfoForm extends Component{
 
 
 
-              <div className="column nine wide">
+              <div className="column nine wide basic-info-btn-grid">
                 <Field name="population" component="input" type="number" required />
               </div>
 
