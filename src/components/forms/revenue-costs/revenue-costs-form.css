@@ -40,7 +40,8 @@
   #sign-up-back-button {
     text-align: center !important;
     padding: 14px;
-    margin-top: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
   #sign-up-back-button button {
     width: 80%;
