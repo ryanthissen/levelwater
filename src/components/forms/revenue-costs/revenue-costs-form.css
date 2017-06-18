@@ -27,17 +27,23 @@
 @media only screen and (max-width: 992px) {
   #revenue-costs-submit-button button {
     height: 60px;
-    width: 200px;
+    width: 80%;
+    margin-right: 0;
   }
 
   #revenue-costs-submit-button {
     margin-bottom: 50px;
-    padding-right: 0;
+    padding: 14px;
+    text-align: center !important;
+
   }
   #sign-up-back-button {
-    text-align: left;
+    text-align: center !important;
+    padding: 14px;
+    margin-top: 30px;
   }
   #sign-up-back-button button {
-    margin-left: 10px;
+    width: 80%;
+    margin-left: 0;
   }
 }
