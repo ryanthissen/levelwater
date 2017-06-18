@@ -110,4 +110,9 @@
   #sign-up-step {
     text-align: right;
   }
+
+  #step1 .ui.grid>.column:not(.row), #step2 .ui.grid>.column:not(.row), #step3 .ui.grid>.column:not(.row), #step4 .ui.grid>.column:not(.row), #step5 .ui.grid>.column:not(.row), #step6 .ui.grid>.column:not(.row) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
