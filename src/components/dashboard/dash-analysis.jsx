@@ -53,6 +53,49 @@ export default class DashAnalysis extends Component {
     });
   }
 
+  rateIncreaseCriticalAnalysis() {
+    console.log('props', this.props)
+    let generatedJSX = [];
+    for (let i = 0; i < this.props.criticalInfrastructure.length; i++) {
+      let generatedItem = (
+        <div className="item">
+          <div className="increase-asset-name">{this.props.criticalInfrastructure[i][0]}</div>
+          <div className="increase-due-to-asset">Monthly Rate Increase to Account for Replacement: ${(this.props.criticalInfrastructure[i][3]/(12 * this.props.waterSystemResults.connections)).toFixed(2)}</div>
+        </div>
+      )
+      generatedJSX.push(generatedItem)
+    }
+    return generatedJSX;
+  }
+
+  rateIncreaseNoncriticalAnalysis() {
+    console.log('props', this.props)
+    let generatedJSX = [];
+    for (let i = 0; i < this.props.noncriticalInfrastructure.length; i++) {
+      let generatedItem = (
+        <div className="item">
+          <div className="increase-asset-name">{this.props.noncriticalInfrastructure[i][0]}</div>
+          <div className="increase-due-to-asset">Monthly Rate Increase to Account for Replacement: ${(this.props.noncriticalInfrastructure[i][3]/(12 * this.props.waterSystemResults.connections)).toFixed(2)}</div>
+        </div>
+      )
+      generatedJSX.push(generatedItem)
+    }
+    return generatedJSX;
+  }
+
+  revenueAndCostsGenerate() {
+    let {totalRevenue, totalCosts, revCostDiff, budgetStatus } = this.doMath();
+    let generatedJSX = [];
+    let generatedItem = (
+    <div className="item">
+      <div>{budgetStatus}  ${revCostDiff}</div>
+      <div>Annual Contribution to Reserve Fund:  ${this.props.financialData.annual_savings_to_financial_reserves}</div>
+    </div>
+  )
+  generatedJSX.push(generatedItem);
+  return generatedJSX;
+  }
+
   criticalInfrastructureGenerate() {
     let generatedJSX = [];
     for (let i = 0; i < this.props.criticalInfrastructure.length; i++) {
@@ -79,8 +122,8 @@ export default class DashAnalysis extends Component {
             <div className="estimated-replacement-cost">Estimated Replacement Cost:       ${this.props.noncriticalInfrastructure[i][1]}</div>
             <div className="estimated-useful-life">Estimated Remaining Useful Life: {this.props.noncriticalInfrastructure[i][2]} years</div>
             <div className="reserve-fund-increase">Annual Increase to Reserve Fund for Eventual Replacement: ${this.props.noncriticalInfrastructure[i][3]}</div>
-            <div className="monthly-increase-per-connection">Monthly Increase per Connection:  ${(this.props.noncriticalInfrastructure[i][3]/(12 * 550)).toFixed(2)}</div>
-          <br/>
+            <div className="monthly-increase-per-connection">Monthly Increase per Connection:  ${(this.props.noncriticalInfrastructure[i][3]/(12 * this.props.waterSystemResults.connections)).toFixed(2)}</div>
+            <br/>
           </div>)
       generatedJSX.push(generatedItem)
     }
@@ -88,14 +131,27 @@ export default class DashAnalysis extends Component {
   }
 
   render() {
-    let {totalRevenue, totalCosts, revCostDiff, budgetStatus } = this.doMath();
     return (
       <div id="dash-analysis" className="house">
+        <div className="rate-increase-analysis">
+          <h3 sectionTitle="section-title">Water Rate Increase Analysis</h3>
+          <div className="ui list">
+            <div className="item">Current Average Water Rate:  ${this.props.financialData.current_average_water_rate}</div>
+          </div>
+          <h4 className="crit-inf-title">Critical Infrastructure Rate Increases</h4>
+          <div className="ui list">
+            <div>{this.rateIncreaseCriticalAnalysis()}</div>
+          </div>
+          <h4 className="noncrit-inf-title">Noncritical Infrastructure Rate Increases</h4>
+          <div className="ui list">
+            <div>{this.rateIncreaseNoncriticalAnalysis()}</div>
+          </div>
+        </div>
         <div className="rate-finance-status">
           <h3 className="section-title">Rate and Finances Status</h3>
-            <div>Current Average Water Rate:  ${this.props.financialData.current_average_water_rate}</div>
-            <div>{budgetStatus}  ${revCostDiff}</div>
-            <div>Annual Contribution to Reserve Fund:  ${this.props.financialData.annual_savings_to_financial_reserves}</div>
+          <div className="ui list">
+            <div>{this.revenueAndCostsGenerate()}</div>
+          </div>
         </div>
         <div className="infrastructure-analysis">
           <h3 className="section-title">Infrastructure Analysis</h3>
