@@ -102,7 +102,7 @@ class RateGraph extends Component {
     return (
     <div className="c3" id="c3-visuals">
       <div className="ui grid">
-        <div id="graph-column" className="column six wide">
+        <div id="graph-column" className="column six wide computer sixteen wide tablet">
           <div>
             <RateIncreaseGraph />
           </div>
@@ -116,7 +116,7 @@ class RateGraph extends Component {
             <C3Chart data={data} axis={axis} grid={grid} size={size} />
           </div> */}
         </div>
-        <div className="column ten wide">
+        <div className="column ten wide computer sixteen wide tablet">
           <DashAnalysis financialData={this.props.ratesFinancesObject} criticalInfrastructure={this.props.criticalInfrastructure} noncriticalInfrastructure={this.props.noncriticalInfrastructure} waterSystemResults={this.props.waterSystemResults} />
         </div>
       </div>
