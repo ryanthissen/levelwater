@@ -7,7 +7,7 @@ import { connect } from 'react-redux';
 //   </div>
 // );
 const mapStateToProps = (state) => {
-  if(state.dashButtons.water_system_results !== undefined){
+  if(state.dashButtons.water_system_results){
     let name = state.dashButtons.water_system_results.pws_name;
     return {
       name
