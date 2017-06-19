@@ -104,7 +104,7 @@ class RateGraph extends Component {
     return (
     <div className="c3" id="c3-visuals">
       <div className="ui grid">
-        <div className="column six wide">
+        <div id="graph-column" className="column six wide">
           <div>
             <FixedCostsGraph />
           </div>
