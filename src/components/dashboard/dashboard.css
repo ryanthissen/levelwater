@@ -3,56 +3,65 @@
   margin-bottom: 40px;
 }
 #dash-header {
-  height: 80px;
+  height: 90px;
 }
 
 #dash-header h2 {
   padding-top: 10px;
-  font-size: 2em;
+  font-size: 2.4em;
   font-weight: 400;
   text-align: left;
   padding-left: 10%;
 }
 
 #c3-visuals {
-  height: 300px;
+  height: 350px;
+  /*width: 80%;
+  margin-left: 20%;*/
 }
 
-#dash-buttons {
+#graph-column {
+  width: 90%;
+  padding-left: 7%
+}
+
+
+
+/*#dash-buttons {
   height: 250px;
-}
+}*/
 
-#dash-buttons-header {
+/*#dash-buttons-header {
   margin: 30px 0;
-}
+}*/
 
-#dash-buttons-header h3 {
+/*#dash-buttons-header h3 {
   font-size: 1.4em;
-}
+}*/
 
-#dashboard button {
+/*#dashboard button {
   height: 50px;
   width: 400px;
   background-color: #d87575;
   color: white;
-}
+}*/
 
-#dash-button selected {
+/*#dash-button selected {
   background-color: #EA4335;
-}
+}*/
 
-.test button {
+/*.test button {
   background-color: #EA4335 !important;
-}
+}*/
 
-#c3-visuals {
+/*#c3-visuals {
 
-}
+}*/
 
 #dash-analysis {
-  /*margin: 40px 0 80px 0;*/
+  margin: 0 0 30px 7.5%;
   /*margin-left: 5%;*/
-  /*width: 100%;*/
+  width: 85%;
   text-align: left;
 }
 
@@ -69,26 +78,60 @@
   padding-bottom: 13px;
 }*/
 
-#dash-analysis ul {
+/*#dash-analysis ul {
   padding: 0;
-}
+}*/
 
 #dash-analysis h3 {
-  font-size: 1.2em;
-  font-weight: 600;
+  font-size: 2em;
+  font-weight: 400;
+  margin-top: 20px;
 }
 
-#dash-analysis p {
+#dash-analysis h4 {
+  font-family: Raleway, sans-serif;
+  font-size: 1.6em;
+  font-weight: 400;
+  padding-left: 3%;
+  margin-top: 0 !important
+}
+
+#dash-analysis .item {
+  padding: 0 0 0 6% !important;
+  font-size: 1.2em;
+}
+
+#dash-analysis .item .data  {
+  padding-left: 3%;
+  line-height: normal;
+}
+
+#dash-analysis .asset-name {
+  font-size: 1.2em;
+  font-weight: 400;
+  text-decoration: underline;
+  padding-bottom: 5px;
+}
+
+#dash-analysis .target-rate-div {
+  border: 2px solid;
+  width: 33%;
+  padding-left: 12px;
+  font-weight: 600;
+  margin: 5px 0;
+}
+
+/*#dash-analysis p {
   font-weight: 500;
   height: 40px;
   margin-bottom: 30px;
-}
+}*/
 
-#dash-analysis .five {
+/*#dash-analysis .five {
   border-left: 2px solid white;
   border-right: 1px solid white;
-}
+}*/
 
-#dash-analysis .five .five {
+/*#dash-analysis .five .five {
   border: none;
-}
+}*/

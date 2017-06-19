@@ -12,7 +12,7 @@ const mapStateToProps = (state, ownProps) => {
 
 
 const donut = {
-  title: 'Annual Expenses',
+  title: 'Annual Revenue',
   label: {
       format: function(value, ratio, id) {
         return `$${value}`;
@@ -21,15 +21,15 @@ const donut = {
 };
 
 
-export class FixedCostsGraph extends Component {
+export class AnnualRevenueGraph extends Component {
 
   constructor(props) {
     super(props);
     this.data = {
       columns: [
-          ['Personnel Costs', this.props.dashState.annual_personnel_costs],
-          ['Operational Costs', this.props.dashState.annual_personnel_costs],
-          ['Debt Costs', this.props.dashState.annual_debt_costs],
+          ['Water Sales', this.props.dashState.annual_revenue_water_sales],
+          ['Fees and Charges', this.props.dashState.annual_revenue_fees_charged],
+          ['Subsidies', this.props.dashState.annual_revenue_subsidies],
       ],
       type : 'donut'
     };
@@ -44,4 +44,4 @@ export class FixedCostsGraph extends Component {
   }
 }
 
-export default connect(mapStateToProps)(FixedCostsGraph);
+export default connect(mapStateToProps)(AnnualRevenueGraph);

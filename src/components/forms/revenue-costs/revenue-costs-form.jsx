@@ -97,7 +97,7 @@ export class RevenueCostsForm extends Component {
 
             <div className="ui grid">
               <SignUpBackButton to="/signup/step1"/>
-              <div id="revenue-costs-submit-button" className="column eight wide">
+              <div id="revenue-costs-submit-button" className="column eight wide computer sixteen wide tablet">
                 <button type='submit' className="ui button">Continue to Sources &gt;</button>
               </div>
             </div>
