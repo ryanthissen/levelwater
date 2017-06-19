@@ -30,3 +30,23 @@
   padding-right: 14px;
   border-radius: 5px;
 }
+
+@media only screen and (max-width: 992px) {
+  #step4 input {
+    width: 55% !important;
+  }
+  #step4 select {
+    width: 55% !important;
+  }
+
+  #treatment-submit-button {
+    margin-bottom: 50px;
+    padding: 14px;
+    text-align: center !important;
+  }
+  #treatment-submit-button button {
+    height: 60px;
+    width: 80%;
+    margin-right: 0;
+  }
+}

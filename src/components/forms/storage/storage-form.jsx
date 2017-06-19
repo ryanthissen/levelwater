@@ -101,7 +101,7 @@ export class StorageForm extends Component {
             </div>
             <div className="ui grid">
               <SignUpBackButton to="/signup/step4"/>
-              <div id="storage-submit-button" className="column eight wide">
+              <div id="storage-submit-button" className="column eight wide computer sixteen wide tablet">
                 <button className="ui button">Continue To Distribution &gt;</button>
               </div>
             </div>

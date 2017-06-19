@@ -31,5 +31,10 @@
 
   #basic-info-submit-button {
     margin-bottom: 50px;
+    padding-right: 0;
   }
+  .four {
+    display: none !important;
+  }
+
 }

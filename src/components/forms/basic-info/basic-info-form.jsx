@@ -83,15 +83,15 @@ export class BasicInfoForm extends Component{
 
 
 
-              <div className="column nine wide">
+              <div className="column nine wide basic-info-btn-grid">
                 <Field name="population" component="input" type="number" required />
               </div>
 
             </div>
               <div>
                 <div className="ui grid">
-                  <div className="column four wide"></div>
-                  <div className="column twelve wide" id="basic-info-submit-button">
+                  <div className="column four wide computer zero wide tablet"></div>
+                  <div className="column twelve wide computer sixteen wide tablet" id="basic-info-submit-button">
                     <button type='submit' className="ui button" >Continue to Financial Information &gt;</button>
                   </div>
                 </div>
