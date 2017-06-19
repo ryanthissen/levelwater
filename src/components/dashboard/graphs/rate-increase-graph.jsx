@@ -15,7 +15,7 @@ const mapStateToProps = (state, ownProps) => {
 
 
 const donut = {
-  title: 'Target Rate Increase',
+  title: 'Target Rate Contribution',
   label: {
       format: function(value, ratio, id) {
         return `$${value}`;
