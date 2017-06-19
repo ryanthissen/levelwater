@@ -12,6 +12,7 @@ export default class DashAnalysis extends Component {
       return { totalRevenue, totalCosts, revCostDiff, budgetStatus };
     } else {
       budgetStatus = 'Annual Budget Deficit:'
+      revCostDiff = revCostDiff * -1;
       return { totalRevenue, totalCosts, revCostDiff, budgetStatus };
     }
   }
@@ -105,7 +106,7 @@ export default class DashAnalysis extends Component {
             <div className="estimated-replacement-cost">Estimated Replacement Cost:       ${this.props.criticalInfrastructure[i][1]}</div>
             <div className="estimated-useful-life">Estimated Remaining Useful Life: {this.props.criticalInfrastructure[i][2]} years</div>
             <div className="reserve-fund-increase">Annual Increase to Reserve Fund for Eventual Replacement: ${this.props.criticalInfrastructure[i][3]}</div>
-            <div className="monthly-increase-per-connection">Monthly Increase per Connection:  ${(this.props.criticalInfrastructure[i][3]/(12 * 550)).toFixed(2)}</div>
+            <div className="monthly-increase-per-connection">Monthly Increase per Connection:  ${(this.props.criticalInfrastructure[i][3]/(12 * this.props.waterSystemResults.connections)).toFixed(2)}</div>
             <br/>
           </div>)
       generatedJSX.push(generatedItem)
@@ -134,9 +135,10 @@ export default class DashAnalysis extends Component {
     return (
       <div id="dash-analysis" className="house">
         <div className="rate-increase-analysis">
-          <h3 sectionTitle="section-title">Water Rate Increase Analysis</h3>
+          <h3 className="section-title">Water Rate Increase Analysis</h3>
           <div className="ui list">
             <div className="item">Current Average Water Rate:  ${this.props.financialData.current_average_water_rate}</div>
+            <div className="item">Number of Service Connections: {this.props.waterSystemResults.connections}</div>
           </div>
           <h4 className="crit-inf-title">Critical Infrastructure Rate Increases</h4>
           <div className="ui list">
