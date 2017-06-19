@@ -9,14 +9,6 @@ const pumpingDistHelper = (total_length_miles, average_age_of_pipes, average_mai
   };
   let id = parseInt(localStorage.getItem('water_systems_id'));
 
-  console.log('body', {
-    water_systems_id: id,
-    total_length_miles: parseInt(total_length_miles),
-    average_age_of_pipes: parseInt(average_age_of_pipes),
-    average_main_diameter_inches: average_main_diameter_inches,
-    conditon: condition
-  }, config);
-
   return axios
   .post(distributionURL, {
     water_systems_id: id,

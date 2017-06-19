@@ -55,10 +55,6 @@ class RateGraph extends Component {
     let ratesFinancesObject = this.props.ratesFinancesObject;
     let criticalInfrastructure = this.props.criticalInfrastructure;
     let noncriticalInfrastructure = this.props.noncriticalInfrastructure;
-
-
-    // console.log('info', criticalInfrastructure)
-
     let increase = ratesFinancesObject.annual_savings_to_financial_reserves;
     let years = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ];
     let linesArray = [];

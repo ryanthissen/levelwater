@@ -18,7 +18,6 @@ export default class DashAnalysis extends Component {
   }
 
   renderCriticalInfrastructureName() {
-    console.log('props', this.props)
     return this.props.criticalInfrastructure.map((element, i) => {
       return <li key={i}>{element[0]}</li>;
     });
@@ -55,7 +54,6 @@ export default class DashAnalysis extends Component {
   }
 
   rateIncreaseCriticalAnalysis() {
-    console.log('props', this.props)
     let generatedJSX = [];
     let cumulativeTotalCritical = 0;
     for (let i = 0; i < this.props.criticalInfrastructure.length; i++) {
@@ -74,7 +72,6 @@ export default class DashAnalysis extends Component {
   }
 
   rateIncreaseNoncriticalAnalysis() {
-    console.log('props', this.props)
     let generatedJSX = [];
     for (let i = 0; i < this.props.noncriticalInfrastructure.length; i++) {
       let generatedItem = (

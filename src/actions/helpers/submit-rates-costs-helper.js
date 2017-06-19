@@ -7,7 +7,6 @@ const submitRatesCostsHelper = (callback) => {
     headers: {'token': localStorage.getItem('token')}
   };
   let water_systems_id = localStorage.getItem('water_systems_id');
-  console.log('watersysid', water_systems_id);
 
   return axios.get(`${ratesCostsURL}${water_systems_id}`,config )
   .then((response) => {

@@ -43,7 +43,6 @@ export class TreatmentForm extends Component {
           <form id="step4" onSubmit = {(event) => {
             event.preventDefault();
             let x = this.props.treatmentFormData.treatment.values;
-            console.log(x);
             this.props.submitTreatmentInfo(
               x.treatment_name,
               x.treatment_type,

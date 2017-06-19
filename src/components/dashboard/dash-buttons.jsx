@@ -30,7 +30,6 @@ export class DashButtons extends Component {
           <div className="ui grid">
             <div className="column eight wide test"><DashButton buttonText="Recommended Rate Schedule"/></div>
             <div className="column eight wide"><DashButton buttonText="Fixed Costs" onClick={(event) => {
-              console.log('clicked!', this);
               event.preventDefault();
               this.props.submitRatesCostsButton(
                 () => {
