@@ -50,23 +50,24 @@
 }
 
 #dash-analysis {
-  margin: 40px 0 80px 0;
-  margin-left: 5%;
-  width: 100%;
+  /*margin: 40px 0 80px 0;*/
+  /*margin-left: 5%;*/
+  /*width: 100%;*/
+  text-align: left;
 }
 
-#dash-analysis li {
+/*#dash-analysis li {
   list-style-type: none;
   text-align: center;
-  /*border-top: 1px solid white;*/
+  border-top: 1px solid white;
   border-bottom: 1px solid white;
   height: 40px;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  /*padding-top: 13px;
-  padding-bottom: 13px;*/
-}
+  padding-top: 13px;
+  padding-bottom: 13px;
+}*/
 
 #dash-analysis ul {
   padding: 0;

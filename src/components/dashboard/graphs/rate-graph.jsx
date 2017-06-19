@@ -10,7 +10,8 @@ const mapStateToProps = (state, ownProps) =>  {
   return {
     ratesFinancesObject : state.dashButtons.ratesFinancesObject,
     criticalInfrastructure : state.dashButtons.criticalInfrastructure,
-    noncriticalInfrastructure : state.dashButtons.noncriticalInfrastructure
+    noncriticalInfrastructure : state.dashButtons.noncriticalInfrastructure,
+    waterSystemResults: state.dashButtons.water_system_results
   };
 };
 
@@ -112,7 +113,7 @@ class RateGraph extends Component {
           </div>
         </div>
         <div className="column ten wide">
-          <DashAnalysis financialData={this.props.ratesFinancesObject} criticalInfrastructure={this.props.criticalInfrastructure} noncriticalInfrastructure={this.props.noncriticalInfrastructure} />
+          <DashAnalysis financialData={this.props.ratesFinancesObject} criticalInfrastructure={this.props.criticalInfrastructure} noncriticalInfrastructure={this.props.noncriticalInfrastructure} waterSystemResults={this.props.waterSystemResults} />
         </div>
       </div>
     </div>
