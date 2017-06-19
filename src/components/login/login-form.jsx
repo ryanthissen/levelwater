@@ -52,9 +52,6 @@ export class LoginForm extends Component{
             history.push('/dashboard')
           }
         });
-        //trying to reset forms, needs work!
-        // console.log(this.refs.email.value);
-        // this.refs.email.value="";
       }}>
         <Link to="/"><div id="close-login"><img
       src={require('../../img/black-icon.png')}

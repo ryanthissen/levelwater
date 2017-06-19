@@ -24,7 +24,6 @@ export class SignupForm extends Component{
       <form id="signup-form" onSubmit={(event) => {
         event.preventDefault();
         let x = this.props.signupFormData.signup.values;
-        console.log(x);
         this.props.signUserUp(x.email, x.firstName, x.lastName, x.password, x.passwordConfirm, () => {
           history.push('/signup/step1');
         });
