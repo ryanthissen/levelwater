@@ -20,16 +20,15 @@ const donut = {
       format: function(value, ratio, id) {
         return `$${value}`;
       }
-    }
+    },
+  // tooltip: {
+  //     format: {
+  //       name: {
+  //         value: function(value, ratio, id, index) {return value}
+  //       }
+  //     }
+  //   },
   };
-
-const labels = {
-  label: {
-    format: function(value, ratio, id) {
-      return value;
-    }
-  }
-}
 
 
 export class RateIncreaseGraph extends Component {
@@ -41,6 +40,9 @@ export class RateIncreaseGraph extends Component {
           ['Current Average Water Rate', this.props.ratesFinancesObject.current_average_water_rate]
           ],
       type : 'donut',
+      tooltip: {
+        show: false
+      }
     };
     this.constructData();
   }
@@ -55,7 +57,7 @@ export class RateIncreaseGraph extends Component {
   render() {
     return (
     <div className="c3 column eight wide" id="c3-visuals">
-      <C3Chart data={this.data} donut={donut} label={labels}/>
+      <C3Chart data={this.data} donut={donut} />
     </div>
     );
   }

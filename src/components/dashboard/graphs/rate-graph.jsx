@@ -6,6 +6,7 @@ import { loadChart } from '../../../actions';
 import DashAnalysis from '../dash-analysis';
 import FixedCostsGraph from './fixed-costs-graph';
 import RateIncreaseGraph from './rate-increase-graph';
+import AnnualRevenueGraph from './annual-revenue'
 
 const mapStateToProps = (state, ownProps) =>  {
   return {
@@ -106,11 +107,14 @@ class RateGraph extends Component {
             <RateIncreaseGraph />
           </div>
           <div>
+            <AnnualRevenueGraph />
+          </div>
+          <div>
             <FixedCostsGraph />
           </div>
-          <div id="charts" >
+          {/* <div id="charts" >
             <C3Chart data={data} axis={axis} grid={grid} size={size} />
-          </div>
+          </div> */}
         </div>
         <div className="column ten wide">
           <DashAnalysis financialData={this.props.ratesFinancesObject} criticalInfrastructure={this.props.criticalInfrastructure} noncriticalInfrastructure={this.props.noncriticalInfrastructure} waterSystemResults={this.props.waterSystemResults} />
