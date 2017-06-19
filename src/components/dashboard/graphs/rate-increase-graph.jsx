@@ -21,13 +21,6 @@ const donut = {
         return `$${value}`;
       }
     },
-  // tooltip: {
-  //     format: {
-  //       name: {
-  //         value: function(value, ratio, id, index) {return value}
-  //       }
-  //     }
-  //   },
   };
 
 
@@ -48,7 +41,6 @@ export class RateIncreaseGraph extends Component {
   }
 
   constructData() {
-    console.log('in constructData', this.props)
     for (let i = 0; i < this.props.criticalInfrastructure.length; i++) {
       this.data.columns.push([this.props.criticalInfrastructure[i][0], (this.props.criticalInfrastructure[i][3]/(12 * this.props.waterSystemResults.connections)).toFixed(2)])
     }

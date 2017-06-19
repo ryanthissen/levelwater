@@ -134,7 +134,6 @@ export default class DashAnalysis extends Component {
   }
 
   targetWaterRate() {
-    console.log('props', this.props)
     let cummulativeCriticalIncrease = 0;
     let generatedJSX = [];
     for (let i = 0; i < this.props.criticalInfrastructure.length; i++) {
