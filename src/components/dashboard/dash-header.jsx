@@ -1,9 +1,30 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
-const DashHeader = () => (
-  <div id="dash-header">
-      <h2>My Dashboard</h2>
-  </div>
-);
+// const DashHeader = ({name}) => (
+//   <div id="dash-header">
+//       <h2>{`My Dashboard ${name}`}</h2>
+//   </div>
+// );
+const mapStateToProps = (state) => {
+  if(state.dashButtons.water_system_results){
+    let name = state.dashButtons.water_system_results.pws_name;
+    return {
+      name
+    };
+  } else {
+    return ''
+  }
+};
 
-export default DashHeader;
+class DashHeader extends React.Component {
+  render() {
+    return (
+      <div id="dash-header">
+          <h2>{`My Dashboard - ${this.props.name}`}</h2>
+      </div>
+    );
+  }
+}
+
+export default connect(mapStateToProps)(DashHeader);

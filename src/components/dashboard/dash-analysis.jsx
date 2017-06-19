@@ -94,9 +94,9 @@ export default class DashAnalysis extends Component {
       <div>{budgetStatus}  ${revCostDiff}</div>
       {/* <div>Annual Contribution to Reserve Fund:  ${this.props.financialData.annual_savings_to_financial_reserves}</div> */}
     </div>
-  )
-  generatedJSX.push(generatedItem);
-  return generatedJSX;
+    )
+    generatedJSX.push(generatedItem);
+    return generatedJSX;
   }
 
   criticalInfrastructureGenerate() {
