@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { loadChart } from '../../../actions';
 import DashAnalysis from '../dash-analysis';
 import FixedCostsGraph from './fixed-costs-graph';
+import RateIncreaseGraph from './rate-increase-graph';
 
 const mapStateToProps = (state, ownProps) =>  {
   return {
@@ -105,6 +106,9 @@ class RateGraph extends Component {
     <div className="c3" id="c3-visuals">
       <div className="ui grid">
         <div id="graph-column" className="column six wide">
+          <div>
+            <RateIncreaseGraph />
+          </div>
           <div>
             <FixedCostsGraph />
           </div>
