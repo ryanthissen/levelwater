@@ -19,11 +19,15 @@ const mapStateToProps = (state) => {
 
 class DashHeader extends React.Component {
   render() {
-    return (
-      <div id="dash-header">
+    if (this.props.name) {
+      return (
+        <div id="dash-header">
           <h2>{`My Dashboard - ${this.props.name}`}</h2>
-      </div>
-    );
+        </div>
+      );
+    } else {
+      return (<div></div>)
+    }
   }
 }
 
