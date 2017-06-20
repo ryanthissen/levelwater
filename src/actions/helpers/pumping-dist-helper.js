@@ -7,6 +7,7 @@ const pumpingDistHelper = (total_length_miles, average_age_of_pipes, average_mai
   let config = {
     headers: {'token': localStorage.getItem('token')}
   };
+  
   let id = parseInt(localStorage.getItem('water_systems_id'));
 
   return axios

@@ -74,19 +74,9 @@ export class BasicInfoForm extends Component{
               <div className="column nine wide computer sixteen wide tablet"><Field name="connections" component="input" type="number" required /></div>
 
               <div className="column seven wide computer sixteen wide tablet"><label>Population Served:</label></div>
-
-
-
-
-
-
-
-
-
               <div className="column nine wide basic-info-btn-grid">
                 <Field name="population" component="input" type="number" required />
               </div>
-
             </div>
               <div>
                 <div className="ui grid">

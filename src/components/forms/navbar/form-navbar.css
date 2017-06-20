@@ -3,16 +3,10 @@
   padding: 0;
 }
 
-#right-nav-forms .button:first-of-type {
-  /*border-right: 1px solid black;
-  border-left: 2px solid black;*/
-}
 
 #right-nav-forms .button {
-  /*height: 68px;*/
   font-family: 'Raleway', sans-serif;
   font-weight: 400;
-  /*font-size: 1.1em;*/
   background-color: #78bec8;
   color: white;
   margin-top: 14px;

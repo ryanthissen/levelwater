@@ -69,27 +69,17 @@ export class StorageForm extends Component {
                 <option value="redwood">Redwood</option>
                 <option value="plastic">Plastic</option>
               </Field></div>
-
-
               <div className="column seven wide computer sixteen wide tablet"><label>Year Of Construction:</label></div>
-
               <div className="column nine wide computer sixteen wide tablet"><Field name="year_constructed" component="input" type="number" required /></div>
-
-
               <div className="column seven wide computer sixteen wide tablet"><label>Storage Capacity (gallons):</label></div>
-
               <div className="column nine wide computer sixteen wide tablet"><Field name="capacity" component="input" type="number" required /></div>
-
               <div className="column seven wide computer sixteen wide tablet"><label>Condition</label></div>
-
               <div className="column nine wide computer sixteen wide tablet"><Field name="condition" component="select" className="ui dropdown">
                 <option value="select">select:</option>
                 <option value="great">Great</option>
                 <option value="fair">Fair</option>
                 <option value="poor">Poor</option>
               </Field></div>
-
-
               <div className="column seven wide computer sixteen wide tablet"><label>Is This Reservoir Critical To Serve Safe Water?</label></div>
               <div className="column nine wide">
                 <Field name="critical_to_operations" component="select" className="ui dropdown">

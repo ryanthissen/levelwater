@@ -8,6 +8,7 @@ const storageInfoHelper = (reservoir_type, reservoir_name, year_constructed, cap
   const config = {
     headers: {'token': localStorage.getItem('token')}
   };
+  
   let id = parseInt(localStorage.getItem('water_systems_id'));
 
   return axios.post(storageURL, {

@@ -86,7 +86,6 @@ class RateGraph extends Component {
               type: 'line',
           }
     }
-
   }
 
   render() {

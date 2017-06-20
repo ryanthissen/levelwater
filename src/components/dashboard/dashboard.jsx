@@ -13,6 +13,3 @@ const Dashboard = () => (
 );
 
 export default Dashboard;
-
-
-// financialData={this.props.ratesFinancesObject} criticalInfrastructure={this.props.criticalInfrastructure} noncriticalInfrastructure={this.props.noncriticalInfrastructure}

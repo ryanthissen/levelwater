@@ -1,10 +1,6 @@
 import axios from 'axios';
 const basicInfoURL = 'https://levelwater-server.herokuapp.com/water-systems';
 
-
-
-
-
 const basicUserInfoHelper = (pws_name, pws_id, population, connections, callback) => {
   let config = {
     headers: {'token': localStorage.getItem('token')}

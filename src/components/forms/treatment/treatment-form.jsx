@@ -58,50 +58,28 @@ export class TreatmentForm extends Component {
               <div className="column seven wide computer sixteen wide tablet">
                 <label>Name Of Treatment Plant:</label>
               </div>
-
               <div className="column nine wide computer sixteen wide tablet">
               <Field name="treatment_name" component="input" type="text" required /></div>
-
-
-
               <div className="column seven wide computer sixteen wide tablet"><label>Type of Treatment:</label></div>
-
               <div className="column nine wide computer sixteen wide tablet"><Field name="treatment_type" component="select" className="ui dropdown">
                 <option value="select">select:</option>
                 <option value="conventional-sw">Conventional Surface Water</option>
                 <option value="ion-exchange">Ion Exchange</option>
                 <option value="corrosion-control">Corrosion Control</option>
               </Field></div>
-
-
-
               <div className="column seven wide computer sixteen wide tablet"><label>Year Of Construction:</label></div>
-
               <div className="column nine wide computer sixteen wide tablet"><Field name="year_constructed" component="input" type="number" required /></div>
-
-
-
-
-
               <div className="column seven wide computer sixteen wide tablet"><label>Treatment Capacity (gpm):</label></div>
-
               <div className="column nine wide computer sixteen wide tablet">
               <Field name="capacity" component="input" type="number" required /></div>
-
-
-
               <div className="column seven wide computer sixteen wide tablet"><label>Condition of Treatment Plant:</label></div>
-
               <div className="column nine wide computer sixteen wide tablet"><Field name="condition" component="select" className="ui dropdown">
                 <option value="select">select:</option>
                 <option value="great">Great</option>
                 <option value="fair">Fair</option>
                 <option value="poor">Poor</option>
               </Field></div>
-
-
               <div className="column seven wide computer sixteen wide tablet"><label>Is This Plant Critical To Serve Safe Water?</label></div>
-
               <div className="column nine wide computer sixteen wide tablet"><Field name="critical_to_operations" component="select" className="ui dropdown">
                 <option value="select">select:</option>
                 <option value="true">Yes</option>

@@ -7,6 +7,7 @@ const sourceInfoHelper = (source_name, source_type, treatment, critical_to_opera
   let config = {
     headers: {'token': localStorage.getItem('token')}
   };
+  
   let id = parseInt(localStorage.getItem('water_systems_id'));
 
   return axios.post(sourcesURL, {
